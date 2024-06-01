@@ -1,0 +1,35 @@
+
+width: 1280
+height: 1024
+Offset_x: 0
+Offset_y: 0
+FrameRateEnable: True
+FrameRate: 50
+
+TriggerMode: 0
+LineSelector: 0
+LineMode: 0
+LineSource: 5
+
+StrobeEnable: True
+StrobeLineDelay: 0
+StrobeLinePreDelay: 0
+
+ExposureAuto: 0
+ExposureTimeUpper: 35000
+ExposureTimeLower: 25000
+ExposureTime: 30000
+
+GainAuto: 1 # 0: off, 1: once, 2: Continuous
+Gain: 15
+
+
+
+BayerCvtQuality: 1
+
+isColor: True
+
+undistortion: True
+alpha: 0.0 # 1: Remain all pixels with black frame. 0: Loss of pixels and no black frame.
+interpolation: 1
+
