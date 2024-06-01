@@ -1,0 +1,9 @@
+<launch>
+
+    <rosparam file="$(find hikcamera_opr)/config/hikcamera.yaml" command="load"/>
+    <rosparam file="$(find hikcamera_opr)/config/ros-node-config.yaml" command="load"/>
+
+    <node pkg="hikcamera_opr" type="img_hikcamera_grab_save" name="img_hikcamera_grab_save" output="screen"/>
+    <node pkg="hikcamera_opr" type="img_show" name="img_show" output="screen"/>
+    
+</launch>
