@@ -21,8 +21,6 @@
 #include "tim.h"
 #include "usart.h"
 #include "gpio.h"
-#include <string.h>
-#include <stdio.h>
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -59,33 +57,15 @@ void SystemClock_Config(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
-
-// 定义基准时间 2003-02-12 02:00:00
-#define BASE_YEAR 2013
-#define BASE_MONTH 9
-#define BASE_DAY 20
-#define BASE_HOUR 2
-#define BASE_MINUTE 0
-#define BASE_SECOND 0
-
-// 定义位置
-#define LATITUDE "2237.8840,N" // 22.6314°N
-#define LONGITUDE "11009.2400,E" // 110.154°E
-
-// 初始时间设置
-uint32_t baseTime = 0; // 秒数
-
-// GPS数据模拟
-const char gprmc_data[100];
-
-
-
 // USART句柄声明
 extern UART_HandleTypeDef huart3;
 extern UART_HandleTypeDef huart1;
 
 // 定时器句柄声明
 extern TIM_HandleTypeDef htim2; // 100Hz -- /100: PPS ,  /10: Trigger
+
+// GPS数据模拟
+const char *gps_data = "$GPRMC,123519,A,4807.038,N,01131.000,E,022.4,084.4,230394,003.1,W*6A\r\n";
 
 // 触发发送GPS数据的标志
 volatile uint8_t send_gps_flag = 0;
@@ -101,39 +81,28 @@ void Error_Handler_Custom(void)
   }
 }
 
-// 校验和计算函数
-uint8_t nmea_checksum(const char* sentence) {
-    uint8_t checksum = 0;
-    if (*sentence == '$') {
-        sentence++;  // 跳过起始的 '$'
+// 定时器中断处理函数
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
+    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, GPIO_PIN_RESET);
+    if (htim->Instance == TIM2) {
+        // 每秒触发一次
+        HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_3); // Toggle PPS signal
+        send_gps_flag = 1;
+        
+        // 点亮PC5表示正在发送GPS数据
+        HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, GPIO_PIN_SET);
+    } else if (htim->Instance == TIM3) {
+        // 每秒10次
+        HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_4); // Toggle Trigger signal
+        
+        // 点亮PB2表示触发信号已发送
+        HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, GPIO_PIN_SET);
+        
+        // 熄灭PB2，表示触发信号完成
+        HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, GPIO_PIN_RESET);
     }
-    while (*sentence && *sentence != '*') {
-        checksum ^= *sentence++;
-    }
-    return checksum;
-}
-
-// GPRMC 句子生成函数
-void GPRMC_Generator(uint32_t input_baseTime) {
-    // 计算当前时间
-    uint32_t currentTime = input_baseTime + HAL_GetTick() / 1000;
-    uint8_t hour = (currentTime / 3600) % 24;
-    uint8_t minute = (currentTime / 60) % 60;
-    uint8_t second = currentTime % 60;
-
-    memset(gprmc_data, 0, sizeof(gprmc_data));
-    // 格式化 GPRMC 字符串，不包括校验和
-    sprintf(gprmc_data, "$GPRMC,%02d%02d%02d,A,%s,%s,0.004,133.4,%02d%02d%02d,0.0,E,D",
-            hour, minute, second, LATITUDE, LONGITUDE, BASE_DAY, BASE_MONTH, BASE_YEAR % 100);
-    // snprintf(gprmc_data, "$GPRMC,%02d%02d%02d.00,A,5109.0262308,N,11401.8407342,W,0.004,133.4,130920,0.0,E,D",
-		// 			hour, minute, second);
-
-    // 计算校验和
-    uint8_t checksum = nmea_checksum(gprmc_data);
-    // 将校验和追加到字符串
-    int length = strlen(gprmc_data);
-    sprintf(gprmc_data + length, "*%02X\n", checksum);
-
+    HAL_Delay(500);
+    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, GPIO_PIN_SET);
 }
 
 
@@ -152,28 +121,25 @@ void TIM2_IRQHandler(void) {
             count_10hz = 0;
             // 每秒10次
             HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_4); // Toggle Trigger signal
-        }
-        if((int)(count_1hz / 10) % 2 == 1) {
-          // 点亮PB2表示触发信号已发送
-          HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, GPIO_PIN_RESET);        
-        } else {
-          // 熄灭PB2，表示触发信号完成
-          HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, GPIO_PIN_SET);
+            
+            // 点亮PB2表示触发信号已发送
+            HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, GPIO_PIN_SET);        
+            
         }
         
         if (count_1hz >= 100) {        // 100 Hz / 100 = 1 Hz
 
             count_1hz = 0;
             // 每秒触发一次
-            GPRMC_Generator(baseTime);
             HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_3); // Toggle PPS signal
-            // baseTime ++;
             send_gps_flag = 1;
             
             // 点亮PC5表示正在发送GPS数据
-            HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, GPIO_PIN_RESET);
+            HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, GPIO_PIN_SET);
         }
 
+        // 熄灭PB2，表示触发信号完成
+        HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, GPIO_PIN_RESET);
     }
 }
 
@@ -221,14 +187,14 @@ int main(void)
       if (send_gps_flag) {
 
           // 发送GPS数据到 USART1
-          int transmitStatus1 = HAL_UART_Transmit(&huart1, (uint8_t *)gprmc_data, strlen(gprmc_data), 100);
+          int transmitStatus1 = HAL_UART_Transmit(&huart1, (uint8_t *)gps_data, strlen(gps_data), 100);
           if (transmitStatus1 != HAL_OK) {
             // 处理 USART1 错误
             Error_Handler_Custom(); // 自定义的错误处理函数
           }
 
           // 发送GPS数据到 USART3
-          int transmitStatus3 = HAL_UART_Transmit(&huart3, (uint8_t *)gprmc_data, strlen(gprmc_data), 100);
+          int transmitStatus3 = HAL_UART_Transmit(&huart3, (uint8_t *)gps_data, strlen(gps_data), 100);
           if (transmitStatus3 != HAL_OK) {
             // 处理 USART3 错误
             Error_Handler_Custom(); // 自定义的错误处理函数
@@ -237,7 +203,7 @@ int main(void)
           send_gps_flag = 0;
           
           // 熄灭PC5，表示GPS数据发送完成
-          HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, GPIO_PIN_SET);
+          HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, GPIO_PIN_RESET);
       }
   }
 
