@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Cortex Debug",
+            "cwd": "${workspaceRoot}",
+            "executable": "./build/stm32_GPRMC_sync.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "device": "STM32F103RCT6", // 根据你的设备型号修改
+            "interface": "swd",
+            "configFiles": [
+                "/usr/share/openocd/scripts/interface/stlink-v2-1.cfg",
+                "/usr/share/openocd/scripts/target/stm32f1x.cfg" // 根据你的设备型号修改
+            ],
+            "serverArgs": [
+                "-c", "gdb_port 50003",
+                "-c", "tcl_port 50004",
+                "-c", "telnet_port 50005"
+            ],
+            "preLaunchTask": "Build STM32 Project", // 确保有一个构建任务
+            "showDevDebug:Output": "raw"
+        }
+    ]
+}
