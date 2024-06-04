@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccYvwhIK.s 			page 1
+ARM GAS  /tmp/cckVcOtM.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccYvwhIK.s 			page 1
   30:Src/syscalls.c **** #include <sys/time.h>
   31:Src/syscalls.c **** #include <sys/times.h>
   32:Src/syscalls.c **** 
-ARM GAS  /tmp/ccYvwhIK.s 			page 2
+ARM GAS  /tmp/cckVcOtM.s 			page 2
 
 
   33:Src/syscalls.c **** 
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccYvwhIK.s 			page 1
   65              		.fpu softvfp
   67              	_kill:
   68              	.LVL0:
-ARM GAS  /tmp/ccYvwhIK.s 			page 3
+ARM GAS  /tmp/cckVcOtM.s 			page 3
 
 
   69              	.LFB27:
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccYvwhIK.s 			page 1
  114              		.cfi_def_cfa_offset 8
  115              		.cfi_offset 3, -8
  116              		.cfi_offset 14, -4
-ARM GAS  /tmp/ccYvwhIK.s 			page 4
+ARM GAS  /tmp/cckVcOtM.s 			page 4
 
 
   63:Src/syscalls.c ****   _kill(status, -1);
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccYvwhIK.s 			page 1
  163              		.loc 1 72 3 is_stmt 0 discriminator 1 view .LVU26
  164 0008 B542     		cmp	r5, r6
  165 000a 07DA     		bge	.L12
-ARM GAS  /tmp/ccYvwhIK.s 			page 5
+ARM GAS  /tmp/cckVcOtM.s 			page 5
 
 
   73:Src/syscalls.c ****   {
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccYvwhIK.s 			page 1
  211              		.cfi_offset 4, -16
  212              		.cfi_offset 5, -12
  213              		.cfi_offset 6, -8
-ARM GAS  /tmp/ccYvwhIK.s 			page 6
+ARM GAS  /tmp/cckVcOtM.s 			page 6
 
 
  214              		.cfi_offset 14, -4
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccYvwhIK.s 			page 1
  257              		.thumb_func
  258              		.fpu softvfp
  260              	_close:
-ARM GAS  /tmp/ccYvwhIK.s 			page 7
+ARM GAS  /tmp/cckVcOtM.s 			page 7
 
 
  261              	.LVL18:
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccYvwhIK.s 			page 1
  303              		.loc 1 104 1 view .LVU65
  304 0008 7047     		bx	lr
  305              		.cfi_endproc
-ARM GAS  /tmp/ccYvwhIK.s 			page 8
+ARM GAS  /tmp/cckVcOtM.s 			page 8
 
 
  306              	.LFE32:
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccYvwhIK.s 			page 1
  352              		.loc 1 116 3 view .LVU74
  117:Src/syscalls.c ****   return 0;
  353              		.loc 1 117 3 view .LVU75
-ARM GAS  /tmp/ccYvwhIK.s 			page 9
+ARM GAS  /tmp/cckVcOtM.s 			page 9
 
 
  118:Src/syscalls.c **** }
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccYvwhIK.s 			page 1
  402              		.section	.text._wait,"ax",%progbits
  403              		.align	1
  404              		.global	_wait
-ARM GAS  /tmp/ccYvwhIK.s 			page 10
+ARM GAS  /tmp/cckVcOtM.s 			page 10
 
 
  405              		.syntax unified
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccYvwhIK.s 			page 1
  452              		.loc 1 136 1 is_stmt 0 view .LVU93
  453 0000 08B5     		push	{r3, lr}
  454              	.LCFI7:
-ARM GAS  /tmp/ccYvwhIK.s 			page 11
+ARM GAS  /tmp/cckVcOtM.s 			page 11
 
 
  455              		.cfi_def_cfa_offset 8
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccYvwhIK.s 			page 1
  502              		.thumb
  503              		.thumb_func
  504              		.fpu softvfp
-ARM GAS  /tmp/ccYvwhIK.s 			page 12
+ARM GAS  /tmp/cckVcOtM.s 			page 12
 
 
  506              	_stat:
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccYvwhIK.s 			page 1
  550              		.loc 1 158 3 view .LVU114
  159:Src/syscalls.c ****   errno = EMLINK;
  551              		.loc 1 159 3 view .LVU115
-ARM GAS  /tmp/ccYvwhIK.s 			page 13
+ARM GAS  /tmp/cckVcOtM.s 			page 13
 
 
  552 0002 FFF7FEFF 		bl	__errno
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccYvwhIK.s 			page 1
  601              		.thumb_func
  602              		.fpu softvfp
  604              	_execve:
-ARM GAS  /tmp/ccYvwhIK.s 			page 14
+ARM GAS  /tmp/cckVcOtM.s 			page 14
 
 
  605              	.LVL39:
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccYvwhIK.s 			page 1
  655              		.file 6 "/usr/include/newlib/sys/lock.h"
  656              		.file 7 "/usr/include/newlib/sys/_timeval.h"
  657              		.file 8 "/usr/include/newlib/sys/_timespec.h"
-ARM GAS  /tmp/ccYvwhIK.s 			page 15
+ARM GAS  /tmp/cckVcOtM.s 			page 15
 
 
  658              		.file 9 "/usr/include/newlib/sys/types.h"
@@ -847,51 +847,51 @@ ARM GAS  /tmp/ccYvwhIK.s 			page 1
  661              		.file 12 "/usr/include/newlib/stdlib.h"
  662              		.file 13 "/usr/include/newlib/sys/errno.h"
  663              		.file 14 "/usr/include/newlib/sys/times.h"
-ARM GAS  /tmp/ccYvwhIK.s 			page 16
+ARM GAS  /tmp/cckVcOtM.s 			page 16
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 syscalls.c
-     /tmp/ccYvwhIK.s:16     .text.initialise_monitor_handles:0000000000000000 $t
-     /tmp/ccYvwhIK.s:24     .text.initialise_monitor_handles:0000000000000000 initialise_monitor_handles
-     /tmp/ccYvwhIK.s:38     .text._getpid:0000000000000000 $t
-     /tmp/ccYvwhIK.s:45     .text._getpid:0000000000000000 _getpid
-     /tmp/ccYvwhIK.s:60     .text._kill:0000000000000000 $t
-     /tmp/ccYvwhIK.s:67     .text._kill:0000000000000000 _kill
-     /tmp/ccYvwhIK.s:96     .text._exit:0000000000000000 $t
-     /tmp/ccYvwhIK.s:103    .text._exit:0000000000000000 _exit
-     /tmp/ccYvwhIK.s:130    .text._read:0000000000000000 $t
-     /tmp/ccYvwhIK.s:137    .text._read:0000000000000000 _read
-     /tmp/ccYvwhIK.s:193    .text._write:0000000000000000 $t
-     /tmp/ccYvwhIK.s:200    .text._write:0000000000000000 _write
-     /tmp/ccYvwhIK.s:253    .text._close:0000000000000000 $t
-     /tmp/ccYvwhIK.s:260    .text._close:0000000000000000 _close
-     /tmp/ccYvwhIK.s:279    .text._fstat:0000000000000000 $t
-     /tmp/ccYvwhIK.s:286    .text._fstat:0000000000000000 _fstat
-     /tmp/ccYvwhIK.s:309    .text._isatty:0000000000000000 $t
-     /tmp/ccYvwhIK.s:316    .text._isatty:0000000000000000 _isatty
-     /tmp/ccYvwhIK.s:335    .text._lseek:0000000000000000 $t
-     /tmp/ccYvwhIK.s:342    .text._lseek:0000000000000000 _lseek
-     /tmp/ccYvwhIK.s:363    .text._open:0000000000000000 $t
-     /tmp/ccYvwhIK.s:370    .text._open:0000000000000000 _open
-     /tmp/ccYvwhIK.s:403    .text._wait:0000000000000000 $t
-     /tmp/ccYvwhIK.s:410    .text._wait:0000000000000000 _wait
-     /tmp/ccYvwhIK.s:438    .text._unlink:0000000000000000 $t
-     /tmp/ccYvwhIK.s:445    .text._unlink:0000000000000000 _unlink
-     /tmp/ccYvwhIK.s:473    .text._times:0000000000000000 $t
-     /tmp/ccYvwhIK.s:480    .text._times:0000000000000000 _times
-     /tmp/ccYvwhIK.s:499    .text._stat:0000000000000000 $t
-     /tmp/ccYvwhIK.s:506    .text._stat:0000000000000000 _stat
-     /tmp/ccYvwhIK.s:529    .text._link:0000000000000000 $t
-     /tmp/ccYvwhIK.s:536    .text._link:0000000000000000 _link
-     /tmp/ccYvwhIK.s:565    .text._fork:0000000000000000 $t
-     /tmp/ccYvwhIK.s:572    .text._fork:0000000000000000 _fork
-     /tmp/ccYvwhIK.s:597    .text._execve:0000000000000000 $t
-     /tmp/ccYvwhIK.s:604    .text._execve:0000000000000000 _execve
-     /tmp/ccYvwhIK.s:645    .data.environ:0000000000000000 environ
-     /tmp/ccYvwhIK.s:639    .bss.__env:0000000000000000 __env
-     /tmp/ccYvwhIK.s:636    .bss.__env:0000000000000000 $d
-     /tmp/ccYvwhIK.s:642    .data.environ:0000000000000000 $d
+     /tmp/cckVcOtM.s:16     .text.initialise_monitor_handles:0000000000000000 $t
+     /tmp/cckVcOtM.s:24     .text.initialise_monitor_handles:0000000000000000 initialise_monitor_handles
+     /tmp/cckVcOtM.s:38     .text._getpid:0000000000000000 $t
+     /tmp/cckVcOtM.s:45     .text._getpid:0000000000000000 _getpid
+     /tmp/cckVcOtM.s:60     .text._kill:0000000000000000 $t
+     /tmp/cckVcOtM.s:67     .text._kill:0000000000000000 _kill
+     /tmp/cckVcOtM.s:96     .text._exit:0000000000000000 $t
+     /tmp/cckVcOtM.s:103    .text._exit:0000000000000000 _exit
+     /tmp/cckVcOtM.s:130    .text._read:0000000000000000 $t
+     /tmp/cckVcOtM.s:137    .text._read:0000000000000000 _read
+     /tmp/cckVcOtM.s:193    .text._write:0000000000000000 $t
+     /tmp/cckVcOtM.s:200    .text._write:0000000000000000 _write
+     /tmp/cckVcOtM.s:253    .text._close:0000000000000000 $t
+     /tmp/cckVcOtM.s:260    .text._close:0000000000000000 _close
+     /tmp/cckVcOtM.s:279    .text._fstat:0000000000000000 $t
+     /tmp/cckVcOtM.s:286    .text._fstat:0000000000000000 _fstat
+     /tmp/cckVcOtM.s:309    .text._isatty:0000000000000000 $t
+     /tmp/cckVcOtM.s:316    .text._isatty:0000000000000000 _isatty
+     /tmp/cckVcOtM.s:335    .text._lseek:0000000000000000 $t
+     /tmp/cckVcOtM.s:342    .text._lseek:0000000000000000 _lseek
+     /tmp/cckVcOtM.s:363    .text._open:0000000000000000 $t
+     /tmp/cckVcOtM.s:370    .text._open:0000000000000000 _open
+     /tmp/cckVcOtM.s:403    .text._wait:0000000000000000 $t
+     /tmp/cckVcOtM.s:410    .text._wait:0000000000000000 _wait
+     /tmp/cckVcOtM.s:438    .text._unlink:0000000000000000 $t
+     /tmp/cckVcOtM.s:445    .text._unlink:0000000000000000 _unlink
+     /tmp/cckVcOtM.s:473    .text._times:0000000000000000 $t
+     /tmp/cckVcOtM.s:480    .text._times:0000000000000000 _times
+     /tmp/cckVcOtM.s:499    .text._stat:0000000000000000 $t
+     /tmp/cckVcOtM.s:506    .text._stat:0000000000000000 _stat
+     /tmp/cckVcOtM.s:529    .text._link:0000000000000000 $t
+     /tmp/cckVcOtM.s:536    .text._link:0000000000000000 _link
+     /tmp/cckVcOtM.s:565    .text._fork:0000000000000000 $t
+     /tmp/cckVcOtM.s:572    .text._fork:0000000000000000 _fork
+     /tmp/cckVcOtM.s:597    .text._execve:0000000000000000 $t
+     /tmp/cckVcOtM.s:604    .text._execve:0000000000000000 _execve
+     /tmp/cckVcOtM.s:645    .data.environ:0000000000000000 environ
+     /tmp/cckVcOtM.s:639    .bss.__env:0000000000000000 __env
+     /tmp/cckVcOtM.s:636    .bss.__env:0000000000000000 $d
+     /tmp/cckVcOtM.s:642    .data.environ:0000000000000000 $d
 
 UNDEFINED SYMBOLS
 __errno
