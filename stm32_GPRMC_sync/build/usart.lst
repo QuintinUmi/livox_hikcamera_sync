@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cclGqIRv.s 			page 1
+ARM GAS  /tmp/ccdKtYTf.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cclGqIRv.s 			page 1
   30:Src/usart.c   **** DMA_HandleTypeDef hdma_usart3_tx;
   31:Src/usart.c   **** 
   32:Src/usart.c   **** /* USART1 init function */
-ARM GAS  /tmp/cclGqIRv.s 			page 2
+ARM GAS  /tmp/ccdKtYTf.s 			page 2
 
 
   33:Src/usart.c   **** 
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cclGqIRv.s 			page 1
   62              		.loc 1 51 3 is_stmt 1 view .LVU15
   63              		.loc 1 51 28 is_stmt 0 view .LVU16
   64 001c C361     		str	r3, [r0, #28]
-ARM GAS  /tmp/cclGqIRv.s 			page 3
+ARM GAS  /tmp/ccdKtYTf.s 			page 3
 
 
   52:Src/usart.c   ****   if (HAL_UART_Init(&huart1) != HAL_OK)
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cclGqIRv.s 			page 1
   65:Src/usart.c   **** {
  107              		.loc 1 65 1 view -0
  108              		.cfi_startproc
-ARM GAS  /tmp/cclGqIRv.s 			page 4
+ARM GAS  /tmp/ccdKtYTf.s 			page 4
 
 
  109              		@ args = 0, pretend = 0, frame = 0
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cclGqIRv.s 			page 1
  146              		.loc 1 82 7 is_stmt 0 view .LVU42
  147 001e FFF7FEFF 		bl	HAL_UART_Init
  148              	.LVL4:
-ARM GAS  /tmp/cclGqIRv.s 			page 5
+ARM GAS  /tmp/ccdKtYTf.s 			page 5
 
 
  149              		.loc 1 82 6 view .LVU43
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cclGqIRv.s 			page 1
  193              		.cfi_def_cfa_offset 48
  194 0004 0446     		mov	r4, r0
   94:Src/usart.c   **** 
-ARM GAS  /tmp/cclGqIRv.s 			page 6
+ARM GAS  /tmp/ccdKtYTf.s 			page 6
 
 
   95:Src/usart.c   ****   GPIO_InitTypeDef GPIO_InitStruct = {0};
@@ -357,8 +357,8 @@ ARM GAS  /tmp/cclGqIRv.s 			page 1
  134:Src/usart.c   ****     __HAL_LINKDMA(uartHandle,hdmatx,hdma_usart1_tx);
  135:Src/usart.c   **** 
  136:Src/usart.c   ****     /* USART1 interrupt Init */
- 137:Src/usart.c   ****     HAL_NVIC_SetPriority(USART1_IRQn, 0, 0);
-ARM GAS  /tmp/cclGqIRv.s 			page 7
+ 137:Src/usart.c   ****     HAL_NVIC_SetPriority(USART1_IRQn, 0, 2);
+ARM GAS  /tmp/ccdKtYTf.s 			page 7
 
 
  138:Src/usart.c   ****     HAL_NVIC_EnableIRQ(USART1_IRQn);
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cclGqIRv.s 			page 1
  185:Src/usart.c   ****     /* USART3 interrupt Init */
  186:Src/usart.c   ****     HAL_NVIC_SetPriority(USART3_IRQn, 0, 0);
  187:Src/usart.c   ****     HAL_NVIC_EnableIRQ(USART3_IRQn);
-ARM GAS  /tmp/cclGqIRv.s 			page 8
+ARM GAS  /tmp/ccdKtYTf.s 			page 8
 
 
  188:Src/usart.c   ****   /* USER CODE BEGIN USART3_MspInit 1 */
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cclGqIRv.s 			page 1
  254              		.loc 1 104 5 view .LVU67
  255 0046 019B     		ldr	r3, [sp, #4]
  256              	.LBE3:
-ARM GAS  /tmp/cclGqIRv.s 			page 9
+ARM GAS  /tmp/ccdKtYTf.s 			page 9
 
 
  104:Src/usart.c   ****     /**USART1 GPIO Configuration
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cclGqIRv.s 			page 1
  294              		.loc 1 121 5 view .LVU84
  121:Src/usart.c   ****     hdma_usart1_tx.Init.Direction = DMA_MEMORY_TO_PERIPH;
  295              		.loc 1 121 29 is_stmt 0 view .LVU85
-ARM GAS  /tmp/cclGqIRv.s 			page 10
+ARM GAS  /tmp/ccdKtYTf.s 			page 10
 
 
  296 0074 3A48     		ldr	r0, .L23+16
@@ -598,7 +598,7 @@ ARM GAS  /tmp/cclGqIRv.s 			page 1
  331 0092 334B     		ldr	r3, .L23+16
  332 0094 A363     		str	r3, [r4, #56]
  134:Src/usart.c   **** 
-ARM GAS  /tmp/cclGqIRv.s 			page 11
+ARM GAS  /tmp/ccdKtYTf.s 			page 11
 
 
  333              		.loc 1 134 5 view .LVU105
@@ -607,8 +607,8 @@ ARM GAS  /tmp/cclGqIRv.s 			page 1
  335              		.loc 1 134 5 view .LVU106
  137:Src/usart.c   ****     HAL_NVIC_EnableIRQ(USART1_IRQn);
  336              		.loc 1 137 5 view .LVU107
- 337 0098 0022     		movs	r2, #0
- 338 009a 1146     		mov	r1, r2
+ 337 0098 0222     		movs	r2, #2
+ 338 009a 0021     		movs	r1, #0
  339 009c 2520     		movs	r0, #37
  340 009e FFF7FEFF 		bl	HAL_NVIC_SetPriority
  341              	.LVL13:
@@ -658,7 +658,7 @@ ARM GAS  /tmp/cclGqIRv.s 			page 1
  374 00c4 9A69     		ldr	r2, [r3, #24]
  375 00c6 42F01002 		orr	r2, r2, #16
  376 00ca 9A61     		str	r2, [r3, #24]
-ARM GAS  /tmp/cclGqIRv.s 			page 12
+ARM GAS  /tmp/ccdKtYTf.s 			page 12
 
 
  151:Src/usart.c   ****     /**USART3 GPIO Configuration
@@ -718,7 +718,7 @@ ARM GAS  /tmp/cclGqIRv.s 			page 1
  414              		.loc 1 163 26 is_stmt 0 view .LVU135
  415 00f8 0695     		str	r5, [sp, #24]
  164:Src/usart.c   **** 
-ARM GAS  /tmp/cclGqIRv.s 			page 13
+ARM GAS  /tmp/ccdKtYTf.s 			page 13
 
 
  416              		.loc 1 164 5 is_stmt 1 view .LVU136
@@ -778,7 +778,7 @@ ARM GAS  /tmp/cclGqIRv.s 			page 1
  455 011e 8560     		str	r5, [r0, #8]
  173:Src/usart.c   ****     hdma_usart3_tx.Init.PeriphDataAlignment = DMA_PDATAALIGN_BYTE;
  456              		.loc 1 173 5 is_stmt 1 view .LVU152
-ARM GAS  /tmp/cclGqIRv.s 			page 14
+ARM GAS  /tmp/ccdKtYTf.s 			page 14
 
 
  173:Src/usart.c   ****     hdma_usart3_tx.Init.PeriphDataAlignment = DMA_PDATAALIGN_BYTE;
@@ -838,7 +838,7 @@ ARM GAS  /tmp/cclGqIRv.s 			page 1
  493 0142 2720     		movs	r0, #39
  494 0144 FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
  495              	.LVL28:
-ARM GAS  /tmp/cclGqIRv.s 			page 15
+ARM GAS  /tmp/ccdKtYTf.s 			page 15
 
 
  496              		.loc 1 192 1 is_stmt 0 view .LVU171
@@ -898,7 +898,7 @@ ARM GAS  /tmp/cclGqIRv.s 			page 1
  546 0008 9342     		cmp	r3, r2
  547 000a 03D0     		beq	.L29
  198:Src/usart.c   ****   {
-ARM GAS  /tmp/cclGqIRv.s 			page 16
+ARM GAS  /tmp/ccdKtYTf.s 			page 16
 
 
  199:Src/usart.c   ****   /* USER CODE BEGIN USART1_MspDeInit 0 */
@@ -958,7 +958,7 @@ ARM GAS  /tmp/cclGqIRv.s 			page 1
  557              	.LVL32:
  558              	.L29:
  203:Src/usart.c   **** 
-ARM GAS  /tmp/cclGqIRv.s 			page 17
+ARM GAS  /tmp/ccdKtYTf.s 			page 17
 
 
  559              		.loc 1 203 5 is_stmt 1 view .LVU181
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/cclGqIRv.s 			page 1
  604              	.L32:
  605              		.align	2
  606              	.L31:
-ARM GAS  /tmp/cclGqIRv.s 			page 18
+ARM GAS  /tmp/ccdKtYTf.s 			page 18
 
 
  607 005c 00380140 		.word	1073821696
@@ -1045,27 +1045,27 @@ ARM GAS  /tmp/cclGqIRv.s 			page 1
  629              		.file 11 "Inc/usart.h"
  630              		.file 12 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h"
  631              		.file 13 "Inc/main.h"
-ARM GAS  /tmp/cclGqIRv.s 			page 19
+ARM GAS  /tmp/ccdKtYTf.s 			page 19
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 usart.c
-     /tmp/cclGqIRv.s:16     .text.MX_USART1_UART_Init:0000000000000000 $t
-     /tmp/cclGqIRv.s:24     .text.MX_USART1_UART_Init:0000000000000000 MX_USART1_UART_Init
-     /tmp/cclGqIRv.s:92     .text.MX_USART1_UART_Init:000000000000003c $d
+     /tmp/ccdKtYTf.s:16     .text.MX_USART1_UART_Init:0000000000000000 $t
+     /tmp/ccdKtYTf.s:24     .text.MX_USART1_UART_Init:0000000000000000 MX_USART1_UART_Init
+     /tmp/ccdKtYTf.s:92     .text.MX_USART1_UART_Init:000000000000003c $d
                             *COM*:0000000000000048 huart1
-     /tmp/cclGqIRv.s:98     .text.MX_USART3_UART_Init:0000000000000000 $t
-     /tmp/cclGqIRv.s:105    .text.MX_USART3_UART_Init:0000000000000000 MX_USART3_UART_Init
-     /tmp/cclGqIRv.s:163    .text.MX_USART3_UART_Init:000000000000002c $d
+     /tmp/ccdKtYTf.s:98     .text.MX_USART3_UART_Init:0000000000000000 $t
+     /tmp/ccdKtYTf.s:105    .text.MX_USART3_UART_Init:0000000000000000 MX_USART3_UART_Init
+     /tmp/ccdKtYTf.s:163    .text.MX_USART3_UART_Init:000000000000002c $d
                             *COM*:0000000000000048 huart3
-     /tmp/cclGqIRv.s:169    .text.HAL_UART_MspInit:0000000000000000 $t
-     /tmp/cclGqIRv.s:176    .text.HAL_UART_MspInit:0000000000000000 HAL_UART_MspInit
-     /tmp/cclGqIRv.s:506    .text.HAL_UART_MspInit:0000000000000150 $d
+     /tmp/ccdKtYTf.s:169    .text.HAL_UART_MspInit:0000000000000000 $t
+     /tmp/ccdKtYTf.s:176    .text.HAL_UART_MspInit:0000000000000000 HAL_UART_MspInit
+     /tmp/ccdKtYTf.s:506    .text.HAL_UART_MspInit:0000000000000150 $d
                             *COM*:0000000000000044 hdma_usart1_tx
                             *COM*:0000000000000044 hdma_usart3_tx
-     /tmp/cclGqIRv.s:520    .text.HAL_UART_MspDeInit:0000000000000000 $t
-     /tmp/cclGqIRv.s:527    .text.HAL_UART_MspDeInit:0000000000000000 HAL_UART_MspDeInit
-     /tmp/cclGqIRv.s:607    .text.HAL_UART_MspDeInit:000000000000005c $d
+     /tmp/ccdKtYTf.s:520    .text.HAL_UART_MspDeInit:0000000000000000 $t
+     /tmp/ccdKtYTf.s:527    .text.HAL_UART_MspDeInit:0000000000000000 HAL_UART_MspDeInit
+     /tmp/ccdKtYTf.s:607    .text.HAL_UART_MspDeInit:000000000000005c $d
 
 UNDEFINED SYMBOLS
 HAL_UART_Init

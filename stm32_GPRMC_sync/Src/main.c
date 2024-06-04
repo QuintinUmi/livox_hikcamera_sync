@@ -25,7 +25,9 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include <stdio.h>
+#include <string.h>
+#include "core_cm3.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -100,17 +102,34 @@ void Error_Handler_Custom(void)
 {
 
   while (1) {
-    // 闪烁错误指示 LED 或其他错误提示
+    // 闪烁错误指示 LED 
     HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_5); 
+    HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_2); 
     HAL_Delay(500);
   }
 }
+
+
+void DWT_Init(void) {
+    if (!(DWT->CTRL & DWT_CTRL_CYCCNTENA_Msk)) {
+        CoreDebug->DEMCR |= CoreDebug_DEMCR_TRCENA_Msk; // 启用DWT和ITM单元
+        DWT->CYCCNT = 0; // 清零计数器
+        DWT->CTRL |= DWT_CTRL_CYCCNTENA_Msk; // 启用CYCCNT
+    }
+}
+void DWT_Delay(uint32_t us) {   // 微秒级延时
+    uint32_t startTick = DWT->CYCCNT;
+    uint32_t delayTicks = us * (SystemCoreClock / 1000000); // 转换微秒为tick数
+
+    while (DWT->CYCCNT - startTick < delayTicks);
+}
+
 
 // 校验和计算函数
 uint8_t nmea_checksum(const char* sentence) {
     uint8_t checksum = 0;
     if (*sentence == '$') {
-        sentence++;  // 跳过起始的 '$'
+        sentence++;  // Skip '$'
     }
     
     while (*sentence && *sentence != '*') {
@@ -121,9 +140,9 @@ uint8_t nmea_checksum(const char* sentence) {
 
 
 
-// GPRMC 句子生成函数
+// GPRMC Generator
 void GPRMC_Generator(uint32_t input_baseTime) {
-    // 计算当前时间
+    
     uint32_t culmulative_hms = 3600 * BASE_HOUR + 60 * BASE_MINUTE + BASE_SECOND;
     uint32_t currentTime = culmulative_hms + HAL_GetTick() / 1000;
     uint8_t hour = (currentTime / 3600) % 24;
@@ -132,14 +151,14 @@ void GPRMC_Generator(uint32_t input_baseTime) {
 
     memset(gprmc_data, 0, sizeof(gprmc_data));
 
-    // 格式化 GPRMC 字符串，不包括校验和
+    // sprintf(gprmc_data, "$GPRMC,020008.00,A,2237.8840,N,11009.2400,E,0.00,0.00,120203,,,A*");
     sprintf(gprmc_data, "$GPRMC,%02d%02d%02d.00,A,%s,%s,0.00,0.00,%02d%02d%02d,,,A*",
             hour, minute, second, LATITUDE, LONGITUDE, BASE_DAY, BASE_MONTH, (BASE_YEAR % 100));
-    // sprintf(gprmc_data, "$GPRMC,020008.00,A,2237.8840,N,11009.2400,E,0.00,0.00,120203,,,A*");
+    
 
-    // 计算校验和
+    // check sum
     uint8_t checksum = nmea_checksum(gprmc_data);
-    // 将校验和追加到字符串
+    
     int length = strlen(gprmc_data);
     sprintf(gprmc_data + length, "%02X\r\n", checksum);
 
@@ -169,6 +188,13 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
         if (pps_flag) {
 
             pps_count ++;
+
+            if (pps_count >= 2)
+            {
+                pps_flag = 0;
+                pps_count = 0;
+                HAL_GPIO_WritePin(GPIOB, GPIO_PIN_3, GPIO_PIN_RESET); // PPS LOW
+            }
             
         }
         if (gprmc_led_flag) {
@@ -181,21 +207,30 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 }
 
 
+uint32_t pps_offset = 397;
 void TIM2_IRQHandler(void) {
     if (__HAL_TIM_GET_FLAG(&htim2, TIM_FLAG_UPDATE) != RESET) {
         __HAL_TIM_CLEAR_IT(&htim2, TIM_IT_UPDATE);
         
         static uint32_t count_10hz = 0, count_1hz = 0;
         
-        if (++count_10hz >= 10) {
+        if (++count_10hz >= 500) {
             count_10hz = 0;
             trigger_flag = 1;
         }
         
-        if (++count_1hz >= 100) {
+        if (++count_1hz >= 5000) {
             count_1hz = 0;
             send_gps_flag = 1;
+
+            if(pps_flag) {
+              Error_Handler();
+            }
+            DWT_Delay(pps_offset);
+            HAL_GPIO_WritePin(GPIOB, GPIO_PIN_3, GPIO_PIN_SET); // PPS HIGH
+            pps_flag = 1;  // Set flag to turn off PPS in ISR after 100 ms
         }
+
     }
 }
 
@@ -235,7 +270,7 @@ int main(void)
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
-  
+  DWT_Init();
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
@@ -245,7 +280,6 @@ int main(void)
   MX_USART1_UART_Init();
   MX_USART3_UART_Init();
   MX_TIM3_Init();
-  MX_TIM5_Init();
   /* USER CODE BEGIN 2 */
   
 
@@ -258,14 +292,14 @@ int main(void)
   if (HAL_TIM_Base_Start_IT(&htim3) != HAL_OK) {
     Error_Handler();
   }
-  HAL_NVIC_SetPriority(TIM3_IRQn, 0, 0);
+  HAL_NVIC_SetPriority(TIM3_IRQn, 0, 1);
     HAL_NVIC_EnableIRQ(TIM3_IRQn);
 
-  if (HAL_TIM_Base_Start_IT(&htim5) != HAL_OK) {
-    Error_Handler();
-  }
-  HAL_NVIC_SetPriority(TIM5_IRQn, 0, 1);
-    HAL_NVIC_EnableIRQ(TIM5_IRQn);
+  // if (HAL_TIM_Base_Start_IT(&htim5) != HAL_OK) {
+  //   Error_Handler();
+  // }
+  // HAL_NVIC_SetPriority(TIM5_IRQn, 0, 1);
+  //   HAL_NVIC_EnableIRQ(TIM5_IRQn);
   
   while (1) {
 
@@ -275,12 +309,7 @@ int main(void)
           trigger_led_count = 0;
           HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, GPIO_PIN_SET); // Trigger LED OFF
       }
-      if (pps_flag && pps_count >= 10)
-      {
-          pps_flag = 0;
-          pps_count = 0;
-          HAL_GPIO_WritePin(GPIOB, GPIO_PIN_3, GPIO_PIN_RESET); // PPS LOW
-      }
+      
       if (!gprmc_led_flag && gprmc_led_count >= 5)
       {
           gprmc_led_count = 0;
@@ -304,12 +333,6 @@ int main(void)
 
 
           send_gps_flag = 0;
-
-          if(pps_flag) {
-              Error_Handler();
-          }
-          HAL_GPIO_WritePin(GPIOB, GPIO_PIN_3, GPIO_PIN_SET); // PPS HIGH
-          pps_flag = 1;  // Set flag to turn off PPS in ISR after 100 ms
 
           HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, GPIO_PIN_RESET); // LED GPRMC Sending ON
           gprmc_led_flag = 1;
