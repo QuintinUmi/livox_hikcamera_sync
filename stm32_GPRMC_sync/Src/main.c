@@ -206,8 +206,9 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 
 }
 
-
-uint32_t pps_offset = 397;
+// uint32_t pps_offset = 397;
+uint32_t pps_offset = 390;
+uint32_t for_delay = 35;
 void TIM2_IRQHandler(void) {
     if (__HAL_TIM_GET_FLAG(&htim2, TIM_FLAG_UPDATE) != RESET) {
         __HAL_TIM_CLEAR_IT(&htim2, TIM_IT_UPDATE);
@@ -227,6 +228,7 @@ void TIM2_IRQHandler(void) {
               Error_Handler();
             }
             DWT_Delay(pps_offset);
+            for(int i = 0; i < for_delay; i ++);
             HAL_GPIO_WritePin(GPIOB, GPIO_PIN_3, GPIO_PIN_SET); // PPS HIGH
             pps_flag = 1;  // Set flag to turn off PPS in ISR after 100 ms
         }
@@ -236,7 +238,7 @@ void TIM2_IRQHandler(void) {
 
 void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
 {
-    if (huart->Instance == USART3)
+    if (huart->Instance == USART1 || huart->Instance == USART3)
     {
         gprmc_led_flag = 0;
     }
@@ -338,8 +340,11 @@ int main(void)
           gprmc_led_flag = 1;
 
           GPRMC_Generator(baseTime);
-          HAL_UART_Transmit_DMA(&huart1, (uint8_t *)gprmc_data, strlen(gprmc_data));
+          HAL_UART_Transmit(&huart1, (uint8_t *)gprmc_data, strlen(gprmc_data), 6);
+          // HAL_UART_Transmit_DMA(&huart1, (uint8_t *)gprmc_data, strlen(gprmc_data));
+          // HAL_UART_Transmit(&huart3, (uint8_t *)gprmc_data, strlen(gprmc_data), 70);
           HAL_UART_Transmit_DMA(&huart3, (uint8_t *)gprmc_data, strlen(gprmc_data));
+          
           
           
       }
