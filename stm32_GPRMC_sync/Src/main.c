@@ -206,9 +206,12 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 
 }
 
-// uint32_t pps_offset = 397;
-uint32_t pps_offset = 390;
-uint32_t for_delay = 35;
+uint32_t pps_offset = 397;
+uint32_t for_delay = 0;
+// uint32_t pps_offset = 390;
+// uint32_t for_delay = 35;
+// uint32_t pps_offset = 0;
+// uint32_t for_delay = 0;
 void TIM2_IRQHandler(void) {
     if (__HAL_TIM_GET_FLAG(&htim2, TIM_FLAG_UPDATE) != RESET) {
         __HAL_TIM_CLEAR_IT(&htim2, TIM_IT_UPDATE);
