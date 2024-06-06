@@ -26,6 +26,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include "core_cm3.h"
 /* USER CODE END Includes */
@@ -63,19 +64,22 @@ void SystemClock_Config(void);
 
 
 // 定义基准时间 2003-02-12 02:00:00
-#define BASE_YEAR 2003
-#define BASE_MONTH 2
-#define BASE_DAY 12
-#define BASE_HOUR 2
-#define BASE_MINUTE 0
-#define BASE_SECOND 0
+unsigned int BASE_YEAR = 2003;
+unsigned int  BASE_MONTH = 2;
+unsigned int  BASE_DAY = 12;
+unsigned int  BASE_HOUR = 2;
+unsigned int BASE_MINUTE = 0;
+unsigned int  BASE_SECOND = 0;
 
 // 定义位置
-#define LATITUDE "2237.8840,N" // 22.6314°N
-#define LONGITUDE "11009.2400,E" // 110.154°E
+char LATITUDE[20] = "2237.8840,N"; // 22.6314°N
+char LONGITUDE[20] = "11009.2400,E"; // 110.154°E
 
 // 初始时间设置
 uint32_t baseTime = 0; // 秒数
+
+uint32_t baseTick = 0;
+uint32_t elapsed = 0;
 
 // GPS数据模拟
 char gprmc_data[100];
@@ -86,9 +90,12 @@ char gprmc_data[100];
 extern UART_HandleTypeDef huart3;
 extern UART_HandleTypeDef huart1;
 
+uint8_t uart_rx_buffer; 
+
 // 定时器句柄声明
-extern TIM_HandleTypeDef htim2; // 100Hz -- /100: PPS ,  /10: Trigger
+extern TIM_HandleTypeDef htim2; 
 extern TIM_HandleTypeDef htim3;
+extern TIM_HandleTypeDef htim4; // 100Hz -- /100: PPS ,  /10: Trigger
 
 
 // 触发发送trigger的标志
@@ -103,9 +110,12 @@ void Error_Handler_Custom(void)
 
   while (1) {
     // 闪烁错误指示 LED 
-    HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_5); 
-    HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_2); 
-    HAL_Delay(500);
+    HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, RESET); 
+    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, RESET); 
+    for(int i = 0; i < 500; i ++);
+    HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, SET); 
+    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, SET); 
+    for(int i = 0; i < 500; i ++);
   }
 }
 
@@ -144,7 +154,7 @@ uint8_t nmea_checksum(const char* sentence) {
 void GPRMC_Generator(uint32_t input_baseTime) {
     
     uint32_t culmulative_hms = 3600 * BASE_HOUR + 60 * BASE_MINUTE + BASE_SECOND;
-    uint32_t currentTime = culmulative_hms + HAL_GetTick() / 1000;
+    uint32_t currentTime = culmulative_hms + (HAL_GetTick() + elapsed) / 1000;
     uint8_t hour = (currentTime / 3600) % 24;
     uint8_t minute = (currentTime / 60) % 60;
     uint8_t second = currentTime % 60;
@@ -162,6 +172,31 @@ void GPRMC_Generator(uint32_t input_baseTime) {
     int length = strlen(gprmc_data);
     sprintf(gprmc_data + length, "%02X\r\n", checksum);
 
+}
+
+
+
+
+volatile uint8_t enable_synchrone = 1;
+
+void TIM2_IRQHandler(void)
+{
+    if(__HAL_TIM_GET_FLAG(&htim2, TIM_FLAG_TRIGGER) != RESET) {
+        __HAL_TIM_CLEAR_IT(&htim2, TIM_IT_TRIGGER);
+
+        enable_synchrone = !enable_synchrone;
+
+    }
+
+    if (__HAL_TIM_GET_FLAG(&htim2, TIM_FLAG_UPDATE) != RESET) {
+        __HAL_TIM_CLEAR_IT(&htim2, TIM_IT_UPDATE);
+
+        if(!enable_synchrone)
+        {
+            HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, RESET); 
+            HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, SET); 
+        } 
+    }
 }
 
 
@@ -212,9 +247,9 @@ uint32_t for_delay = 0;
 // uint32_t for_delay = 35;
 // uint32_t pps_offset = 0;
 // uint32_t for_delay = 0;
-void TIM2_IRQHandler(void) {
-    if (__HAL_TIM_GET_FLAG(&htim2, TIM_FLAG_UPDATE) != RESET) {
-        __HAL_TIM_CLEAR_IT(&htim2, TIM_IT_UPDATE);
+void TIM4_IRQHandler(void) {
+    if (__HAL_TIM_GET_FLAG(&htim4, TIM_FLAG_UPDATE) != RESET) {
+        __HAL_TIM_CLEAR_IT(&htim4, TIM_IT_UPDATE);
         
         static uint32_t count_10hz = 0, count_1hz = 0;
         
@@ -239,6 +274,7 @@ void TIM2_IRQHandler(void) {
     }
 }
 
+
 void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
 {
     if (huart->Instance == USART1 || huart->Instance == USART3)
@@ -246,6 +282,100 @@ void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
         gprmc_led_flag = 0;
     }
 }
+
+
+
+void ProcessReceivedData(uint8_t data) {
+    static char buffer[1024];
+    static int index = 0;
+
+    // 接收到换行符，处理数据
+    if (data == '\n' || data == '\0') {
+        buffer[index] = '\0'; 
+        
+        // 如果第一个字符是 #
+        if (buffer[0] == '#') {
+            char *ptr;
+            long num = strtol(buffer + 1, &ptr, 10);  // 尝试将字符串转换为长整型数字
+            if (*ptr == '\0') {  // 检查转换后的剩余部分是否为空
+                pps_offset = (uint32_t)num;
+
+                char output_log[100];
+                sprintf(output_log, "Set pps_offset = %ld\n", pps_offset);
+                HAL_UART_Transmit(&huart1, (uint8_t *)output_log, strlen(output_log), 1000);
+            } else {
+
+                char output_log[] = "Fail to set pps_offset! Invalid input as number.\n";
+                HAL_UART_Transmit(&huart1, (uint8_t *)output_log, strlen(output_log), 1000);
+                return;
+            }
+        }
+        // 如果第一个字符是 $
+        else if (buffer[0] == '$') {
+            if (strncmp(buffer, "$GPRMC", 6) == 0) {
+                int commaCount = 0;
+                for (int i = 0; buffer[i]; i++) {
+                    if (buffer[i] == ',') commaCount++;
+                }
+                // 检查逗号数量是否符合最低要求
+                if (commaCount >= 11) { // GPRMC 应该至少有 12 个字段，即至少 11 个逗号
+                    // 解析 GPRMC 数据
+                    char *token = strtok(buffer, ",");
+                    int tokenIndex = 0;
+                    while (token != NULL) {
+                        token = strtok(NULL, ",");
+                        tokenIndex++;
+
+                        // 根据 GPRMC 的格式选择数据
+                        switch (tokenIndex) {
+                            case 1: // 时间
+                                BASE_HOUR = atoi(token) / 10000;
+                                BASE_MINUTE = (atoi(token) % 10000) / 100;
+                                BASE_SECOND = atoi(token) % 100;
+                                break;
+                            case 3: // 纬度
+                                strncpy(LATITUDE, token, sizeof(LATITUDE));
+                                break;
+                            case 4: // 纬度方向
+                                strncat(LATITUDE, token, sizeof(LATITUDE) - strlen(LATITUDE) - 1);
+                                break;
+                            case 5: // 经度
+                                strncpy(LONGITUDE, token, sizeof(LONGITUDE));
+                                break;
+                            case 6: // 经度方向
+                                strncat(LONGITUDE, token, sizeof(LONGITUDE) - strlen(LONGITUDE) - 1);
+                                break;
+                        }
+                    }
+                    elapsed = baseTick - HAL_GetTick();
+
+                } else {
+                    char output_log[] = "Fail to set GPRMC data! Invalid GPRMC data!";
+                    HAL_UART_Transmit(&huart1, (uint8_t *)output_log, strlen(output_log), 1000);
+                    return;
+                }
+            }
+        }
+
+        memset(buffer, 0, sizeof(buffer)); // 显式清空缓冲区
+        index = 0; // 重置缓冲区索引
+
+    } else {
+        // 持续接收数据
+        if (index < (sizeof(buffer) - 1)) {
+            buffer[index++] = data;
+        }
+    }
+}
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+{
+    if (huart->Instance == USART1) 
+    {
+        ProcessReceivedData(uart_rx_buffer); 
+        HAL_UART_Receive_IT(huart, &uart_rx_buffer, 1);
+    }
+}
+
 
 
 
@@ -285,20 +415,29 @@ int main(void)
   MX_USART1_UART_Init();
   MX_USART3_UART_Init();
   MX_TIM3_Init();
+  MX_TIM4_Init();
   /* USER CODE BEGIN 2 */
   
 
-  if (HAL_TIM_Base_Start_IT(&htim2) != HAL_OK) {
-    Error_Handler();  
-  }
-  HAL_NVIC_SetPriority(TIM2_IRQn, 0, 0);
-    HAL_NVIC_EnableIRQ(TIM2_IRQn);
 
   if (HAL_TIM_Base_Start_IT(&htim3) != HAL_OK) {
     Error_Handler();
   }
-  HAL_NVIC_SetPriority(TIM3_IRQn, 0, 1);
-    HAL_NVIC_EnableIRQ(TIM3_IRQn);
+  HAL_NVIC_SetPriority(TIM3_IRQn, 1, 1);
+  HAL_NVIC_EnableIRQ(TIM3_IRQn);
+
+  if (HAL_TIM_Base_Start_IT(&htim4) != HAL_OK) {
+    Error_Handler();
+  }
+  HAL_NVIC_SetPriority(TIM4_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(TIM4_IRQn);
+  baseTick = HAL_GetTick();
+
+  if (HAL_TIM_Base_Start_IT(&htim2) != HAL_OK) {
+    Error_Handler();  
+  }
+  HAL_NVIC_SetPriority(TIM2_IRQn, 2, 2);
+  HAL_NVIC_EnableIRQ(TIM2_IRQn);
 
   // if (HAL_TIM_Base_Start_IT(&htim5) != HAL_OK) {
   //   Error_Handler();
@@ -306,50 +445,59 @@ int main(void)
   // HAL_NVIC_SetPriority(TIM5_IRQn, 0, 1);
   //   HAL_NVIC_EnableIRQ(TIM5_IRQn);
   
+
+  if (HAL_UART_Receive_IT(&huart1, &uart_rx_buffer, 1) != HAL_OK) {
+      Error_Handler(); 
+  }
+
+
   while (1) {
 
-      if (trigger_led_flag && trigger_led_count >= 5)
-      {
-          trigger_led_flag = 0;
-          trigger_led_count = 0;
-          HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, GPIO_PIN_SET); // Trigger LED OFF
-      }
-      
-      if (!gprmc_led_flag && gprmc_led_count >= 5)
-      {
-          gprmc_led_count = 0;
-          HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, GPIO_PIN_SET); // LED GPRMC Sending OFF
-      }
-    
+      while(enable_synchrone) {
 
-      if (trigger_flag) {
-
-          trigger_flag = 0;
-
-          // 点亮PB2表示触发信号已发送
-          HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, GPIO_PIN_RESET); // Trigger LED
-          trigger_led_flag = 1;
-
-          HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_4); // Toggle Trigger signal
+          if (trigger_led_flag && trigger_led_count >= 5)
+          {
+              trigger_led_flag = 0;
+              trigger_led_count = 0;
+              HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, GPIO_PIN_SET); // Trigger LED OFF
+          }
           
-      }
+          if (!gprmc_led_flag && gprmc_led_count >= 5)
+          {
+              gprmc_led_count = 0;
+              HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, GPIO_PIN_SET); // LED GPRMC Sending OFF
+          }
+        
 
-      if (send_gps_flag) {
+          if (trigger_flag) {
+
+              trigger_flag = 0;
+
+              // 点亮PB2表示触发信号已发送
+              HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, GPIO_PIN_RESET); // Trigger LED
+              trigger_led_flag = 1;
+
+              HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_4); // Toggle Trigger signal
+              
+          }
+
+          if (send_gps_flag) {
 
 
-          send_gps_flag = 0;
+              send_gps_flag = 0;
 
-          HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, GPIO_PIN_RESET); // LED GPRMC Sending ON
-          gprmc_led_flag = 1;
+              HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, GPIO_PIN_RESET); // LED GPRMC Sending ON
+              gprmc_led_flag = 1;
 
-          GPRMC_Generator(baseTime);
-          HAL_UART_Transmit(&huart1, (uint8_t *)gprmc_data, strlen(gprmc_data), 6);
-          // HAL_UART_Transmit_DMA(&huart1, (uint8_t *)gprmc_data, strlen(gprmc_data));
-          // HAL_UART_Transmit(&huart3, (uint8_t *)gprmc_data, strlen(gprmc_data), 70);
-          HAL_UART_Transmit_DMA(&huart3, (uint8_t *)gprmc_data, strlen(gprmc_data));
-          
-          
-          
+              GPRMC_Generator(baseTime);
+              HAL_UART_Transmit(&huart1, (uint8_t *)gprmc_data, strlen(gprmc_data), 6);
+              // HAL_UART_Transmit_DMA(&huart1, (uint8_t *)gprmc_data, strlen(gprmc_data));
+              // HAL_UART_Transmit(&huart3, (uint8_t *)gprmc_data, strlen(gprmc_data), 70);
+              HAL_UART_Transmit_DMA(&huart3, (uint8_t *)gprmc_data, strlen(gprmc_data));
+              
+              
+              
+          }
       }
   }
 
