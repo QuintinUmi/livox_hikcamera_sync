@@ -307,7 +307,6 @@ void ProcessReceivedData(uint8_t data) {
 
                 char output_log[] = "Fail to set pps_offset! Invalid input as number.\n";
                 HAL_UART_Transmit(&huart1, (uint8_t *)output_log, strlen(output_log), 1000);
-                return;
             }
         }
         // 如果第一个字符是 $
@@ -326,6 +325,7 @@ void ProcessReceivedData(uint8_t data) {
                         token = strtok(NULL, ",");
                         tokenIndex++;
 
+                    
                         // 根据 GPRMC 的格式选择数据
                         switch (tokenIndex) {
                             case 1: // 时间
@@ -334,16 +334,45 @@ void ProcessReceivedData(uint8_t data) {
                                 BASE_SECOND = atoi(token) % 100;
                                 break;
                             case 3: // 纬度
-                                strncpy(LATITUDE, token, sizeof(LATITUDE));
+                                strncpy(LATITUDE, token, sizeof(LATITUDE) - 1);
+                                LATITUDE[sizeof(LATITUDE) - 1] = '\0';  // 确保字符串以null结尾
                                 break;
                             case 4: // 纬度方向
-                                strncat(LATITUDE, token, sizeof(LATITUDE) - strlen(LATITUDE) - 1);
+                                if (strlen(LATITUDE) + 2 < sizeof(LATITUDE)) {  // Check enough space for comma and token
+                                    size_t len = strlen(LATITUDE);
+                                    LATITUDE[len] = ',';           // Append comma directly
+                                    LATITUDE[len + 1] = '\0';      // Null-terminate
+                                    strncat(LATITUDE, token, sizeof(LATITUDE) - strlen(LATITUDE) - 1);  // Append token safely
+                                }
                                 break;
                             case 5: // 经度
-                                strncpy(LONGITUDE, token, sizeof(LONGITUDE));
+                                strncpy(LONGITUDE, token, sizeof(LONGITUDE) - 1);
+                                LONGITUDE[sizeof(LONGITUDE) - 1] = '\0';  // 确保字符串以null结尾
                                 break;
                             case 6: // 经度方向
-                                strncat(LONGITUDE, token, sizeof(LONGITUDE) - strlen(LONGITUDE) - 1);
+                                if (strlen(LONGITUDE) + 2 < sizeof(LONGITUDE)) {
+                                    size_t len = strlen(LONGITUDE);
+                                    LONGITUDE[len] = ',';          // Append comma directly
+                                    LONGITUDE[len + 1] = '\0';     // Null-terminate
+                                    strncat(LONGITUDE, token, sizeof(LONGITUDE) - strlen(LONGITUDE) - 1);  // Append token safely
+                                }
+                                break;
+                            case 9: // 日期，格式为 DDMMYY
+                                if (strlen(token) == 6) {
+                                    char day[3], month[3], year[5];
+                                    // Prepend '20' for the year
+                                    strcpy(year, "20"); // Use strcpy here for clarity and safety
+                                    strncat(year, token + 4, 2); // Append last two digits of the year
+
+                                    strncpy(day, token, 2);
+                                    day[2] = '\0'; // Ensure null termination
+                                    strncpy(month, token + 2, 2);
+                                    month[2] = '\0'; // Ensure null termination
+
+                                    BASE_DAY = atoi(day);
+                                    BASE_MONTH = atoi(month);
+                                    BASE_YEAR = atoi(year);
+                                }
                                 break;
                         }
                     }
@@ -351,12 +380,15 @@ void ProcessReceivedData(uint8_t data) {
 
                 } else {
                     char output_log[] = "Fail to set GPRMC data! Invalid GPRMC data!";
-                    HAL_UART_Transmit(&huart1, (uint8_t *)output_log, strlen(output_log), 1000);
-                    return;
+                    HAL_UART_Transmit(&huart1, (uint8_t *)output_log, strlen(output_log), 100);
                 }
             }
         }
 
+        while (__HAL_UART_GET_FLAG(&huart1, UART_FLAG_RXNE)) {
+            volatile uint32_t dummy = USART1->DR; // 替换USART1为相应的USART实例
+            dummy;
+        }
         memset(buffer, 0, sizeof(buffer)); // 显式清空缓冲区
         index = 0; // 重置缓冲区索引
 
