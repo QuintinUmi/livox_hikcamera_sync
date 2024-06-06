@@ -326,6 +326,7 @@ void ProcessReceivedData(uint8_t data) {
                         token = strtok(NULL, ",");
                         tokenIndex++;
 
+                    
                         // 根据 GPRMC 的格式选择数据
                         switch (tokenIndex) {
                             case 1: // 时间
@@ -334,16 +335,24 @@ void ProcessReceivedData(uint8_t data) {
                                 BASE_SECOND = atoi(token) % 100;
                                 break;
                             case 3: // 纬度
-                                strncpy(LATITUDE, token, sizeof(LATITUDE));
+                                strncpy(LATITUDE, token, sizeof(LATITUDE) - 1);
+                                LATITUDE[sizeof(LATITUDE) - 1] = '\0';  // 确保字符串以null结尾
                                 break;
                             case 4: // 纬度方向
-                                strncat(LATITUDE, token, sizeof(LATITUDE) - strlen(LATITUDE) - 1);
+                                if (strlen(LATITUDE) + 2 < sizeof(LATITUDE)) {  // 检查空间是否足够
+                                    strncat(LATITUDE, ",", 1);  // 首先添加逗号
+                                    strncat(LATITUDE, token, sizeof(LATITUDE) - strlen(LATITUDE) - 1);
+                                }
                                 break;
                             case 5: // 经度
-                                strncpy(LONGITUDE, token, sizeof(LONGITUDE));
+                                strncpy(LONGITUDE, token, sizeof(LONGITUDE) - 1);
+                                LONGITUDE[sizeof(LONGITUDE) - 1] = '\0';  // 确保字符串以null结尾
                                 break;
                             case 6: // 经度方向
-                                strncat(LONGITUDE, token, sizeof(LONGITUDE) - strlen(LONGITUDE) - 1);
+                                if (strlen(LONGITUDE) + 2 < sizeof(LONGITUDE)) {  // 检查空间是否足够
+                                    strncat(LONGITUDE, ",", 1);  // 首先添加逗号
+                                    strncat(LONGITUDE, token, sizeof(LONGITUDE) - strlen(LONGITUDE) - 1);
+                                }
                                 break;
                         }
                     }
