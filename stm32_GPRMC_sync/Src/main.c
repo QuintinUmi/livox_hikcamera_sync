@@ -241,7 +241,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 
 }
 
-uint32_t pps_offset = 397;
+uint32_t pps_offset = 350;
 uint32_t for_delay = 0;
 // uint32_t pps_offset = 390;
 // uint32_t for_delay = 35;
@@ -253,24 +253,27 @@ void TIM4_IRQHandler(void) {
         
         static uint32_t count_10hz = 0, count_1hz = 0;
         
-        if (++count_10hz >= 500) {
-            count_10hz = 0;
-            trigger_flag = 1;
-        }
-        
-        if (++count_1hz >= 5000) {
-            count_1hz = 0;
-            send_gps_flag = 1;
-
-            if(pps_flag) {
-              Error_Handler();
-            }
+        count_1hz ++;
+        count_10hz ++;
+        if (count_10hz >= 250) {
             DWT_Delay(pps_offset);
             for(int i = 0; i < for_delay; i ++);
-            HAL_GPIO_WritePin(GPIOB, GPIO_PIN_3, GPIO_PIN_SET); // PPS HIGH
-            pps_flag = 1;  // Set flag to turn off PPS in ISR after 100 ms
-        }
 
+            HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_4); // Toggle Trigger signal
+            trigger_flag = 1;
+
+            if (count_1hz >= 5000) {
+                if(pps_flag) {
+                    Error_Handler();
+                }
+                HAL_GPIO_WritePin(GPIOB, GPIO_PIN_3, GPIO_PIN_SET); // PPS HIGH
+                send_gps_flag = 1;    
+                pps_flag = 1;  // Set flag to turn off PPS in ISR after 100 ms
+                count_1hz = 0;          
+            }
+            count_10hz = 0;
+        }
+        
     }
 }
 
@@ -487,7 +490,7 @@ int main(void)
 
       while(enable_synchrone) {
 
-          if (trigger_led_flag && trigger_led_count >= 5)
+          if (trigger_led_flag && trigger_led_count >= 3)
           {
               trigger_led_flag = 0;
               trigger_led_count = 0;
@@ -508,8 +511,6 @@ int main(void)
               // 点亮PB2表示触发信号已发送
               HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, GPIO_PIN_RESET); // Trigger LED
               trigger_led_flag = 1;
-
-              HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_4); // Toggle Trigger signal
               
           }
 
