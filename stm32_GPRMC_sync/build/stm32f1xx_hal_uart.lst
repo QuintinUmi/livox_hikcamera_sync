@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccWdceWU.s 			page 1
+ARM GAS  /tmp/ccvLMv3d.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
   31:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     (#) Declare a UART_HandleTypeDef handle structure (eg. UART_HandleTypeDef huart).
   32:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     (#) Initialize the UART low level resources by implementing the HAL_UART_MspInit() API:
   33:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****         (##) Enable the USARTx interface clock.
-ARM GAS  /tmp/ccWdceWU.s 			page 2
+ARM GAS  /tmp/ccvLMv3d.s 			page 2
 
 
   34:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****         (##) UART pins configuration:
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
   88:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     Function HAL_UART_RegisterCallback() allows to register following callbacks:
   89:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     (+) TxHalfCpltCallback        : Tx Half Complete Callback.
   90:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     (+) TxCpltCallback            : Tx Complete Callback.
-ARM GAS  /tmp/ccWdceWU.s 			page 3
+ARM GAS  /tmp/ccvLMv3d.s 			page 3
 
 
   91:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     (+) RxHalfCpltCallback        : Rx Half Complete Callback.
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  145:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     and weak (surcharged) callbacks are used.
  146:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
  147:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****      [..]
-ARM GAS  /tmp/ccWdceWU.s 			page 4
+ARM GAS  /tmp/ccvLMv3d.s 			page 4
 
 
  148:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****         Three operation modes are available within this driver :
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  202:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****            When function exits, no data reception could occur. HAL status and number of actually re
  203:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****            are returned by function after finishing transfer.
  204:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****        (+) Non-Blocking mode: The reception is performed using Interrupts or DMA.
-ARM GAS  /tmp/ccWdceWU.s 			page 5
+ARM GAS  /tmp/ccvLMv3d.s 			page 5
 
 
  205:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****            These API's return the HAL status.
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  259:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
  260:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** /** @addtogroup STM32F1xx_HAL_Driver
  261:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   * @{
-ARM GAS  /tmp/ccWdceWU.s 			page 6
+ARM GAS  /tmp/ccvLMv3d.s 			page 6
 
 
  262:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   */
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  316:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** /** @defgroup UART_Exported_Functions_Group1 Initialization and de-initialization functions
  317:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   *  @brief    Initialization and Configuration functions
  318:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   *
-ARM GAS  /tmp/ccWdceWU.s 			page 7
+ARM GAS  /tmp/ccvLMv3d.s 			page 7
 
 
  319:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** @verbatim
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  373:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   assert_param(IS_UART_WORD_LENGTH(huart->Init.WordLength));
  374:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** #if defined(USART_CR1_OVER8)
  375:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   assert_param(IS_UART_OVERSAMPLING(huart->Init.OverSampling));
-ARM GAS  /tmp/ccWdceWU.s 			page 8
+ARM GAS  /tmp/ccvLMv3d.s 			page 8
 
 
  376:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** #endif /* USART_CR1_OVER8 */
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  430:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   * @retval HAL status
  431:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   */
  432:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** HAL_StatusTypeDef HAL_HalfDuplex_Init(UART_HandleTypeDef *huart)
-ARM GAS  /tmp/ccWdceWU.s 			page 9
+ARM GAS  /tmp/ccvLMv3d.s 			page 9
 
 
  433:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** {
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  487:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
  488:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   /* Initialize the UART state*/
  489:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   huart->ErrorCode = HAL_UART_ERROR_NONE;
-ARM GAS  /tmp/ccWdceWU.s 			page 10
+ARM GAS  /tmp/ccvLMv3d.s 			page 10
 
 
  490:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   huart->gState = HAL_UART_STATE_READY;
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  544:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** #endif /* (USE_HAL_UART_REGISTER_CALLBACKS) */
  545:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   }
  546:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
-ARM GAS  /tmp/ccWdceWU.s 			page 11
+ARM GAS  /tmp/ccvLMv3d.s 			page 11
 
 
  547:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   huart->gState = HAL_UART_STATE_BUSY;
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  601:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   assert_param(IS_UART_INSTANCE(huart->Instance));
  602:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
  603:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   /* Check the Address & wake up method parameters */
-ARM GAS  /tmp/ccWdceWU.s 			page 12
+ARM GAS  /tmp/ccvLMv3d.s 			page 12
 
 
  604:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   assert_param(IS_UART_WAKEUPMETHOD(WakeUpMethod));
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  658:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   huart->ErrorCode = HAL_UART_ERROR_NONE;
  659:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   huart->gState = HAL_UART_STATE_READY;
  660:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   huart->RxState = HAL_UART_STATE_READY;
-ARM GAS  /tmp/ccWdceWU.s 			page 13
+ARM GAS  /tmp/ccvLMv3d.s 			page 13
 
 
  661:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   huart->RxEventType = HAL_UART_RXEVENT_TC;
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  715:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   *                the configuration information for the specified UART module.
  716:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   * @retval None
  717:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   */
-ARM GAS  /tmp/ccWdceWU.s 			page 14
+ARM GAS  /tmp/ccvLMv3d.s 			page 14
 
 
  718:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** __weak void HAL_UART_MspInit(UART_HandleTypeDef *huart)
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  772:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     huart->ErrorCode |= HAL_UART_ERROR_INVALID_CALLBACK;
  773:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
  774:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     return HAL_ERROR;
-ARM GAS  /tmp/ccWdceWU.s 			page 15
+ARM GAS  /tmp/ccvLMv3d.s 			page 15
 
 
  775:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   }
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  829:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   }
  830:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   else if (huart->gState == HAL_UART_STATE_RESET)
  831:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   {
-ARM GAS  /tmp/ccWdceWU.s 			page 16
+ARM GAS  /tmp/ccvLMv3d.s 			page 16
 
 
  832:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     switch (CallbackID)
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  886:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   HAL_StatusTypeDef status = HAL_OK;
  887:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
  888:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   if (HAL_UART_STATE_READY == huart->gState)
-ARM GAS  /tmp/ccWdceWU.s 			page 17
+ARM GAS  /tmp/ccvLMv3d.s 			page 17
 
 
  889:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   {
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  943:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     switch (CallbackID)
  944:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     {
  945:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****       case HAL_UART_MSPINIT_CB_ID :
-ARM GAS  /tmp/ccWdceWU.s 			page 18
+ARM GAS  /tmp/ccvLMv3d.s 			page 18
 
 
  946:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****         huart->MspInitCallback = HAL_UART_MspInit;
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 1000:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   {
 1001:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     huart->ErrorCode |= HAL_UART_ERROR_INVALID_CALLBACK;
 1002:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
-ARM GAS  /tmp/ccWdceWU.s 			page 19
+ARM GAS  /tmp/ccvLMv3d.s 			page 19
 
 
 1003:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     status =  HAL_ERROR;
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 1057:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****        (+) Blocking mode: The communication is performed in polling mode.
 1058:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****            The HAL status of all data processing is returned by the same function
 1059:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****            after finishing transfer.
-ARM GAS  /tmp/ccWdceWU.s 			page 20
+ARM GAS  /tmp/ccvLMv3d.s 			page 20
 
 
 1060:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****        (+) Non-Blocking mode: The communication is performed using Interrupts
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 1114:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****            If user wants to abort it, Abort services should be called by user.
 1115:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****        (+) Error is considered as Blocking : Transfer could not be completed properly and is aborte
 1116:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****            This concerns Overrun Error In Interrupt mode reception and all errors in DMA mode.
-ARM GAS  /tmp/ccWdceWU.s 			page 21
+ARM GAS  /tmp/ccvLMv3d.s 			page 21
 
 
 1117:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****            Error code is set to allow user to identify error type, and HAL_UART_ErrorCallback() use
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 1171:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     }
 1172:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
 1173:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     while (huart->TxXferCount > 0U)
-ARM GAS  /tmp/ccWdceWU.s 			page 22
+ARM GAS  /tmp/ccvLMv3d.s 			page 22
 
 
 1174:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     {
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 1228:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   {
 1229:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     if ((pData == NULL) || (Size == 0U))
 1230:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     {
-ARM GAS  /tmp/ccWdceWU.s 			page 23
+ARM GAS  /tmp/ccvLMv3d.s 			page 23
 
 
 1231:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****       return  HAL_ERROR;
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 1285:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
 1286:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     return HAL_OK;
 1287:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   }
-ARM GAS  /tmp/ccWdceWU.s 			page 24
+ARM GAS  /tmp/ccvLMv3d.s 			page 24
 
 
 1288:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   else
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 1342:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   * @retval HAL status
 1343:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   */
 1344:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** HAL_StatusTypeDef HAL_UART_Receive_IT(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size)
-ARM GAS  /tmp/ccWdceWU.s 			page 25
+ARM GAS  /tmp/ccvLMv3d.s 			page 25
 
 
 1345:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** {
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 1399:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     huart->hdmatx->XferHalfCpltCallback = UART_DMATxHalfCplt;
 1400:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
 1401:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     /* Set the DMA error callback */
-ARM GAS  /tmp/ccWdceWU.s 			page 26
+ARM GAS  /tmp/ccvLMv3d.s 			page 26
 
 
 1402:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     huart->hdmatx->XferErrorCallback = UART_DMAError;
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 1456:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   }
 1457:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** }
 1458:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
-ARM GAS  /tmp/ccWdceWU.s 			page 27
+ARM GAS  /tmp/ccvLMv3d.s 			page 27
 
 
 1459:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** /**
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 1513:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****       ATOMIC_SET_BIT(huart->Instance->CR1, USART_CR1_PEIE);
 1514:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     }
 1515:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     ATOMIC_SET_BIT(huart->Instance->CR3, USART_CR3_EIE);
-ARM GAS  /tmp/ccWdceWU.s 			page 28
+ARM GAS  /tmp/ccvLMv3d.s 			page 28
 
 
 1516:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 1570:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** /**
 1571:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   * @brief Receive an amount of data in blocking mode till either the expected number of data is re
 1572:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   * @note   HAL_OK is returned if reception is completed (expected number of data has been received
-ARM GAS  /tmp/ccWdceWU.s 			page 29
+ARM GAS  /tmp/ccvLMv3d.s 			page 29
 
 
 1573:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   *         or if reception is stopped after IDLE event (less than the expected number of data has 
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 1627:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     while (huart->RxXferCount > 0U)
 1628:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     {
 1629:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****       /* Check if IDLE flag is set */
-ARM GAS  /tmp/ccWdceWU.s 			page 30
+ARM GAS  /tmp/ccvLMv3d.s 			page 30
 
 
 1630:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****       if (__HAL_UART_GET_FLAG(huart, UART_FLAG_IDLE))
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 1684:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     /* Set number of received elements in output parameter : RxLen */
 1685:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     *RxLen = huart->RxXferSize - huart->RxXferCount;
 1686:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     /* At end of Rx process, restore huart->RxState to Ready */
-ARM GAS  /tmp/ccWdceWU.s 			page 31
+ARM GAS  /tmp/ccvLMv3d.s 			page 31
 
 
 1687:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     huart->RxState = HAL_UART_STATE_READY;
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 1741:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****            In such case Reception Type has been reset to HAL_UART_RECEPTION_STANDARD. */
 1742:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****         status = HAL_ERROR;
 1743:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****       }
-ARM GAS  /tmp/ccWdceWU.s 			page 32
+ARM GAS  /tmp/ccvLMv3d.s 			page 32
 
 
 1744:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     }
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 1798:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****         /* In case of errors already pending when reception is started,
 1799:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****            Interrupts may have already been raised and lead to reception abortion.
 1800:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****            (Overrun error for instance).
-ARM GAS  /tmp/ccWdceWU.s 			page 33
+ARM GAS  /tmp/ccvLMv3d.s 			page 33
 
 
 1801:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****            In such case Reception Type has been reset to HAL_UART_RECEPTION_STANDARD. */
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 1855:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   */
 1856:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** HAL_StatusTypeDef HAL_UART_Abort(UART_HandleTypeDef *huart)
 1857:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** {
-ARM GAS  /tmp/ccWdceWU.s 			page 34
+ARM GAS  /tmp/ccvLMv3d.s 			page 34
 
 
 1858:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   /* Disable TXEIE, TCIE, RXNE, PE and ERR (Frame error, noise error, overrun error) interrupts */
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 1912:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****           return HAL_TIMEOUT;
 1913:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****         }
 1914:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****       }
-ARM GAS  /tmp/ccWdceWU.s 			page 35
+ARM GAS  /tmp/ccvLMv3d.s 			page 35
 
 
 1915:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     }
@@ -2098,7 +2098,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 1969:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****           return HAL_TIMEOUT;
 1970:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****         }
 1971:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****       }
-ARM GAS  /tmp/ccWdceWU.s 			page 36
+ARM GAS  /tmp/ccvLMv3d.s 			page 36
 
 
 1972:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     }
@@ -2158,7 +2158,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 2026:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
 2027:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****           return HAL_TIMEOUT;
 2028:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****         }
-ARM GAS  /tmp/ccWdceWU.s 			page 37
+ARM GAS  /tmp/ccvLMv3d.s 			page 37
 
 
 2029:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****       }
@@ -2218,7 +2218,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 2083:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     {
 2084:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****       huart->hdmatx->XferAbortCallback = NULL;
 2085:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     }
-ARM GAS  /tmp/ccWdceWU.s 			page 38
+ARM GAS  /tmp/ccvLMv3d.s 			page 38
 
 
 2086:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   }
@@ -2278,7 +2278,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 2140:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****         huart->hdmarx->XferAbortCallback = NULL;
 2141:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****         AbortCplt = 0x01U;
 2142:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****       }
-ARM GAS  /tmp/ccWdceWU.s 			page 39
+ARM GAS  /tmp/ccvLMv3d.s 			page 39
 
 
 2143:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****       else
@@ -2338,7 +2338,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 2197:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   /* Disable the UART DMA Tx request if enabled */
 2198:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   if (HAL_IS_BIT_SET(huart->Instance->CR3, USART_CR3_DMAT))
 2199:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   {
-ARM GAS  /tmp/ccWdceWU.s 			page 40
+ARM GAS  /tmp/ccvLMv3d.s 			page 40
 
 
 2200:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     ATOMIC_CLEAR_BIT(huart->Instance->CR3, USART_CR3_DMAT);
@@ -2398,7 +2398,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 2254:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
 2255:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** /**
 2256:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   * @brief  Abort ongoing Receive transfer (Interrupt mode).
-ARM GAS  /tmp/ccWdceWU.s 			page 41
+ARM GAS  /tmp/ccvLMv3d.s 			page 41
 
 
 2257:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   * @param  huart UART handle.
@@ -2458,7 +2458,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 2311:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****       /* Call registered Abort Receive Complete Callback */
 2312:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****       huart->AbortReceiveCpltCallback(huart);
 2313:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** #else
-ARM GAS  /tmp/ccWdceWU.s 			page 42
+ARM GAS  /tmp/ccvLMv3d.s 			page 42
 
 
 2314:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****       /* Call legacy weak Abort Receive Complete Callback */
@@ -2518,7 +2518,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 2368:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   if ((errorflags != RESET) && (((cr3its & USART_CR3_EIE) != RESET)
 2369:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****                                 || ((cr1its & (USART_CR1_RXNEIE | USART_CR1_PEIE)) != RESET)))
 2370:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   {
-ARM GAS  /tmp/ccWdceWU.s 			page 43
+ARM GAS  /tmp/ccvLMv3d.s 			page 43
 
 
 2371:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     /* UART parity error interrupt occurred ----------------------------------*/
@@ -2578,7 +2578,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 2425:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****             huart->hdmarx->XferAbortCallback = UART_DMAAbortOnError;
 2426:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****             if (HAL_DMA_Abort_IT(huart->hdmarx) != HAL_OK)
 2427:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****             {
-ARM GAS  /tmp/ccWdceWU.s 			page 44
+ARM GAS  /tmp/ccvLMv3d.s 			page 44
 
 
 2428:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****               /* Call Directly XferAbortCallback function in case of error */
@@ -2638,7 +2638,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 2482:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     /* Check if DMA mode is enabled in UART */
 2483:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     if (HAL_IS_BIT_SET(huart->Instance->CR3, USART_CR3_DMAR))
 2484:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     {
-ARM GAS  /tmp/ccWdceWU.s 			page 45
+ARM GAS  /tmp/ccvLMv3d.s 			page 45
 
 
 2485:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****       /* DMA mode enabled */
@@ -2698,7 +2698,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 2539:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****       {
 2540:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****         /* Disable the UART Parity Error Interrupt and RXNE interrupts */
 2541:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****         ATOMIC_CLEAR_BIT(huart->Instance->CR1, (USART_CR1_RXNEIE | USART_CR1_PEIE));
-ARM GAS  /tmp/ccWdceWU.s 			page 46
+ARM GAS  /tmp/ccvLMv3d.s 			page 46
 
 
 2542:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
@@ -2758,7 +2758,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 2596:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** }
 2597:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
 2598:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** /**
-ARM GAS  /tmp/ccWdceWU.s 			page 47
+ARM GAS  /tmp/ccvLMv3d.s 			page 47
 
 
 2599:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   * @brief  Tx Half Transfer completed callbacks.
@@ -2818,7 +2818,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 2653:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   /* NOTE: This function should not be modified, when the callback is needed,
 2654:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****            the HAL_UART_ErrorCallback could be implemented in the user file
 2655:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****    */
-ARM GAS  /tmp/ccWdceWU.s 			page 48
+ARM GAS  /tmp/ccvLMv3d.s 			page 48
 
 
 2656:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** }
@@ -2878,7 +2878,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 2710:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** __weak void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
 2711:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** {
 2712:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   /* Prevent unused argument(s) compilation warning */
-ARM GAS  /tmp/ccWdceWU.s 			page 49
+ARM GAS  /tmp/ccvLMv3d.s 			page 49
 
 
 2713:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   UNUSED(huart);
@@ -2938,7 +2938,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 2767:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
 2768:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   return HAL_OK;
 2769:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** }
-ARM GAS  /tmp/ccWdceWU.s 			page 50
+ARM GAS  /tmp/ccvLMv3d.s 			page 50
 
 
 2770:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
@@ -2998,7 +2998,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 2824:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   return HAL_OK;
 2825:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** }
 2826:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
-ARM GAS  /tmp/ccWdceWU.s 			page 51
+ARM GAS  /tmp/ccvLMv3d.s 			page 51
 
 
 2827:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** /**
@@ -3058,7 +3058,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 2881:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   tmpreg &= (uint32_t)~((uint32_t)(USART_CR1_TE | USART_CR1_RE));
 2882:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
 2883:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   /* Enable the USART's receive interface by setting the RE bit in the USART CR1 register */
-ARM GAS  /tmp/ccWdceWU.s 			page 52
+ARM GAS  /tmp/ccvLMv3d.s 			page 52
 
 
 2884:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   tmpreg |= (uint32_t)USART_CR1_RE;
@@ -3118,7 +3118,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 2938:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   * @retval UART Error Code
 2939:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   */
 2940:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** uint32_t HAL_UART_GetError(const UART_HandleTypeDef *huart)
-ARM GAS  /tmp/ccWdceWU.s 			page 53
+ARM GAS  /tmp/ccvLMv3d.s 			page 53
 
 
 2941:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** {
@@ -3178,7 +3178,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 2995:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     ATOMIC_CLEAR_BIT(huart->Instance->CR3, USART_CR3_DMAT);
 2996:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
 2997:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     /* Enable the UART Transmit Complete Interrupt */
-ARM GAS  /tmp/ccWdceWU.s 			page 54
+ARM GAS  /tmp/ccvLMv3d.s 			page 54
 
 
 2998:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     ATOMIC_SET_BIT(huart->Instance->CR1, USART_CR1_TCIE);
@@ -3238,7 +3238,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 3052:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     /* Disable the DMA transfer for the receiver request by setting the DMAR bit
 3053:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****        in the UART CR3 register */
 3054:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     ATOMIC_CLEAR_BIT(huart->Instance->CR3, USART_CR3_DMAR);
-ARM GAS  /tmp/ccWdceWU.s 			page 55
+ARM GAS  /tmp/ccvLMv3d.s 			page 55
 
 
 3055:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
@@ -3298,7 +3298,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 3109:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   /* Check current reception Mode :
 3110:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****      If Reception till IDLE event has been selected : use Rx Event callback */
 3111:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   if (huart->ReceptionType == HAL_UART_RECEPTION_TOIDLE)
-ARM GAS  /tmp/ccWdceWU.s 			page 56
+ARM GAS  /tmp/ccvLMv3d.s 			page 56
 
 
 3112:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   {
@@ -3358,7 +3358,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 3166:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   /*Call legacy weak error callback*/
 3167:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   HAL_UART_ErrorCallback(huart);
 3168:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** #endif /* USE_HAL_UART_REGISTER_CALLBACKS */
-ARM GAS  /tmp/ccWdceWU.s 			page 57
+ARM GAS  /tmp/ccvLMv3d.s 			page 57
 
 
 3169:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** }
@@ -3418,7 +3418,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 3223:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   huart->pRxBuffPtr = pData;
 3224:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   huart->RxXferSize = Size;
 3225:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   huart->RxXferCount = Size;
-ARM GAS  /tmp/ccWdceWU.s 			page 58
+ARM GAS  /tmp/ccvLMv3d.s 			page 58
 
 
 3226:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
@@ -3478,7 +3478,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 3280:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   HAL_DMA_Start_IT(huart->hdmarx, (uint32_t)&huart->Instance->DR, *(uint32_t *)tmp, Size);
 3281:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
 3282:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   /* Clear the Overrun flag just before enabling the DMA Rx request: can be mandatory for the secon
-ARM GAS  /tmp/ccWdceWU.s 			page 59
+ARM GAS  /tmp/ccvLMv3d.s 			page 59
 
 
 3283:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   __HAL_UART_CLEAR_OREFLAG(huart);
@@ -3538,7 +3538,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
   11:Drivers/CMSIS/Include/cmsis_gcc.h ****  *
   12:Drivers/CMSIS/Include/cmsis_gcc.h ****  * Licensed under the Apache License, Version 2.0 (the License); you may
   13:Drivers/CMSIS/Include/cmsis_gcc.h ****  * not use this file except in compliance with the License.
-ARM GAS  /tmp/ccWdceWU.s 			page 60
+ARM GAS  /tmp/ccvLMv3d.s 			page 60
 
 
   14:Drivers/CMSIS/Include/cmsis_gcc.h ****  * You may obtain a copy of the License at
@@ -3598,7 +3598,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
   68:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __PACKED_UNION                         union __attribute__((packed, aligned(1)))
   69:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
   70:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT32        /* deprecated */
-ARM GAS  /tmp/ccWdceWU.s 			page 61
+ARM GAS  /tmp/ccvLMv3d.s 			page 61
 
 
   71:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic push
@@ -3658,7 +3658,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  125:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Enable IRQ Interrupts
  126:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Enables IRQ interrupts by clearing the I-bit in the CPSR.
  127:Drivers/CMSIS/Include/cmsis_gcc.h ****            Can only be executed in Privileged modes.
-ARM GAS  /tmp/ccWdceWU.s 			page 62
+ARM GAS  /tmp/ccvLMv3d.s 			page 62
 
 
  128:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
@@ -3718,7 +3718,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  182:Drivers/CMSIS/Include/cmsis_gcc.h **** {
  183:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR control, %0" : : "r" (control) : "memory");
  184:Drivers/CMSIS/Include/cmsis_gcc.h **** }
-ARM GAS  /tmp/ccWdceWU.s 			page 63
+ARM GAS  /tmp/ccvLMv3d.s 			page 63
 
 
  185:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -3778,7 +3778,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  239:Drivers/CMSIS/Include/cmsis_gcc.h **** }
  240:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  241:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  /tmp/ccWdceWU.s 			page 64
+ARM GAS  /tmp/ccvLMv3d.s 			page 64
 
 
  242:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
@@ -3838,7 +3838,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  296:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  297:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Main Stack Pointer
  298:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the Main Stack Pointer (MSP).
-ARM GAS  /tmp/ccWdceWU.s 			page 65
+ARM GAS  /tmp/ccvLMv3d.s 			page 65
 
 
  299:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               MSP Register value
@@ -3898,7 +3898,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  353:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the non-secure Stack Pointer (SP) when in secure state.
  354:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               SP Register value
  355:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
-ARM GAS  /tmp/ccWdceWU.s 			page 66
+ARM GAS  /tmp/ccvLMv3d.s 			page 66
 
 
  356:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __TZ_get_SP_NS(void)
@@ -3958,7 +3958,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  410:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    priMask  Priority Mask
  411:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  412:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __set_PRIMASK(uint32_t priMask)
-ARM GAS  /tmp/ccWdceWU.s 			page 67
+ARM GAS  /tmp/ccvLMv3d.s 			page 67
 
 
  413:Drivers/CMSIS/Include/cmsis_gcc.h **** {
@@ -4018,7 +4018,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  467:Drivers/CMSIS/Include/cmsis_gcc.h **** }
  468:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  469:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  /tmp/ccWdceWU.s 			page 68
+ARM GAS  /tmp/ccvLMv3d.s 			page 68
 
 
  470:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
@@ -4078,7 +4078,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  524:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the Fault Mask register.
  525:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               Fault Mask register value
  526:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
-ARM GAS  /tmp/ccWdceWU.s 			page 69
+ARM GAS  /tmp/ccvLMv3d.s 			page 69
 
 
  527:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_FAULTMASK(void)
@@ -4138,7 +4138,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  581:Drivers/CMSIS/Include/cmsis_gcc.h ****      (defined (__ARM_ARCH_8M_BASE__ ) && (__ARM_ARCH_8M_BASE__ == 1))    )
  582:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  583:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
-ARM GAS  /tmp/ccWdceWU.s 			page 70
+ARM GAS  /tmp/ccvLMv3d.s 			page 70
 
 
  584:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Process Stack Pointer Limit
@@ -4198,7 +4198,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  638:Drivers/CMSIS/Include/cmsis_gcc.h **** {
  639:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (!(defined (__ARM_ARCH_8M_MAIN__ ) && (__ARM_ARCH_8M_MAIN__ == 1)) && \
  640:Drivers/CMSIS/Include/cmsis_gcc.h ****     (!defined (__ARM_FEATURE_CMSE) || (__ARM_FEATURE_CMSE < 3)))
-ARM GAS  /tmp/ccWdceWU.s 			page 71
+ARM GAS  /tmp/ccvLMv3d.s 			page 71
 
 
  641:Drivers/CMSIS/Include/cmsis_gcc.h ****   // without main extensions, the non-secure PSPLIM is RAZ/WI
@@ -4258,7 +4258,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  695:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Main Stack Pointer Limit (non-secure)
  696:Drivers/CMSIS/Include/cmsis_gcc.h ****   Devices without ARMv8-M Main Extensions (i.e. Cortex-M23) lack the non-secure
  697:Drivers/CMSIS/Include/cmsis_gcc.h ****   Stack Pointer Limit register hence zero is returned always.
-ARM GAS  /tmp/ccWdceWU.s 			page 72
+ARM GAS  /tmp/ccvLMv3d.s 			page 72
 
 
  698:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -4318,7 +4318,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  752:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR msplim_ns, %0" : : "r" (MainStackPtrLimit));
  753:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
  754:Drivers/CMSIS/Include/cmsis_gcc.h **** }
-ARM GAS  /tmp/ccWdceWU.s 			page 73
+ARM GAS  /tmp/ccvLMv3d.s 			page 73
 
 
  755:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
@@ -4378,7 +4378,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  809:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  810:Drivers/CMSIS/Include/cmsis_gcc.h **** /*@} end of CMSIS_Core_RegAccFunctions */
  811:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  /tmp/ccWdceWU.s 			page 74
+ARM GAS  /tmp/ccvLMv3d.s 			page 74
 
 
  812:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -4438,7 +4438,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  866:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __ISB(void)
  867:Drivers/CMSIS/Include/cmsis_gcc.h **** {
  868:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("isb 0xF":::"memory");
-ARM GAS  /tmp/ccWdceWU.s 			page 75
+ARM GAS  /tmp/ccvLMv3d.s 			page 75
 
 
  869:Drivers/CMSIS/Include/cmsis_gcc.h **** }
@@ -4498,7 +4498,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  923:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("rev16 %0, %1" : __CMSIS_GCC_OUT_REG (result) : __CMSIS_GCC_USE_REG (value) );
  924:Drivers/CMSIS/Include/cmsis_gcc.h ****   return result;
  925:Drivers/CMSIS/Include/cmsis_gcc.h **** }
-ARM GAS  /tmp/ccWdceWU.s 			page 76
+ARM GAS  /tmp/ccvLMv3d.s 			page 76
 
 
  926:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -4558,7 +4558,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  980:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  981:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __RBIT(uint32_t value)
  982:Drivers/CMSIS/Include/cmsis_gcc.h **** {
-ARM GAS  /tmp/ccWdceWU.s 			page 77
+ARM GAS  /tmp/ccvLMv3d.s 			page 77
 
 
  983:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
@@ -4618,7 +4618,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 1037:Drivers/CMSIS/Include/cmsis_gcc.h **** }
 1038:Drivers/CMSIS/Include/cmsis_gcc.h **** 
 1039:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  /tmp/ccWdceWU.s 			page 78
+ARM GAS  /tmp/ccvLMv3d.s 			page 78
 
 
 1040:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
@@ -4678,7 +4678,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
   63              	.LVL4:
   64              		.loc 1 3309 3 is_stmt 1 discriminator 1 view .LVU12
   65              	.LBB323:
-ARM GAS  /tmp/ccWdceWU.s 			page 79
+ARM GAS  /tmp/ccvLMv3d.s 			page 79
 
 
   66              	.LBI323:
@@ -4738,7 +4738,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
   70              		.loc 2 1123 4 discriminator 1 view .LVU15
   71 000e 0C32     		adds	r2, r2, #12
   72              	.LVL5:
-ARM GAS  /tmp/ccWdceWU.s 			page 80
+ARM GAS  /tmp/ccvLMv3d.s 			page 80
 
 
   73              		.loc 2 1123 4 is_stmt 0 discriminator 1 view .LVU16
@@ -4798,7 +4798,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  116              	.L4:
 3322:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   /* Disable RXNE, PE and ERR (Frame error, noise error, overrun error) interrupts */
 3323:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   ATOMIC_CLEAR_BIT(huart->Instance->CR1, (USART_CR1_RXNEIE | USART_CR1_PEIE));
-ARM GAS  /tmp/ccWdceWU.s 			page 81
+ARM GAS  /tmp/ccvLMv3d.s 			page 81
 
 
  117              		.loc 1 3323 3 discriminator 1 view .LVU26
@@ -4858,7 +4858,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  161              	.LVL14:
  162              		.loc 2 1124 4 is_stmt 1 discriminator 1 view .LVU42
  163              		.loc 2 1124 4 is_stmt 0 discriminator 1 view .LVU43
-ARM GAS  /tmp/ccWdceWU.s 			page 82
+ARM GAS  /tmp/ccvLMv3d.s 			page 82
 
 
  164              		.thumb
@@ -4918,7 +4918,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  210              	.LBB334:
 1121:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  211              		.loc 2 1121 4 discriminator 1 view .LVU60
-ARM GAS  /tmp/ccWdceWU.s 			page 83
+ARM GAS  /tmp/ccvLMv3d.s 			page 83
 
 
 1123:Drivers/CMSIS/Include/cmsis_gcc.h ****    return(result);
@@ -4978,7 +4978,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  252              		.loc 1 3329 5 is_stmt 1 discriminator 1 view .LVU76
  253              	.LBB335:
 3329:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   }
-ARM GAS  /tmp/ccWdceWU.s 			page 84
+ARM GAS  /tmp/ccvLMv3d.s 			page 84
 
 
  254              		.loc 1 3329 5 discriminator 1 view .LVU77
@@ -5038,7 +5038,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  294 0052 42E80031 		strex r1, r3, [r2]
  295              	@ 0 "" 2
  296              	.LVL28:
-ARM GAS  /tmp/ccWdceWU.s 			page 85
+ARM GAS  /tmp/ccvLMv3d.s 			page 85
 
 
  297              		.loc 2 1124 4 is_stmt 1 discriminator 1 view .LVU92
@@ -5098,7 +5098,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 3367:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   */
 3368:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** static void UART_DMATxAbortCallback(DMA_HandleTypeDef *hdma)
 3369:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** {
-ARM GAS  /tmp/ccWdceWU.s 			page 86
+ARM GAS  /tmp/ccvLMv3d.s 			page 86
 
 
 3370:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   UART_HandleTypeDef *huart = (UART_HandleTypeDef *)((DMA_HandleTypeDef *)hdma)->Parent;
@@ -5158,7 +5158,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 3424:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     {
 3425:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****       return;
 3426:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     }
-ARM GAS  /tmp/ccWdceWU.s 			page 87
+ARM GAS  /tmp/ccvLMv3d.s 			page 87
 
 
 3427:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   }
@@ -5218,7 +5218,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 3481:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   *         HAL_UART_AbortReceive_IT API (Abort only Rx transfer)
 3482:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   *         (This callback is executed at end of DMA Rx Abort procedure following user abort reques
 3483:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   *         and leads to user Rx Abort Complete callback execution).
-ARM GAS  /tmp/ccWdceWU.s 			page 88
+ARM GAS  /tmp/ccvLMv3d.s 			page 88
 
 
 3484:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   * @param  hdma  Pointer to a DMA_HandleTypeDef structure that contains
@@ -5278,7 +5278,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 3525:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****       huart->pTxBuffPtr += 2U;
 3526:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     }
 3527:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     else
-ARM GAS  /tmp/ccWdceWU.s 			page 89
+ARM GAS  /tmp/ccvLMv3d.s 			page 89
 
 
 3528:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     {
@@ -5338,7 +5338,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  360              	.L11:
 3532:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     {
  361              		.loc 1 3532 5 is_stmt 1 view .LVU111
-ARM GAS  /tmp/ccWdceWU.s 			page 90
+ARM GAS  /tmp/ccvLMv3d.s 			page 90
 
 
 3532:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     {
@@ -5398,7 +5398,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  402              	.LVL35:
 3524:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****       huart->pTxBuffPtr += 2U;
  403              		.loc 1 3524 12 view .LVU126
-ARM GAS  /tmp/ccWdceWU.s 			page 91
+ARM GAS  /tmp/ccvLMv3d.s 			page 91
 
 
  404 0050 0268     		ldr	r2, [r0]
@@ -5458,7 +5458,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 3574:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   * @brief  Receives an amount of data in non blocking mode
 3575:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   * @param  huart  Pointer to a UART_HandleTypeDef structure that contains
 3576:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   *                the configuration information for the specified UART module.
-ARM GAS  /tmp/ccWdceWU.s 			page 92
+ARM GAS  /tmp/ccvLMv3d.s 			page 92
 
 
 3577:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   * @retval HAL status
@@ -5518,7 +5518,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 3631:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****         /* Set reception type to Standard */
 3632:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****         huart->ReceptionType = HAL_UART_RECEPTION_STANDARD;
 3633:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
-ARM GAS  /tmp/ccWdceWU.s 			page 93
+ARM GAS  /tmp/ccvLMv3d.s 			page 93
 
 
 3634:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****         /* Disable IDLE interrupt */
@@ -5578,7 +5578,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  435              	.LCFI0:
  436              		.cfi_def_cfa_offset 8
  437              		.cfi_offset 4, -8
-ARM GAS  /tmp/ccWdceWU.s 			page 94
+ARM GAS  /tmp/ccvLMv3d.s 			page 94
 
 
  438              		.cfi_offset 14, -4
@@ -5638,7 +5638,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  464              	.LVL38:
 3710:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   MODIFY_REG(huart->Instance->CR1,
  465              		.loc 1 3710 3 is_stmt 1 view .LVU146
-ARM GAS  /tmp/ccWdceWU.s 			page 95
+ARM GAS  /tmp/ccvLMv3d.s 			page 95
 
 
  466 001c 0168     		ldr	r1, [r0]
@@ -5698,7 +5698,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 3738:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   }
 3739:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** #else
 3740:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   huart->Instance->BRR = UART_BRR_SAMPLING16(pclk, huart->Init.BaudRate);
-ARM GAS  /tmp/ccWdceWU.s 			page 96
+ARM GAS  /tmp/ccvLMv3d.s 			page 96
 
 
  493              		.loc 1 3740 3 is_stmt 1 view .LVU154
@@ -5758,7 +5758,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  543              		.fpu softvfp
  545              	UART_WaitOnFlagUntilTimeout:
  546              	.LVL44:
-ARM GAS  /tmp/ccWdceWU.s 			page 97
+ARM GAS  /tmp/ccvLMv3d.s 			page 97
 
 
  547              	.LFB113:
@@ -5818,7 +5818,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  590 0028 B8F1000F 		cmp	r8, #0
  591 002c 05D0     		beq	.L27
 3191:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****       {
-ARM GAS  /tmp/ccWdceWU.s 			page 98
+ARM GAS  /tmp/ccvLMv3d.s 			page 98
 
 
  592              		.loc 1 3191 32 discriminator 1 view .LVU175
@@ -5878,7 +5878,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  632              	.LBB343:
  633              	.LBI343:
 1119:Drivers/CMSIS/Include/cmsis_gcc.h **** {
-ARM GAS  /tmp/ccWdceWU.s 			page 99
+ARM GAS  /tmp/ccvLMv3d.s 			page 99
 
 
  634              		.loc 2 1119 31 discriminator 1 view .LVU190
@@ -5938,7 +5938,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 1072:Drivers/CMSIS/Include/cmsis_gcc.h ****    return(result);
  675              		.loc 2 1072 4 is_stmt 0 discriminator 1 view .LVU206
  676              		.syntax unified
-ARM GAS  /tmp/ccWdceWU.s 			page 100
+ARM GAS  /tmp/ccvLMv3d.s 			page 100
 
 
  677              	@ 1072 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
@@ -5998,7 +5998,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  719              	.LVL60:
 3197:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****         huart->RxState = HAL_UART_STATE_READY;
  720              		.loc 1 3197 24 discriminator 2 view .LVU221
-ARM GAS  /tmp/ccWdceWU.s 			page 101
+ARM GAS  /tmp/ccvLMv3d.s 			page 101
 
 
  721 006c 85F84130 		strb	r3, [r5, #65]
@@ -6058,7 +6058,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  764              	.LFE70:
  766              		.section	.text.HAL_UART_Init,"ax",%progbits
  767              		.align	1
-ARM GAS  /tmp/ccWdceWU.s 			page 102
+ARM GAS  /tmp/ccvLMv3d.s 			page 102
 
 
  768              		.global	HAL_UART_Init
@@ -6118,7 +6118,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  405:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
  810              		.loc 1 405 3 view .LVU248
  811 001c 2046     		mov	r0, r4
-ARM GAS  /tmp/ccWdceWU.s 			page 103
+ARM GAS  /tmp/ccvLMv3d.s 			page 103
 
 
  812 001e FFF7FEFF 		bl	UART_SetConfig
@@ -6178,7 +6178,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  395:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** #endif /* (USE_HAL_UART_REGISTER_CALLBACKS) */
  851              		.loc 1 395 5 is_stmt 1 view .LVU264
  852 0056 FFF7FEFF 		bl	HAL_UART_MspInit
-ARM GAS  /tmp/ccWdceWU.s 			page 104
+ARM GAS  /tmp/ccvLMv3d.s 			page 104
 
 
  853              	.LVL66:
@@ -6238,7 +6238,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  447:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   {
  899              		.loc 1 447 12 is_stmt 0 view .LVU275
  900 0008 90F84130 		ldrb	r3, [r0, #65]	@ zero_extendqisi2
-ARM GAS  /tmp/ccWdceWU.s 			page 105
+ARM GAS  /tmp/ccvLMv3d.s 			page 105
 
 
  447:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   {
@@ -6298,7 +6298,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  490:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   huart->RxState = HAL_UART_STATE_READY;
  943              		.loc 1 490 17 is_stmt 0 view .LVU288
  944 0050 2023     		movs	r3, #32
-ARM GAS  /tmp/ccWdceWU.s 			page 106
+ARM GAS  /tmp/ccvLMv3d.s 			page 106
 
 
  945 0052 84F84130 		strb	r3, [r4, #65]
@@ -6358,7 +6358,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  989              	.LFB67:
  509:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   /* Check the UART handle allocation */
  990              		.loc 1 509 1 is_stmt 1 view -0
-ARM GAS  /tmp/ccWdceWU.s 			page 107
+ARM GAS  /tmp/ccvLMv3d.s 			page 107
 
 
  991              		.cfi_startproc
@@ -6418,7 +6418,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  558:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   CLEAR_BIT(huart->Instance->CR3, (USART_CR3_HDSEL | USART_CR3_IREN | USART_CR3_SCEN));
  1032              		.loc 1 558 3 view .LVU315
  1033 0028 2268     		ldr	r2, [r4]
-ARM GAS  /tmp/ccWdceWU.s 			page 108
+ARM GAS  /tmp/ccvLMv3d.s 			page 108
 
 
  1034 002a 1369     		ldr	r3, [r2, #16]
@@ -6478,7 +6478,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  1075              		.loc 1 575 3 is_stmt 1 view .LVU328
  575:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
  1076              		.loc 1 575 22 is_stmt 0 view .LVU329
-ARM GAS  /tmp/ccWdceWU.s 			page 109
+ARM GAS  /tmp/ccvLMv3d.s 			page 109
 
 
  1077 0070 6063     		str	r0, [r4, #52]
@@ -6538,7 +6538,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  595:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   {
  1123              		.loc 1 595 6 is_stmt 0 view .LVU340
  1124 0000 0028     		cmp	r0, #0
-ARM GAS  /tmp/ccWdceWU.s 			page 110
+ARM GAS  /tmp/ccvLMv3d.s 			page 110
 
 
  1125 0002 41D0     		beq	.L64
@@ -6598,7 +6598,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  1166 0032 1361     		str	r3, [r2, #16]
  644:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
  1167              		.loc 1 644 3 view .LVU354
-ARM GAS  /tmp/ccWdceWU.s 			page 111
+ARM GAS  /tmp/ccvLMv3d.s 			page 111
 
 
  1168 0034 2268     		ldr	r2, [r4]
@@ -6658,7 +6658,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  661:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
  1210              		.loc 1 661 3 is_stmt 1 view .LVU367
  661:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
-ARM GAS  /tmp/ccWdceWU.s 			page 112
+ARM GAS  /tmp/ccvLMv3d.s 			page 112
 
 
  1211              		.loc 1 661 22 is_stmt 0 view .LVU368
@@ -6718,7 +6718,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  736:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   /* NOTE: This function should not be modified, when the callback is needed,
  1258              		.loc 1 736 3 view .LVU378
  740:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
-ARM GAS  /tmp/ccWdceWU.s 			page 113
+ARM GAS  /tmp/ccvLMv3d.s 			page 113
 
 
  1259              		.loc 1 740 1 is_stmt 0 view .LVU379
@@ -6778,7 +6778,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  1304 001a 0020     		movs	r0, #0
  1305 001c 6064     		str	r0, [r4, #68]
  701:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   huart->RxState = HAL_UART_STATE_RESET;
-ARM GAS  /tmp/ccWdceWU.s 			page 114
+ARM GAS  /tmp/ccvLMv3d.s 			page 114
 
 
  1306              		.loc 1 701 3 is_stmt 1 view .LVU391
@@ -6838,7 +6838,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  1348              	.LVL97:
  1349              	.LFB72:
 1139:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   const uint8_t  *pdata8bits;
-ARM GAS  /tmp/ccWdceWU.s 			page 115
+ARM GAS  /tmp/ccvLMv3d.s 			page 115
 
 
  1350              		.loc 1 1139 1 is_stmt 1 view -0
@@ -6898,7 +6898,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  1392              	.LVL100:
 1149:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     }
  1393              		.loc 1 1149 15 view .LVU419
-ARM GAS  /tmp/ccWdceWU.s 			page 116
+ARM GAS  /tmp/ccvLMv3d.s 			page 116
 
 
  1394 0020 44E0     		b	.L79
@@ -6958,7 +6958,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  1431 004a FBB1     		cbz	r3, .L89
 1170:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     }
  1432              		.loc 1 1170 19 view .LVU437
-ARM GAS  /tmp/ccWdceWU.s 			page 117
+ARM GAS  /tmp/ccvLMv3d.s 			page 117
 
 
  1433 004c 4FF00008 		mov	r8, #0
@@ -7018,7 +7018,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  1473 0078 FFF7FEFF 		bl	UART_WaitOnFlagUntilTimeout
  1474              	.LVL108:
 1175:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****       {
-ARM GAS  /tmp/ccWdceWU.s 			page 118
+ARM GAS  /tmp/ccvLMv3d.s 			page 118
 
 
  1475              		.loc 1 1175 10 view .LVU452
@@ -7078,7 +7078,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 1198:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
  1515              		.loc 1 1198 5 is_stmt 1 view .LVU467
 1198:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
-ARM GAS  /tmp/ccWdceWU.s 			page 119
+ARM GAS  /tmp/ccvLMv3d.s 			page 119
 
 
  1516              		.loc 1 1198 19 is_stmt 0 view .LVU468
@@ -7138,7 +7138,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  1564              	HAL_UART_Receive:
  1565              	.LVL120:
  1566              	.LFB73:
-ARM GAS  /tmp/ccWdceWU.s 			page 120
+ARM GAS  /tmp/ccvLMv3d.s 			page 120
 
 
 1221:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   uint8_t  *pdata8bits;
@@ -7198,7 +7198,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  1608 001e 0120     		movs	r0, #1
  1609              	.LVL123:
 1231:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     }
-ARM GAS  /tmp/ccWdceWU.s 			page 121
+ARM GAS  /tmp/ccvLMv3d.s 			page 121
 
 
  1610              		.loc 1 1231 15 view .LVU490
@@ -7258,7 +7258,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  1646              		.loc 1 1253 19 view .LVU508
  1647 0044 4FF00008 		mov	r8, #0
  1648 0048 17E0     		b	.L100
-ARM GAS  /tmp/ccWdceWU.s 			page 122
+ARM GAS  /tmp/ccvLMv3d.s 			page 122
 
 
  1649              	.L115:
@@ -7318,7 +7318,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  1686              		.loc 1 1272 23 view .LVU525
  1687 006c 2B70     		strb	r3, [r5]
  1688              	.L105:
-ARM GAS  /tmp/ccWdceWU.s 			page 123
+ARM GAS  /tmp/ccvLMv3d.s 			page 123
 
 
 1278:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****       }
@@ -7378,7 +7378,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 1270:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****         {
  1728              		.loc 1 1270 12 view .LVU541
  1729 0096 B3F5805F 		cmp	r3, #4096
-ARM GAS  /tmp/ccWdceWU.s 			page 124
+ARM GAS  /tmp/ccvLMv3d.s 			page 124
 
 
  1730 009a E5D0     		beq	.L103
@@ -7438,7 +7438,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  1770 00be BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
  1771              	.LVL136:
  1772              	.L108:
-ARM GAS  /tmp/ccWdceWU.s 			page 125
+ARM GAS  /tmp/ccvLMv3d.s 			page 125
 
 
  1773              	.LCFI19:
@@ -7498,7 +7498,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  1817              		.loc 1 1315 23 is_stmt 0 view .LVU567
  1818 000e 0162     		str	r1, [r0, #32]
 1316:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     huart->TxXferCount = Size;
-ARM GAS  /tmp/ccWdceWU.s 			page 126
+ARM GAS  /tmp/ccvLMv3d.s 			page 126
 
 
  1819              		.loc 1 1316 5 is_stmt 1 view .LVU568
@@ -7558,7 +7558,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 1312:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     }
  1858              		.loc 1 1312 14 view .LVU584
  1859 0030 0120     		movs	r0, #1
-ARM GAS  /tmp/ccWdceWU.s 			page 127
+ARM GAS  /tmp/ccvLMv3d.s 			page 127
 
 
  1860              	.LVL147:
@@ -7618,7 +7618,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 1383:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     {
  1906              		.loc 1 1383 8 is_stmt 0 view .LVU595
  1907 000e 0029     		cmp	r1, #0
-ARM GAS  /tmp/ccWdceWU.s 			page 128
+ARM GAS  /tmp/ccvLMv3d.s 			page 128
 
 
  1908 0010 2FD0     		beq	.L127
@@ -7678,7 +7678,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  1944              		.loc 1 1399 5 is_stmt 1 view .LVU613
 1399:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
  1945              		.loc 1 1399 10 is_stmt 0 view .LVU614
-ARM GAS  /tmp/ccWdceWU.s 			page 129
+ARM GAS  /tmp/ccvLMv3d.s 			page 129
 
 
  1946 002e A06B     		ldr	r0, [r4, #56]
@@ -7738,7 +7738,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  1983              		.loc 1 1416 5 discriminator 1 view .LVU631
  1984 0052 2268     		ldr	r2, [r4]
  1985              	.LVL157:
-ARM GAS  /tmp/ccWdceWU.s 			page 130
+ARM GAS  /tmp/ccvLMv3d.s 			page 130
 
 
  1986              	.LBB351:
@@ -7798,7 +7798,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  2028              	.LBE354:
  2029              	.LBE353:
 1416:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
-ARM GAS  /tmp/ccWdceWU.s 			page 131
+ARM GAS  /tmp/ccvLMv3d.s 			page 131
 
 
  2030              		.loc 1 1416 5 discriminator 1 view .LVU646
@@ -7858,7 +7858,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 1467:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
  2079              		.loc 1 1467 3 view .LVU654
 1469:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   if ((huart->gState == HAL_UART_STATE_BUSY_TX) && dmarequest)
-ARM GAS  /tmp/ccWdceWU.s 			page 132
+ARM GAS  /tmp/ccvLMv3d.s 			page 132
 
 
  2080              		.loc 1 1469 3 view .LVU655
@@ -7918,7 +7918,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 1470:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   {
  2120              		.loc 1 1470 49 discriminator 1 view .LVU670
  2121 0028 002A     		cmp	r2, #0
-ARM GAS  /tmp/ccWdceWU.s 			page 133
+ARM GAS  /tmp/ccvLMv3d.s 			page 133
 
 
  2122 002a F2D0     		beq	.L134
@@ -7978,7 +7978,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  2161              		.loc 2 1123 4 discriminator 1 view .LVU685
  2162 003a 1432     		adds	r2, r2, #20
  2163              	.LVL179:
-ARM GAS  /tmp/ccWdceWU.s 			page 134
+ARM GAS  /tmp/ccvLMv3d.s 			page 134
 
 
 1123:Drivers/CMSIS/Include/cmsis_gcc.h ****    return(result);
@@ -8038,7 +8038,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  2206              	@ 1072 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
  2207 0050 53E8003F 		ldrex r3, [r3]
  2208              	@ 0 "" 2
-ARM GAS  /tmp/ccWdceWU.s 			page 135
+ARM GAS  /tmp/ccvLMv3d.s 			page 135
 
 
  2209              	.LVL185:
@@ -8098,7 +8098,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  2250              		.loc 1 1481 5 discriminator 1 view .LVU714
 1481:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
  2251              		.loc 1 1481 5 discriminator 1 view .LVU715
-ARM GAS  /tmp/ccWdceWU.s 			page 136
+ARM GAS  /tmp/ccvLMv3d.s 			page 136
 
 
 1481:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
@@ -8158,7 +8158,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  2293              		.loc 2 1124 4 is_stmt 1 discriminator 1 view .LVU729
  2294              		.loc 2 1124 4 is_stmt 0 discriminator 1 view .LVU730
  2295              		.thumb
-ARM GAS  /tmp/ccWdceWU.s 			page 137
+ARM GAS  /tmp/ccvLMv3d.s 			page 137
 
 
  2296              		.syntax unified
@@ -8218,7 +8218,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  2336              	.LVL200:
 1484:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   }
  2337              		.loc 1 1484 5 is_stmt 1 discriminator 1 view .LVU745
-ARM GAS  /tmp/ccWdceWU.s 			page 138
+ARM GAS  /tmp/ccvLMv3d.s 			page 138
 
 
  2338              	.LBB374:
@@ -8278,7 +8278,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 1499:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   {
  2386              		.loc 1 1499 6 view .LVU756
  2387 0006 212B     		cmp	r3, #33
-ARM GAS  /tmp/ccWdceWU.s 			page 139
+ARM GAS  /tmp/ccvLMv3d.s 			page 139
 
 
  2388 0008 06D0     		beq	.L144
@@ -8338,7 +8338,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  2426              	@ 0 "" 2
  2427              	.LVL208:
 1073:Drivers/CMSIS/Include/cmsis_gcc.h **** }
-ARM GAS  /tmp/ccWdceWU.s 			page 140
+ARM GAS  /tmp/ccvLMv3d.s 			page 140
 
 
  2428              		.loc 2 1073 4 is_stmt 1 discriminator 1 view .LVU773
@@ -8398,7 +8398,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  2471              	.LBB381:
 1508:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
  2472              		.loc 1 1508 5 view .LVU787
-ARM GAS  /tmp/ccWdceWU.s 			page 141
+ARM GAS  /tmp/ccvLMv3d.s 			page 141
 
 
  2473 0034 0023     		movs	r3, #0
@@ -8458,7 +8458,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  2512              	.LVL215:
 1073:Drivers/CMSIS/Include/cmsis_gcc.h **** }
  2513              		.loc 2 1073 4 is_stmt 1 discriminator 1 view .LVU803
-ARM GAS  /tmp/ccWdceWU.s 			page 142
+ARM GAS  /tmp/ccvLMv3d.s 			page 142
 
 
 1073:Drivers/CMSIS/Include/cmsis_gcc.h **** }
@@ -8518,7 +8518,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 1515:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
  2555              		.loc 1 1515 5 discriminator 1 view .LVU819
  2556 0060 0268     		ldr	r2, [r0]
-ARM GAS  /tmp/ccWdceWU.s 			page 143
+ARM GAS  /tmp/ccvLMv3d.s 			page 143
 
 
  2557              	.LVL220:
@@ -8578,7 +8578,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  2599              		.syntax unified
  2600              	.LBE391:
  2601              	.LBE390:
-ARM GAS  /tmp/ccWdceWU.s 			page 144
+ARM GAS  /tmp/ccvLMv3d.s 			page 144
 
 
 1515:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
@@ -8638,7 +8638,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  2641              	.LBB395:
  2642              	.LBI395:
 1119:Drivers/CMSIS/Include/cmsis_gcc.h **** {
-ARM GAS  /tmp/ccWdceWU.s 			page 145
+ARM GAS  /tmp/ccvLMv3d.s 			page 145
 
 
  2643              		.loc 2 1119 31 discriminator 1 view .LVU849
@@ -8698,7 +8698,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  2690              		.loc 1 1531 1 is_stmt 1 view -0
  2691              		.cfi_startproc
  2692              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/ccWdceWU.s 			page 146
+ARM GAS  /tmp/ccvLMv3d.s 			page 146
 
 
  2693              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -8758,7 +8758,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  2733              		.loc 1 1568 1 is_stmt 0 view .LVU874
  2734 0024 0020     		movs	r0, #0
  2735 0026 10BD     		pop	{r4, pc}
-ARM GAS  /tmp/ccWdceWU.s 			page 147
+ARM GAS  /tmp/ccvLMv3d.s 			page 147
 
 
  2736              	.LVL240:
@@ -8818,7 +8818,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  2776              	.LBB400:
  2777              	.LBI400:
 1119:Drivers/CMSIS/Include/cmsis_gcc.h **** {
-ARM GAS  /tmp/ccWdceWU.s 			page 148
+ARM GAS  /tmp/ccvLMv3d.s 			page 148
 
 
  2778              		.loc 2 1119 31 discriminator 1 view .LVU889
@@ -8878,7 +8878,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  2821              	.LVL252:
  2822              	.L160:
 1557:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
-ARM GAS  /tmp/ccWdceWU.s 			page 149
+ARM GAS  /tmp/ccvLMv3d.s 			page 149
 
 
  2823              		.loc 1 1557 5 is_stmt 1 discriminator 1 view .LVU903
@@ -8938,7 +8938,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  2862              		.loc 2 1123 4 is_stmt 0 discriminator 1 view .LVU918
  2863              		.syntax unified
  2864              	@ 1123 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
-ARM GAS  /tmp/ccWdceWU.s 			page 150
+ARM GAS  /tmp/ccvLMv3d.s 			page 150
 
 
  2865 006c 42E80031 		strex r1, r3, [r2]
@@ -8998,7 +8998,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  2912 0000 2DE9F043 		push	{r4, r5, r6, r7, r8, r9, lr}
  2913              	.LCFI24:
  2914              		.cfi_def_cfa_offset 28
-ARM GAS  /tmp/ccWdceWU.s 			page 151
+ARM GAS  /tmp/ccvLMv3d.s 			page 151
 
 
  2915              		.cfi_offset 4, -28
@@ -9058,7 +9058,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 1600:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     huart->RxState = HAL_UART_STATE_BUSY_RX;
  2956              		.loc 1 1600 22 is_stmt 0 view .LVU943
  2957 0024 0023     		movs	r3, #0
-ARM GAS  /tmp/ccWdceWU.s 			page 152
+ARM GAS  /tmp/ccvLMv3d.s 			page 152
 
 
  2958 0026 4364     		str	r3, [r0, #68]
@@ -9118,7 +9118,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  2994              	.L167:
 1624:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
  2995              		.loc 1 1624 5 is_stmt 1 view .LVU962
-ARM GAS  /tmp/ccWdceWU.s 			page 153
+ARM GAS  /tmp/ccvLMv3d.s 			page 153
 
 
 1624:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
@@ -9178,7 +9178,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  3034              		.loc 1 1651 11 is_stmt 1 view .LVU978
 1651:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****           pdata16bits++;
  3035              		.loc 1 1651 52 is_stmt 0 view .LVU979
-ARM GAS  /tmp/ccWdceWU.s 			page 154
+ARM GAS  /tmp/ccvLMv3d.s 			page 154
 
 
  3036 0072 5368     		ldr	r3, [r2, #4]
@@ -9238,7 +9238,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  3074 0098 25D1     		bne	.L187
  3075              	.L168:
 1627:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     {
-ARM GAS  /tmp/ccWdceWU.s 			page 155
+ARM GAS  /tmp/ccvLMv3d.s 			page 155
 
 
  3076              		.loc 1 1627 11 is_stmt 1 view .LVU996
@@ -9298,7 +9298,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  3114 00c0 1368     		ldr	r3, [r2]
 1647:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****       {
  3115              		.loc 1 1647 10 view .LVU1013
-ARM GAS  /tmp/ccWdceWU.s 			page 156
+ARM GAS  /tmp/ccvLMv3d.s 			page 156
 
 
  3116 00c2 13F0200F 		tst	r3, #32
@@ -9358,7 +9358,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 1675:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****         {
  3154              		.loc 1 1675 53 discriminator 1 view .LVU1030
  3155 00f2 002F     		cmp	r7, #0
-ARM GAS  /tmp/ccWdceWU.s 			page 157
+ARM GAS  /tmp/ccvLMv3d.s 			page 157
 
 
  3156 00f4 D1D1     		bne	.L168
@@ -9418,7 +9418,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  3195              		.cfi_def_cfa_offset 28
  3196              		@ sp needed
  3197 0118 BDE8F083 		pop	{r4, r5, r6, r7, r8, r9, pc}
-ARM GAS  /tmp/ccWdceWU.s 			page 158
+ARM GAS  /tmp/ccvLMv3d.s 			page 158
 
 
  3198              	.LVL277:
@@ -9478,7 +9478,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  3249              		@ frame_needed = 0, uses_anonymous_args = 0
 1857:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   /* Disable TXEIE, TCIE, RXNE, PE and ERR (Frame error, noise error, overrun error) interrupts */
  3250              		.loc 1 1857 1 is_stmt 0 view .LVU1053
-ARM GAS  /tmp/ccWdceWU.s 			page 159
+ARM GAS  /tmp/ccvLMv3d.s 			page 159
 
 
  3251 0000 10B5     		push	{r4, lr}
@@ -9538,7 +9538,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  3292              	.LBB412:
 1121:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  3293              		.loc 2 1121 4 discriminator 1 view .LVU1067
-ARM GAS  /tmp/ccWdceWU.s 			page 160
+ARM GAS  /tmp/ccvLMv3d.s 			page 160
 
 
 1123:Drivers/CMSIS/Include/cmsis_gcc.h ****    return(result);
@@ -9598,7 +9598,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  3335 0022 53E8003F 		ldrex r3, [r3]
  3336              	@ 0 "" 2
  3337              	.LVL291:
-ARM GAS  /tmp/ccWdceWU.s 			page 161
+ARM GAS  /tmp/ccvLMv3d.s 			page 161
 
 
 1073:Drivers/CMSIS/Include/cmsis_gcc.h **** }
@@ -9658,7 +9658,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  3379 0038 3CD0     		beq	.L196
  3380              	.L195:
 1865:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   }
-ARM GAS  /tmp/ccWdceWU.s 			page 162
+ARM GAS  /tmp/ccvLMv3d.s 			page 162
 
 
  3381              		.loc 1 1865 5 is_stmt 1 discriminator 2 view .LVU1098
@@ -9718,7 +9718,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  3420              		.loc 1 1871 5 is_stmt 1 discriminator 1 view .LVU1113
  3421              	.LBB421:
  3422              	.LBI421:
-ARM GAS  /tmp/ccWdceWU.s 			page 163
+ARM GAS  /tmp/ccvLMv3d.s 			page 163
 
 
 1119:Drivers/CMSIS/Include/cmsis_gcc.h **** {
@@ -9778,7 +9778,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 1880:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****       {
  3463              		.loc 1 1880 10 view .LVU1130
  3464 006a 80BB     		cbnz	r0, .L203
-ARM GAS  /tmp/ccWdceWU.s 			page 164
+ARM GAS  /tmp/ccvLMv3d.s 			page 164
 
 
  3465              	.L197:
@@ -9838,7 +9838,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  3504              		.loc 1 1896 5 is_stmt 1 discriminator 1 view .LVU1145
  3505              	.LBB426:
  3506              	.LBI426:
-ARM GAS  /tmp/ccWdceWU.s 			page 165
+ARM GAS  /tmp/ccvLMv3d.s 			page 165
 
 
 1119:Drivers/CMSIS/Include/cmsis_gcc.h **** {
@@ -9898,7 +9898,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  3547              	.L200:
 1919:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   huart->RxXferCount = 0x00U;
  3548              		.loc 1 1919 3 is_stmt 1 view .LVU1162
-ARM GAS  /tmp/ccWdceWU.s 			page 166
+ARM GAS  /tmp/ccvLMv3d.s 			page 166
 
 
 1919:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   huart->RxXferCount = 0x00U;
@@ -9958,7 +9958,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 1070:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  3585              		.loc 2 1070 5 discriminator 1 view .LVU1181
 1072:Drivers/CMSIS/Include/cmsis_gcc.h ****    return(result);
-ARM GAS  /tmp/ccWdceWU.s 			page 167
+ARM GAS  /tmp/ccvLMv3d.s 			page 167
 
 
  3586              		.loc 2 1072 4 discriminator 1 view .LVU1182
@@ -10018,7 +10018,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  3630              	.L203:
 1865:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   }
  3631              		.loc 1 1865 5 discriminator 1 view .LVU1195
-ARM GAS  /tmp/ccWdceWU.s 			page 168
+ARM GAS  /tmp/ccvLMv3d.s 			page 168
 
 
  3632              	.LBE428:
@@ -10078,7 +10078,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  3673              		.thumb
  3674              		.thumb_func
  3675              		.fpu softvfp
-ARM GAS  /tmp/ccWdceWU.s 			page 169
+ARM GAS  /tmp/ccvLMv3d.s 			page 169
 
 
  3677              	HAL_UART_AbortTransmit:
@@ -10138,7 +10138,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 1948:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
  3719              		.loc 1 1948 3 discriminator 1 view .LVU1222
  3720 000e 23F0C003 		bic	r3, r3, #192
-ARM GAS  /tmp/ccWdceWU.s 			page 170
+ARM GAS  /tmp/ccvLMv3d.s 			page 170
 
 
  3721              	.LVL327:
@@ -10198,7 +10198,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  3761              		.loc 1 1953 5 discriminator 1 view .LVU1238
 1953:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
  3762              		.loc 1 1953 5 discriminator 1 view .LVU1239
-ARM GAS  /tmp/ccWdceWU.s 			page 171
+ARM GAS  /tmp/ccvLMv3d.s 			page 171
 
 
  3763 0026 2268     		ldr	r2, [r4]
@@ -10258,7 +10258,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  3805              		.thumb
  3806              		.syntax unified
  3807              	.LBE442:
-ARM GAS  /tmp/ccWdceWU.s 			page 172
+ARM GAS  /tmp/ccvLMv3d.s 			page 172
 
 
  3808              	.LBE441:
@@ -10318,7 +10318,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  3845 0058 10BD     		pop	{r4, pc}
  3846              	.LVL340:
  3847              	.L211:
-ARM GAS  /tmp/ccWdceWU.s 			page 173
+ARM GAS  /tmp/ccvLMv3d.s 			page 173
 
 
 1964:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****         {
@@ -10378,7 +10378,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 1999:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   ATOMIC_CLEAR_BIT(huart->Instance->CR3, USART_CR3_EIE);
  3893              		.loc 1 1999 3 discriminator 1 view .LVU1282
 1999:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   ATOMIC_CLEAR_BIT(huart->Instance->CR3, USART_CR3_EIE);
-ARM GAS  /tmp/ccWdceWU.s 			page 174
+ARM GAS  /tmp/ccvLMv3d.s 			page 174
 
 
  3894              		.loc 1 1999 3 discriminator 1 view .LVU1283
@@ -10438,7 +10438,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  3936              		.loc 2 1124 4 is_stmt 0 discriminator 1 view .LVU1297
  3937              		.thumb
  3938              		.syntax unified
-ARM GAS  /tmp/ccWdceWU.s 			page 175
+ARM GAS  /tmp/ccvLMv3d.s 			page 175
 
 
  3939              	.LBE447:
@@ -10498,7 +10498,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 2000:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
  3979              		.loc 1 2000 3 is_stmt 1 discriminator 1 view .LVU1312
  3980              	.LBB451:
-ARM GAS  /tmp/ccWdceWU.s 			page 176
+ARM GAS  /tmp/ccvLMv3d.s 			page 176
 
 
  3981              	.LBI451:
@@ -10558,7 +10558,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 2011:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
  4022              		.loc 1 2011 5 is_stmt 1 discriminator 1 view .LVU1328
  4023              	.LBB453:
-ARM GAS  /tmp/ccWdceWU.s 			page 177
+ARM GAS  /tmp/ccvLMv3d.s 			page 177
 
 
 2011:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
@@ -10618,7 +10618,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  4063              	@ 1123 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
  4064 0054 42E80031 		strex r1, r3, [r2]
  4065              	@ 0 "" 2
-ARM GAS  /tmp/ccWdceWU.s 			page 178
+ARM GAS  /tmp/ccvLMv3d.s 			page 178
 
 
  4066              	.LVL362:
@@ -10678,7 +10678,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  4105 0072 84F84230 		strb	r3, [r4, #66]
 2038:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
  4106              		.loc 1 2038 3 is_stmt 1 view .LVU1361
-ARM GAS  /tmp/ccWdceWU.s 			page 179
+ARM GAS  /tmp/ccvLMv3d.s 			page 179
 
 
 2038:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
@@ -10738,7 +10738,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  4146              	.LBB461:
  4147              	.LBI461:
 1119:Drivers/CMSIS/Include/cmsis_gcc.h **** {
-ARM GAS  /tmp/ccWdceWU.s 			page 180
+ARM GAS  /tmp/ccvLMv3d.s 			page 180
 
 
  4148              		.loc 2 1119 31 discriminator 1 view .LVU1377
@@ -10798,7 +10798,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  4190              		.cfi_endproc
  4191              	.LFE87:
  4193              		.section	.text.HAL_UART_TxCpltCallback,"ax",%progbits
-ARM GAS  /tmp/ccWdceWU.s 			page 181
+ARM GAS  /tmp/ccvLMv3d.s 			page 181
 
 
  4194              		.align	1
@@ -10858,7 +10858,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  4242 0006 1B68     		ldr	r3, [r3]
  4243              	.LVL378:
 2989:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   {
-ARM GAS  /tmp/ccWdceWU.s 			page 182
+ARM GAS  /tmp/ccvLMv3d.s 			page 182
 
 
  4244              		.loc 1 2989 22 view .LVU1401
@@ -10918,7 +10918,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 2995:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
  4284              		.loc 1 2995 5 is_stmt 1 discriminator 1 view .LVU1416
  4285              	.LBB466:
-ARM GAS  /tmp/ccWdceWU.s 			page 183
+ARM GAS  /tmp/ccvLMv3d.s 			page 183
 
 
  4286              	.LBI466:
@@ -10978,7 +10978,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  4326 002e 02F10C03 		add	r3, r2, #12
  4327              	.LVL387:
 1072:Drivers/CMSIS/Include/cmsis_gcc.h ****    return(result);
-ARM GAS  /tmp/ccWdceWU.s 			page 184
+ARM GAS  /tmp/ccvLMv3d.s 			page 184
 
 
  4328              		.loc 2 1072 4 is_stmt 0 discriminator 1 view .LVU1433
@@ -11038,7 +11038,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  4371              		.loc 1 3012 1 view .LVU1446
  4372 0044 08BD     		pop	{r3, pc}
  4373              	.LVL393:
-ARM GAS  /tmp/ccWdceWU.s 			page 185
+ARM GAS  /tmp/ccvLMv3d.s 			page 185
 
 
  4374              	.L224:
@@ -11098,7 +11098,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  4420              	.LFE124:
  4422              		.section	.text.HAL_UART_TxHalfCpltCallback,"ax",%progbits
  4423              		.align	1
-ARM GAS  /tmp/ccWdceWU.s 			page 186
+ARM GAS  /tmp/ccvLMv3d.s 			page 186
 
 
  4424              		.weak	HAL_UART_TxHalfCpltCallback
@@ -11158,7 +11158,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  4472              		.loc 1 3031 1 view .LVU1465
  4473 0008 08BD     		pop	{r3, pc}
  4474              		.cfi_endproc
-ARM GAS  /tmp/ccWdceWU.s 			page 187
+ARM GAS  /tmp/ccvLMv3d.s 			page 187
 
 
  4475              	.LFE109:
@@ -11218,7 +11218,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  4529              	HAL_UART_ErrorCallback:
  4530              	.LVL404:
  4531              	.LFB96:
-ARM GAS  /tmp/ccWdceWU.s 			page 188
+ARM GAS  /tmp/ccvLMv3d.s 			page 188
 
 
 2650:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   /* Prevent unused argument(s) compilation warning */
@@ -11278,7 +11278,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  4576 0008 94F84130 		ldrb	r3, [r4, #65]	@ zero_extendqisi2
  4577 000c DBB2     		uxtb	r3, r3
 3147:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   {
-ARM GAS  /tmp/ccWdceWU.s 			page 189
+ARM GAS  /tmp/ccvLMv3d.s 			page 189
 
 
  4578              		.loc 1 3147 6 view .LVU1484
@@ -11338,7 +11338,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  4619 003c 0023     		movs	r3, #0
  4620 003e E384     		strh	r3, [r4, #38]	@ movhi
 3150:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   }
-ARM GAS  /tmp/ccWdceWU.s 			page 190
+ARM GAS  /tmp/ccvLMv3d.s 			page 190
 
 
  4621              		.loc 1 3150 5 is_stmt 1 view .LVU1498
@@ -11398,7 +11398,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  4667              		.loc 1 3346 23 is_stmt 0 view .LVU1508
  4668 0002 406A     		ldr	r0, [r0, #36]
  4669              	.LVL420:
-ARM GAS  /tmp/ccWdceWU.s 			page 191
+ARM GAS  /tmp/ccvLMv3d.s 			page 191
 
 
 3347:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   huart->TxXferCount = 0x00U;
@@ -11458,7 +11458,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  4718              		.loc 1 2058 1 is_stmt 1 view -0
  4719              		.cfi_startproc
  4720              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/ccWdceWU.s 			page 192
+ARM GAS  /tmp/ccvLMv3d.s 			page 192
 
 
  4721              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -11518,7 +11518,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  4762 000e 23F4F073 		bic	r3, r3, #480
  4763              	.LVL428:
 2062:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   ATOMIC_CLEAR_BIT(huart->Instance->CR3, USART_CR3_EIE);
-ARM GAS  /tmp/ccWdceWU.s 			page 193
+ARM GAS  /tmp/ccvLMv3d.s 			page 193
 
 
  4764              		.loc 1 2062 3 is_stmt 1 discriminator 1 view .LVU1532
@@ -11578,7 +11578,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 1072:Drivers/CMSIS/Include/cmsis_gcc.h ****    return(result);
  4805              		.loc 2 1072 4 discriminator 1 view .LVU1548
  4806 001e 02F11403 		add	r3, r2, #20
-ARM GAS  /tmp/ccWdceWU.s 			page 194
+ARM GAS  /tmp/ccvLMv3d.s 			page 194
 
 
  4807              	.LVL433:
@@ -11638,7 +11638,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  4849              		.loc 1 2066 3 discriminator 2 view .LVU1562
 2066:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   {
  4850              		.loc 1 2066 12 is_stmt 0 discriminator 2 view .LVU1563
-ARM GAS  /tmp/ccWdceWU.s 			page 195
+ARM GAS  /tmp/ccvLMv3d.s 			page 195
 
 
  4851 0034 236B     		ldr	r3, [r4, #48]
@@ -11698,7 +11698,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 2094:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     }
  4888              		.loc 1 2094 40 is_stmt 0 view .LVU1581
  4889 005a 314A     		ldr	r2, .L264+4
-ARM GAS  /tmp/ccWdceWU.s 			page 196
+ARM GAS  /tmp/ccvLMv3d.s 			page 196
 
 
  4890 005c 5A63     		str	r2, [r3, #52]
@@ -11758,7 +11758,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 2106:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
  4930              		.loc 1 2106 5 is_stmt 1 discriminator 1 view .LVU1596
  4931              	.LBB486:
-ARM GAS  /tmp/ccWdceWU.s 			page 197
+ARM GAS  /tmp/ccvLMv3d.s 			page 197
 
 
  4932              	.LBI486:
@@ -11818,7 +11818,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  4972 008e A36B     		ldr	r3, [r4, #56]
 2117:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****       }
  4973              		.loc 1 2117 42 view .LVU1613
-ARM GAS  /tmp/ccWdceWU.s 			page 198
+ARM GAS  /tmp/ccvLMv3d.s 			page 198
 
 
  4974 0090 0022     		movs	r2, #0
@@ -11878,7 +11878,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  5014              		.loc 2 1119 31 discriminator 1 view .LVU1627
  5015              	.LBB492:
 1121:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  /tmp/ccWdceWU.s 			page 199
+ARM GAS  /tmp/ccvLMv3d.s 			page 199
 
 
  5016              		.loc 2 1121 4 discriminator 1 view .LVU1628
@@ -11938,7 +11938,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  5059 00c2 5B69     		ldr	r3, [r3, #20]
 2127:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   {
  5060              		.loc 1 2127 6 view .LVU1642
-ARM GAS  /tmp/ccWdceWU.s 			page 200
+ARM GAS  /tmp/ccvLMv3d.s 			page 200
 
 
  5061 00c4 13F0400F 		tst	r3, #64
@@ -11998,7 +11998,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  5100              		.loc 2 1123 4 discriminator 1 view .LVU1657
  5101 00d8 1432     		adds	r2, r2, #20
  5102              	.LVL460:
-ARM GAS  /tmp/ccWdceWU.s 			page 201
+ARM GAS  /tmp/ccvLMv3d.s 			page 201
 
 
 1123:Drivers/CMSIS/Include/cmsis_gcc.h ****    return(result);
@@ -12058,7 +12058,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 2154:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     huart->RxXferCount = 0x00U;
  5142              		.loc 1 2154 24 is_stmt 0 view .LVU1675
  5143 00f2 0023     		movs	r3, #0
-ARM GAS  /tmp/ccWdceWU.s 			page 202
+ARM GAS  /tmp/ccvLMv3d.s 			page 202
 
 
  5144 00f4 E384     		strh	r3, [r4, #38]	@ movhi
@@ -12118,7 +12118,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  5182 0118 38BD     		pop	{r3, r4, r5, pc}
  5183              	.LVL468:
  5184              	.L265:
-ARM GAS  /tmp/ccWdceWU.s 			page 203
+ARM GAS  /tmp/ccvLMv3d.s 			page 203
 
 
 2176:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
@@ -12178,7 +12178,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 3423:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     {
  5229              		.loc 1 3423 22 is_stmt 0 view .LVU1704
  5230 000e 5B6B     		ldr	r3, [r3, #52]
-ARM GAS  /tmp/ccWdceWU.s 			page 204
+ARM GAS  /tmp/ccvLMv3d.s 			page 204
 
 
 3423:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     {
@@ -12238,7 +12238,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  5272              	.LFB119:
 3369:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   UART_HandleTypeDef *huart = (UART_HandleTypeDef *)((DMA_HandleTypeDef *)hdma)->Parent;
  5273              		.loc 1 3369 1 is_stmt 1 view -0
-ARM GAS  /tmp/ccWdceWU.s 			page 205
+ARM GAS  /tmp/ccvLMv3d.s 			page 205
 
 
  5274              		.cfi_startproc
@@ -12298,7 +12298,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  5311              		.loc 1 3388 3 is_stmt 1 view .LVU1737
 3388:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
  5312              		.loc 1 3388 20 is_stmt 0 view .LVU1738
-ARM GAS  /tmp/ccWdceWU.s 			page 206
+ARM GAS  /tmp/ccvLMv3d.s 			page 206
 
 
  5313 0018 4364     		str	r3, [r0, #68]
@@ -12358,7 +12358,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  5359              		.thumb
  5360              		.thumb_func
  5361              		.fpu softvfp
-ARM GAS  /tmp/ccWdceWU.s 			page 207
+ARM GAS  /tmp/ccvLMv3d.s 			page 207
 
 
  5363              	HAL_UART_AbortTransmit_IT:
@@ -12418,7 +12418,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 2195:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
  5405              		.loc 1 2195 3 discriminator 1 view .LVU1762
  5406 000e 23F0C003 		bic	r3, r3, #192
-ARM GAS  /tmp/ccWdceWU.s 			page 208
+ARM GAS  /tmp/ccvLMv3d.s 			page 208
 
 
  5407              	.LVL480:
@@ -12478,7 +12478,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  5447              		.loc 1 2200 5 discriminator 1 view .LVU1778
 2200:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
  5448              		.loc 1 2200 5 discriminator 1 view .LVU1779
-ARM GAS  /tmp/ccWdceWU.s 			page 209
+ARM GAS  /tmp/ccvLMv3d.s 			page 209
 
 
  5449 0026 2268     		ldr	r2, [r4]
@@ -12538,7 +12538,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  5491              		.thumb
  5492              		.syntax unified
  5493              	.LBE507:
-ARM GAS  /tmp/ccWdceWU.s 			page 210
+ARM GAS  /tmp/ccvLMv3d.s 			page 210
 
 
  5494              	.LBE506:
@@ -12598,7 +12598,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  5531              		.loc 1 2219 26 is_stmt 0 view .LVU1810
  5532 0056 0023     		movs	r3, #0
  5533 0058 E384     		strh	r3, [r4, #38]	@ movhi
-ARM GAS  /tmp/ccWdceWU.s 			page 211
+ARM GAS  /tmp/ccvLMv3d.s 			page 211
 
 
 2222:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
@@ -12658,7 +12658,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  5576              		.align	1
  5577              		.syntax unified
  5578              		.thumb
-ARM GAS  /tmp/ccWdceWU.s 			page 212
+ARM GAS  /tmp/ccvLMv3d.s 			page 212
 
 
  5579              		.thumb_func
@@ -12718,7 +12718,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 2694:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   /* Prevent unused argument(s) compilation warning */
  5626              		.loc 1 2694 1 is_stmt 1 view -0
  5627              		.cfi_startproc
-ARM GAS  /tmp/ccWdceWU.s 			page 213
+ARM GAS  /tmp/ccvLMv3d.s 			page 213
 
 
  5628              		@ args = 0, pretend = 0, frame = 0
@@ -12778,7 +12778,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  5673 0006 02F10C03 		add	r3, r2, #12
  5674              	.LVL507:
 1072:Drivers/CMSIS/Include/cmsis_gcc.h ****    return(result);
-ARM GAS  /tmp/ccWdceWU.s 			page 214
+ARM GAS  /tmp/ccvLMv3d.s 			page 214
 
 
  5675              		.loc 2 1072 4 is_stmt 0 discriminator 1 view .LVU1846
@@ -12838,7 +12838,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  5718              		.loc 1 2272 3 is_stmt 1 discriminator 1 view .LVU1859
 2273:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
  5719              		.loc 1 2273 3 discriminator 1 view .LVU1860
-ARM GAS  /tmp/ccWdceWU.s 			page 215
+ARM GAS  /tmp/ccvLMv3d.s 			page 215
 
 
  5720              	.LBB513:
@@ -12898,7 +12898,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  5759              		.syntax unified
  5760              	@ 1123 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
  5761 002c 42E80031 		strex r1, r3, [r2]
-ARM GAS  /tmp/ccWdceWU.s 			page 216
+ARM GAS  /tmp/ccvLMv3d.s 			page 216
 
 
  5762              	@ 0 "" 2
@@ -12958,7 +12958,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  5802              	.LBB520:
 1070:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  5803              		.loc 2 1070 5 discriminator 1 view .LVU1892
-ARM GAS  /tmp/ccWdceWU.s 			page 217
+ARM GAS  /tmp/ccvLMv3d.s 			page 217
 
 
 1072:Drivers/CMSIS/Include/cmsis_gcc.h ****    return(result);
@@ -13018,7 +13018,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 2284:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
  5847              		.loc 1 2284 5 is_stmt 1 discriminator 2 view .LVU1906
 2287:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     {
-ARM GAS  /tmp/ccWdceWU.s 			page 218
+ARM GAS  /tmp/ccvLMv3d.s 			page 218
 
 
  5848              		.loc 1 2287 5 discriminator 2 view .LVU1907
@@ -13078,7 +13078,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  5886              	.LBI524:
 1068:Drivers/CMSIS/Include/cmsis_gcc.h **** {
  5887              		.loc 2 1068 31 discriminator 1 view .LVU1924
-ARM GAS  /tmp/ccWdceWU.s 			page 219
+ARM GAS  /tmp/ccvLMv3d.s 			page 219
 
 
  5888              	.LBB525:
@@ -13138,7 +13138,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  5930 0088 0029     		cmp	r1, #0
  5931 008a F3D1     		bne	.L291
  5932 008c D5E7     		b	.L290
-ARM GAS  /tmp/ccWdceWU.s 			page 220
+ARM GAS  /tmp/ccvLMv3d.s 			page 220
 
 
  5933              	.LVL537:
@@ -13198,7 +13198,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 2334:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** #endif /* USE_HAL_UART_REGISTER_CALLBACKS */
  5971              		.loc 1 2334 5 is_stmt 0 view .LVU1955
  5972 00b0 FFF7FEFF 		bl	HAL_UART_AbortReceiveCpltCallback
-ARM GAS  /tmp/ccWdceWU.s 			page 221
+ARM GAS  /tmp/ccvLMv3d.s 			page 221
 
 
  5973              	.LVL542:
@@ -13258,7 +13258,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  6018 0008 2022     		movs	r2, #32
  6019 000a 80F84220 		strb	r2, [r0, #66]
 3496:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
-ARM GAS  /tmp/ccWdceWU.s 			page 222
+ARM GAS  /tmp/ccvLMv3d.s 			page 222
 
 
  6020              		.loc 1 3496 3 is_stmt 1 view .LVU1967
@@ -13318,7 +13318,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 3582:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
  6069              		.loc 1 3582 3 view .LVU1977
 3585:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   {
-ARM GAS  /tmp/ccWdceWU.s 			page 223
+ARM GAS  /tmp/ccvLMv3d.s 			page 223
 
 
  6070              		.loc 1 3585 3 view .LVU1978
@@ -13378,7 +13378,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  6107              		.loc 1 3601 21 view .LVU1995
  6108 0028 1370     		strb	r3, [r2]
  6109              	.L308:
-ARM GAS  /tmp/ccWdceWU.s 			page 224
+ARM GAS  /tmp/ccvLMv3d.s 			page 224
 
 
 3607:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     }
@@ -13438,7 +13438,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  6152              		.loc 1 3622 22 is_stmt 0 view .LVU2007
  6153 0060 2023     		movs	r3, #32
  6154 0062 80F84230 		strb	r3, [r0, #66]
-ARM GAS  /tmp/ccWdceWU.s 			page 225
+ARM GAS  /tmp/ccvLMv3d.s 			page 225
 
 
 3625:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
@@ -13498,7 +13498,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  6192              		.loc 2 1073 4 is_stmt 0 discriminator 1 view .LVU2024
  6193              		.thumb
  6194              		.syntax unified
-ARM GAS  /tmp/ccWdceWU.s 			page 226
+ARM GAS  /tmp/ccvLMv3d.s 			page 226
 
 
  6195              	.LBE530:
@@ -13558,7 +13558,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  6236              	.LBB533:
 3641:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****         }
  6237              		.loc 1 3641 11 view .LVU2040
-ARM GAS  /tmp/ccWdceWU.s 			page 227
+ARM GAS  /tmp/ccvLMv3d.s 			page 227
 
 
  6238 0096 0022     		movs	r2, #0
@@ -13618,7 +13618,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  6279 00b8 826A     		ldr	r2, [r0, #40]
  6280              	.LVL561:
 3591:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****       huart->pRxBuffPtr += 2U;
-ARM GAS  /tmp/ccWdceWU.s 			page 228
+ARM GAS  /tmp/ccvLMv3d.s 			page 228
 
 
  6281              		.loc 1 3591 7 is_stmt 1 view .LVU2054
@@ -13678,7 +13678,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  6322              		.cfi_restore 14
 3670:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   }
  6323              		.loc 1 3670 12 view .LVU2068
-ARM GAS  /tmp/ccWdceWU.s 			page 229
+ARM GAS  /tmp/ccvLMv3d.s 			page 229
 
 
  6324 00de 0220     		movs	r0, #2
@@ -13738,7 +13738,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 2350:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   uint32_t cr3its     = READ_REG(huart->Instance->CR3);
  6371              		.loc 1 2350 12 is_stmt 0 view .LVU2078
  6372 000a D068     		ldr	r0, [r2, #12]
-ARM GAS  /tmp/ccWdceWU.s 			page 230
+ARM GAS  /tmp/ccvLMv3d.s 			page 230
 
 
  6373              	.LVL571:
@@ -13798,7 +13798,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  6409 002e 216B     		ldr	r1, [r4, #48]
 2476:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****       && ((isrflags & USART_SR_IDLE) != 0U)
  6410              		.loc 1 2476 6 view .LVU2097
-ARM GAS  /tmp/ccWdceWU.s 			page 231
+ARM GAS  /tmp/ccvLMv3d.s 			page 231
 
 
  6411 0030 0129     		cmp	r1, #1
@@ -13858,7 +13858,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  6453              		.loc 1 2372 8 is_stmt 0 view .LVU2109
  6454 005c 13F0010F 		tst	r3, #1
  6455 0060 06D0     		beq	.L325
-ARM GAS  /tmp/ccWdceWU.s 			page 232
+ARM GAS  /tmp/ccvLMv3d.s 			page 232
 
 
 2372:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     {
@@ -13918,7 +13918,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  6494 0096 10F0200F 		tst	r0, #32
  6495 009a 00D1     		bne	.L329
 2391:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     {
-ARM GAS  /tmp/ccWdceWU.s 			page 233
+ARM GAS  /tmp/ccvLMv3d.s 			page 233
 
 
  6496              		.loc 1 2391 50 view .LVU2126
@@ -13978,7 +13978,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  6535              		.loc 1 2413 9 is_stmt 1 view .LVU2141
  6536 00ca 2046     		mov	r0, r4
  6537 00cc FFF7FEFF 		bl	UART_EndRxTransfer
-ARM GAS  /tmp/ccWdceWU.s 			page 234
+ARM GAS  /tmp/ccvLMv3d.s 			page 234
 
 
  6538              	.LVL582:
@@ -14038,7 +14038,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  6577              		.loc 1 2418 11 is_stmt 1 discriminator 1 view .LVU2156
  6578              	.LBB537:
  6579              	.LBI537:
-ARM GAS  /tmp/ccWdceWU.s 			page 235
+ARM GAS  /tmp/ccvLMv3d.s 			page 235
 
 
 1119:Drivers/CMSIS/Include/cmsis_gcc.h **** {
@@ -14098,7 +14098,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  6620 0102 A5D0     		beq	.L320
 2429:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****             }
  6621              		.loc 1 2429 15 is_stmt 1 view .LVU2173
-ARM GAS  /tmp/ccWdceWU.s 			page 236
+ARM GAS  /tmp/ccvLMv3d.s 			page 236
 
 
 2429:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****             }
@@ -14158,7 +14158,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  6664 012e 8FE7     		b	.L320
  6665              	.LVL600:
  6666              	.L352:
-ARM GAS  /tmp/ccWdceWU.s 			page 237
+ARM GAS  /tmp/ccvLMv3d.s 			page 237
 
 
 2477:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****       && ((cr1its & USART_SR_IDLE) != 0U))
@@ -14218,7 +14218,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  6705              		.loc 1 2490 7 is_stmt 1 view .LVU2201
 2490:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****           && (nb_remaining_rx_data < huart->RxXferSize))
  6706              		.loc 1 2490 10 is_stmt 0 view .LVU2202
-ARM GAS  /tmp/ccWdceWU.s 			page 238
+ARM GAS  /tmp/ccvLMv3d.s 			page 238
 
 
  6707 015e 002B     		cmp	r3, #0
@@ -14278,7 +14278,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 1073:Drivers/CMSIS/Include/cmsis_gcc.h **** }
  6746              		.loc 2 1073 4 is_stmt 1 discriminator 1 view .LVU2218
 1073:Drivers/CMSIS/Include/cmsis_gcc.h **** }
-ARM GAS  /tmp/ccWdceWU.s 			page 239
+ARM GAS  /tmp/ccvLMv3d.s 			page 239
 
 
  6747              		.loc 2 1073 4 is_stmt 0 discriminator 1 view .LVU2219
@@ -14338,7 +14338,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  6788              		.loc 1 2501 11 discriminator 1 view .LVU2234
  6789 018c 2268     		ldr	r2, [r4]
  6790              	.LVL611:
-ARM GAS  /tmp/ccWdceWU.s 			page 240
+ARM GAS  /tmp/ccvLMv3d.s 			page 240
 
 
  6791              	.LBB547:
@@ -14398,7 +14398,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  6833              	.LBE550:
  6834              	.LBE549:
 2501:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
-ARM GAS  /tmp/ccWdceWU.s 			page 241
+ARM GAS  /tmp/ccvLMv3d.s 			page 241
 
 
  6835              		.loc 1 2501 11 discriminator 1 view .LVU2249
@@ -14458,7 +14458,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  6875              	.LBI554:
 1119:Drivers/CMSIS/Include/cmsis_gcc.h **** {
  6876              		.loc 2 1119 31 discriminator 1 view .LVU2264
-ARM GAS  /tmp/ccWdceWU.s 			page 242
+ARM GAS  /tmp/ccvLMv3d.s 			page 242
 
 
  6877              	.LBB555:
@@ -14518,7 +14518,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  6917              	.LVL626:
  6918              	.LBB557:
  6919              	.LBI557:
-ARM GAS  /tmp/ccWdceWU.s 			page 243
+ARM GAS  /tmp/ccvLMv3d.s 			page 243
 
 
 1068:Drivers/CMSIS/Include/cmsis_gcc.h **** {
@@ -14578,7 +14578,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 2511:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
  6962              		.loc 1 2511 11 discriminator 1 view .LVU2295
  6963 01da 0029     		cmp	r1, #0
-ARM GAS  /tmp/ccWdceWU.s 			page 244
+ARM GAS  /tmp/ccvLMv3d.s 			page 244
 
 
  6964 01dc F3D1     		bne	.L344
@@ -14638,7 +14638,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  7003 01fe 9BB2     		uxth	r3, r3
 2536:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****       if ((huart->RxXferCount > 0U)
  7004              		.loc 1 2536 16 view .LVU2311
-ARM GAS  /tmp/ccWdceWU.s 			page 245
+ARM GAS  /tmp/ccvLMv3d.s 			page 245
 
 
  7005 0200 C91A     		subs	r1, r1, r3
@@ -14698,7 +14698,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  7045              	.LBE564:
  7046              	.LBE563:
 2541:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
-ARM GAS  /tmp/ccWdceWU.s 			page 246
+ARM GAS  /tmp/ccvLMv3d.s 			page 246
 
 
  7047              		.loc 1 2541 9 discriminator 1 view .LVU2326
@@ -14758,7 +14758,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  7088              		.loc 2 1068 31 discriminator 1 view .LVU2341
  7089              	.LBB569:
 1070:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  /tmp/ccWdceWU.s 			page 247
+ARM GAS  /tmp/ccvLMv3d.s 			page 247
 
 
  7090              		.loc 2 1070 5 discriminator 1 view .LVU2342
@@ -14818,7 +14818,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  7133              	.LBE567:
 2544:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
  7134              		.loc 1 2544 9 is_stmt 1 discriminator 2 view .LVU2356
-ARM GAS  /tmp/ccWdceWU.s 			page 248
+ARM GAS  /tmp/ccvLMv3d.s 			page 248
 
 
 2547:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****         huart->ReceptionType = HAL_UART_RECEPTION_STANDARD;
@@ -14878,7 +14878,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  7173              		.loc 1 2550 9 discriminator 1 view .LVU2372
  7174 0258 23F01003 		bic	r3, r3, #16
  7175              	.LVL655:
-ARM GAS  /tmp/ccWdceWU.s 			page 249
+ARM GAS  /tmp/ccvLMv3d.s 			page 249
 
 
 2550:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
@@ -14938,7 +14938,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  7217              	.LBE561:
 2571:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     return;
  7218              		.loc 1 2571 5 is_stmt 1 view .LVU2388
-ARM GAS  /tmp/ccWdceWU.s 			page 250
+ARM GAS  /tmp/ccvLMv3d.s 			page 250
 
 
  7219 0272 2046     		mov	r0, r4
@@ -14998,7 +14998,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  7266              	.LVL667:
 3107:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
  7267              		.loc 1 3107 3 is_stmt 1 view .LVU2398
-ARM GAS  /tmp/ccWdceWU.s 			page 251
+ARM GAS  /tmp/ccvLMv3d.s 			page 251
 
 
 3107:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
@@ -15058,7 +15058,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  7312 0000 08B5     		push	{r3, lr}
  7313              	.LCFI54:
  7314              		.cfi_def_cfa_offset 8
-ARM GAS  /tmp/ccWdceWU.s 			page 252
+ARM GAS  /tmp/ccvLMv3d.s 			page 252
 
 
  7315              		.cfi_offset 3, -8
@@ -15118,7 +15118,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  7353              	@ 1072 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
  7354 001a 53E8003F 		ldrex r3, [r3]
  7355              	@ 0 "" 2
-ARM GAS  /tmp/ccWdceWU.s 			page 253
+ARM GAS  /tmp/ccvLMv3d.s 			page 253
 
 
  7356              	.LVL676:
@@ -15178,7 +15178,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  7397              		.loc 1 3050 5 discriminator 1 view .LVU2441
 3050:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
  7398              		.loc 1 3050 5 discriminator 1 view .LVU2442
-ARM GAS  /tmp/ccWdceWU.s 			page 254
+ARM GAS  /tmp/ccvLMv3d.s 			page 254
 
 
 3050:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
@@ -15238,7 +15238,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  7440              		.loc 2 1124 4 is_stmt 1 discriminator 1 view .LVU2456
  7441              		.loc 2 1124 4 is_stmt 0 discriminator 1 view .LVU2457
  7442              		.thumb
-ARM GAS  /tmp/ccWdceWU.s 			page 255
+ARM GAS  /tmp/ccvLMv3d.s 			page 255
 
 
  7443              		.syntax unified
@@ -15298,7 +15298,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  7483              	.LVL691:
 3054:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
  7484              		.loc 1 3054 5 is_stmt 1 discriminator 1 view .LVU2472
-ARM GAS  /tmp/ccWdceWU.s 			page 256
+ARM GAS  /tmp/ccvLMv3d.s 			page 256
 
 
  7485              	.LBB590:
@@ -15358,7 +15358,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 3068:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
  7525              		.loc 1 3068 22 is_stmt 0 discriminator 2 view .LVU2489
  7526 0068 0023     		movs	r3, #0
-ARM GAS  /tmp/ccWdceWU.s 			page 257
+ARM GAS  /tmp/ccvLMv3d.s 			page 257
 
 
  7527 006a 4363     		str	r3, [r0, #52]
@@ -15418,7 +15418,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  7566              		.syntax unified
  7567              	.LBE594:
  7568              	.LBE593:
-ARM GAS  /tmp/ccWdceWU.s 			page 258
+ARM GAS  /tmp/ccvLMv3d.s 			page 258
 
 
 3062:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     }
@@ -15478,7 +15478,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  7614              		.thumb
  7615              		.thumb_func
  7616              		.fpu softvfp
-ARM GAS  /tmp/ccWdceWU.s 			page 259
+ARM GAS  /tmp/ccvLMv3d.s 			page 259
 
 
  7618              	HAL_LIN_SendBreak:
@@ -15538,7 +15538,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  7656              		.loc 2 1072 4 is_stmt 0 discriminator 1 view .LVU2532
  7657              		.syntax unified
  7658              	@ 1072 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
-ARM GAS  /tmp/ccWdceWU.s 			page 260
+ARM GAS  /tmp/ccvLMv3d.s 			page 260
 
 
  7659 001a 53E8003F 		ldrex r3, [r3]
@@ -15598,7 +15598,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 2763:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
  7701              		.loc 1 2763 17 discriminator 2 view .LVU2547
  7702 002e 80F84130 		strb	r3, [r0, #65]
-ARM GAS  /tmp/ccWdceWU.s 			page 261
+ARM GAS  /tmp/ccvLMv3d.s 			page 261
 
 
 2766:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
@@ -15658,7 +15658,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  7746              		.loc 1 2783 3 discriminator 2 view .LVU2560
  7747 0008 0123     		movs	r3, #1
  7748 000a 80F84030 		strb	r3, [r0, #64]
-ARM GAS  /tmp/ccWdceWU.s 			page 262
+ARM GAS  /tmp/ccvLMv3d.s 			page 262
 
 
 2783:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
@@ -15718,7 +15718,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 1119:Drivers/CMSIS/Include/cmsis_gcc.h **** {
  7788              		.loc 2 1119 31 discriminator 1 view .LVU2576
  7789              	.LBB606:
-ARM GAS  /tmp/ccWdceWU.s 			page 263
+ARM GAS  /tmp/ccvLMv3d.s 			page 263
 
 
 1121:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -15778,7 +15778,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 2796:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** }
  7829              		.loc 1 2796 10 discriminator 2 view .LVU2594
  7830 003c 7047     		bx	lr
-ARM GAS  /tmp/ccWdceWU.s 			page 264
+ARM GAS  /tmp/ccvLMv3d.s 			page 264
 
 
  7831              	.LVL725:
@@ -15838,7 +15838,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 2816:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
  7875              		.loc 1 2816 3 discriminator 1 view .LVU2607
 2816:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
-ARM GAS  /tmp/ccWdceWU.s 			page 265
+ARM GAS  /tmp/ccvLMv3d.s 			page 265
 
 
  7876              		.loc 1 2816 3 discriminator 1 view .LVU2608
@@ -15898,7 +15898,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  7918              		.loc 2 1124 4 is_stmt 0 discriminator 1 view .LVU2622
  7919              		.thumb
  7920              		.syntax unified
-ARM GAS  /tmp/ccWdceWU.s 			page 266
+ARM GAS  /tmp/ccvLMv3d.s 			page 266
 
 
  7921              	.LBE611:
@@ -15958,7 +15958,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  7961              		.syntax unified
  7962              		.thumb
  7963              		.thumb_func
-ARM GAS  /tmp/ccWdceWU.s 			page 267
+ARM GAS  /tmp/ccvLMv3d.s 			page 267
 
 
  7964              		.fpu softvfp
@@ -16018,7 +16018,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  8003 0020 D360     		str	r3, [r2, #12]
 2854:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
  8004              		.loc 1 2854 3 discriminator 2 view .LVU2654
-ARM GAS  /tmp/ccWdceWU.s 			page 268
+ARM GAS  /tmp/ccvLMv3d.s 			page 268
 
 
 2854:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
@@ -16078,7 +16078,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 2873:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
  8049              		.loc 1 2873 3 view .LVU2667
 2873:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
-ARM GAS  /tmp/ccWdceWU.s 			page 269
+ARM GAS  /tmp/ccvLMv3d.s 			page 269
 
 
  8050              		.loc 1 2873 3 view .LVU2668
@@ -16138,7 +16138,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  8087 0028 0023     		movs	r3, #0
  8088 002a 80F84030 		strb	r3, [r0, #64]
 2892:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
-ARM GAS  /tmp/ccWdceWU.s 			page 270
+ARM GAS  /tmp/ccvLMv3d.s 			page 270
 
 
  8089              		.loc 1 2892 3 discriminator 2 view .LVU2686
@@ -16198,7 +16198,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  8132              		.loc 1 2932 1 is_stmt 0 view .LVU2699
  8133 0008 1843     		orrs	r0, r0, r3
  8134              	.LVL759:
-ARM GAS  /tmp/ccWdceWU.s 			page 271
+ARM GAS  /tmp/ccvLMv3d.s 			page 271
 
 
 2932:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
@@ -16258,7 +16258,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  8184              		.loc 1 3224 3 is_stmt 1 view .LVU2708
 3224:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   huart->RxXferCount = Size;
  8185              		.loc 1 3224 21 is_stmt 0 view .LVU2709
-ARM GAS  /tmp/ccWdceWU.s 			page 272
+ARM GAS  /tmp/ccvLMv3d.s 			page 272
 
 
  8186 0002 8285     		strh	r2, [r0, #44]	@ movhi
@@ -16318,7 +16318,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  8225              	.LVL765:
 3243:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
  8226              		.loc 1 3243 1 view .LVU2725
-ARM GAS  /tmp/ccWdceWU.s 			page 273
+ARM GAS  /tmp/ccvLMv3d.s 			page 273
 
 
  8227 0034 7047     		bx	lr
@@ -16378,7 +16378,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  8272              		.loc 1 1355 5 is_stmt 1 view .LVU2736
 1355:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
  8273              		.loc 1 1355 26 is_stmt 0 view .LVU2737
-ARM GAS  /tmp/ccWdceWU.s 			page 274
+ARM GAS  /tmp/ccvLMv3d.s 			page 274
 
 
  8274 0014 0023     		movs	r3, #0
@@ -16438,7 +16438,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 1715:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   {
  8319              		.loc 1 1715 6 view .LVU2749
  8320 0006 202B     		cmp	r3, #32
-ARM GAS  /tmp/ccWdceWU.s 			page 275
+ARM GAS  /tmp/ccvLMv3d.s 			page 275
 
 
  8321 0008 29D1     		bne	.L406
@@ -16498,7 +16498,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  8363              	.LVL777:
 1729:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     {
  8364              		.loc 1 1729 5 is_stmt 1 view .LVU2762
-ARM GAS  /tmp/ccWdceWU.s 			page 276
+ARM GAS  /tmp/ccvLMv3d.s 			page 276
 
 
 1729:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     {
@@ -16558,7 +16558,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 1734:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****       }
  8403              		.loc 1 1734 9 discriminator 1 view .LVU2779
  8404 0044 2268     		ldr	r2, [r4]
-ARM GAS  /tmp/ccWdceWU.s 			page 277
+ARM GAS  /tmp/ccvLMv3d.s 			page 277
 
 
  8405              	.LVL780:
@@ -16618,7 +16618,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  8447              		.syntax unified
  8448              	.LBE617:
  8449              	.LBE616:
-ARM GAS  /tmp/ccWdceWU.s 			page 278
+ARM GAS  /tmp/ccvLMv3d.s 			page 278
 
 
 1734:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****       }
@@ -16678,7 +16678,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  8498              	.LCFI62:
  8499              		.cfi_def_cfa_offset 12
  8500              		.cfi_offset 4, -12
-ARM GAS  /tmp/ccWdceWU.s 			page 279
+ARM GAS  /tmp/ccvLMv3d.s 			page 279
 
 
  8501              		.cfi_offset 5, -8
@@ -16738,7 +16738,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  8538 001e 1F48     		ldr	r0, .L422+4
  8539 0020 D062     		str	r0, [r2, #44]
 3273:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
-ARM GAS  /tmp/ccWdceWU.s 			page 280
+ARM GAS  /tmp/ccvLMv3d.s 			page 280
 
 
  8540              		.loc 1 3273 3 is_stmt 1 view .LVU2819
@@ -16798,7 +16798,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  8578              		.loc 1 3283 3 view .LVU2835
 3285:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   {
  8579              		.loc 1 3285 3 view .LVU2836
-ARM GAS  /tmp/ccWdceWU.s 			page 281
+ARM GAS  /tmp/ccvLMv3d.s 			page 281
 
 
 3285:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   {
@@ -16858,7 +16858,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  8619              	.LBB623:
 1121:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  8620              		.loc 2 1121 4 discriminator 1 view .LVU2852
-ARM GAS  /tmp/ccWdceWU.s 			page 282
+ARM GAS  /tmp/ccvLMv3d.s 			page 282
 
 
 1123:Drivers/CMSIS/Include/cmsis_gcc.h ****    return(result);
@@ -16918,7 +16918,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  8662 0068 53E8003F 		ldrex r3, [r3]
  8663              	@ 0 "" 2
  8664              	.LVL806:
-ARM GAS  /tmp/ccWdceWU.s 			page 283
+ARM GAS  /tmp/ccvLMv3d.s 			page 283
 
 
 1073:Drivers/CMSIS/Include/cmsis_gcc.h **** }
@@ -16978,7 +16978,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 3296:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
  8706              		.loc 1 3296 3 discriminator 1 view .LVU2883
 3296:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c **** 
-ARM GAS  /tmp/ccWdceWU.s 			page 284
+ARM GAS  /tmp/ccvLMv3d.s 			page 284
 
 
  8707              		.loc 1 3296 3 discriminator 1 view .LVU2884
@@ -17038,7 +17038,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  8749              		.loc 2 1124 4 is_stmt 0 discriminator 1 view .LVU2898
  8750              		.thumb
  8751              		.syntax unified
-ARM GAS  /tmp/ccWdceWU.s 			page 285
+ARM GAS  /tmp/ccvLMv3d.s 			page 285
 
 
  8752              	.LBE633:
@@ -17098,7 +17098,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 1441:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****   {
  8800              		.loc 1 1441 12 is_stmt 0 view .LVU2907
  8801 0002 90F84230 		ldrb	r3, [r0, #66]	@ zero_extendqisi2
-ARM GAS  /tmp/ccWdceWU.s 			page 286
+ARM GAS  /tmp/ccvLMv3d.s 			page 286
 
 
  8802 0006 DBB2     		uxtb	r3, r3
@@ -17158,7 +17158,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  8841              		.loc 1 1445 14 view .LVU2922
  8842 0024 F5E7     		b	.L425
  8843              		.cfi_endproc
-ARM GAS  /tmp/ccWdceWU.s 			page 287
+ARM GAS  /tmp/ccvLMv3d.s 			page 287
 
 
  8844              	.LFE77:
@@ -17218,7 +17218,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  8889 0016 02B0     		add	sp, sp, #8
  8890              	.LCFI68:
  8891              		.cfi_remember_state
-ARM GAS  /tmp/ccWdceWU.s 			page 288
+ARM GAS  /tmp/ccvLMv3d.s 			page 288
 
 
  8892              		.cfi_def_cfa_offset 8
@@ -17278,7 +17278,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 1793:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****         ATOMIC_SET_BIT(huart->Instance->CR1, USART_CR1_IDLEIE);
  8931              		.loc 1 1793 9 view .LVU2949
  8932 0034 0023     		movs	r3, #0
-ARM GAS  /tmp/ccWdceWU.s 			page 289
+ARM GAS  /tmp/ccvLMv3d.s 			page 289
 
 
  8933 0036 0193     		str	r3, [sp, #4]
@@ -17338,7 +17338,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 1794:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****       }
  8973              		.loc 1 1794 9 discriminator 1 view .LVU2964
  8974 004e 43F01003 		orr	r3, r3, #16
-ARM GAS  /tmp/ccWdceWU.s 			page 290
+ARM GAS  /tmp/ccvLMv3d.s 			page 290
 
 
  8975              	.LVL835:
@@ -17398,7 +17398,7 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
 1779:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c ****     }
  9020              		.loc 1 1779 14 view .LVU2976
  9021 0062 0120     		movs	r0, #1
-ARM GAS  /tmp/ccWdceWU.s 			page 291
+ARM GAS  /tmp/ccvLMv3d.s 			page 291
 
 
  9022              	.LVL841:
@@ -17419,148 +17419,148 @@ ARM GAS  /tmp/ccWdceWU.s 			page 1
  9037              		.file 10 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h"
  9038              		.file 11 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
  9039              		.file 12 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h"
-ARM GAS  /tmp/ccWdceWU.s 			page 292
+ARM GAS  /tmp/ccvLMv3d.s 			page 292
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f1xx_hal_uart.c
-     /tmp/ccWdceWU.s:16     .text.UART_EndTxTransfer:0000000000000000 $t
-     /tmp/ccWdceWU.s:23     .text.UART_EndTxTransfer:0000000000000000 UART_EndTxTransfer
-     /tmp/ccWdceWU.s:102    .text.UART_EndRxTransfer:0000000000000000 $t
-     /tmp/ccWdceWU.s:108    .text.UART_EndRxTransfer:0000000000000000 UART_EndRxTransfer
-     /tmp/ccWdceWU.s:312    .text.UART_Transmit_IT:0000000000000000 $t
-     /tmp/ccWdceWU.s:318    .text.UART_Transmit_IT:0000000000000000 UART_Transmit_IT
-     /tmp/ccWdceWU.s:420    .text.UART_SetConfig:0000000000000000 $t
-     /tmp/ccWdceWU.s:426    .text.UART_SetConfig:0000000000000000 UART_SetConfig
-     /tmp/ccWdceWU.s:533    .text.UART_SetConfig:0000000000000088 $d
-     /tmp/ccWdceWU.s:539    .text.UART_WaitOnFlagUntilTimeout:0000000000000000 $t
-     /tmp/ccWdceWU.s:545    .text.UART_WaitOnFlagUntilTimeout:0000000000000000 UART_WaitOnFlagUntilTimeout
-     /tmp/ccWdceWU.s:745    .text.HAL_UART_MspInit:0000000000000000 $t
-     /tmp/ccWdceWU.s:752    .text.HAL_UART_MspInit:0000000000000000 HAL_UART_MspInit
-     /tmp/ccWdceWU.s:767    .text.HAL_UART_Init:0000000000000000 $t
-     /tmp/ccWdceWU.s:774    .text.HAL_UART_Init:0000000000000000 HAL_UART_Init
-     /tmp/ccWdceWU.s:871    .text.HAL_HalfDuplex_Init:0000000000000000 $t
-     /tmp/ccWdceWU.s:878    .text.HAL_HalfDuplex_Init:0000000000000000 HAL_HalfDuplex_Init
-     /tmp/ccWdceWU.s:980    .text.HAL_LIN_Init:0000000000000000 $t
-     /tmp/ccWdceWU.s:987    .text.HAL_LIN_Init:0000000000000000 HAL_LIN_Init
-     /tmp/ccWdceWU.s:1108   .text.HAL_MultiProcessor_Init:0000000000000000 $t
-     /tmp/ccWdceWU.s:1115   .text.HAL_MultiProcessor_Init:0000000000000000 HAL_MultiProcessor_Init
-     /tmp/ccWdceWU.s:1243   .text.HAL_UART_MspDeInit:0000000000000000 $t
-     /tmp/ccWdceWU.s:1250   .text.HAL_UART_MspDeInit:0000000000000000 HAL_UART_MspDeInit
-     /tmp/ccWdceWU.s:1265   .text.HAL_UART_DeInit:0000000000000000 $t
-     /tmp/ccWdceWU.s:1272   .text.HAL_UART_DeInit:0000000000000000 HAL_UART_DeInit
-     /tmp/ccWdceWU.s:1340   .text.HAL_UART_Transmit:0000000000000000 $t
-     /tmp/ccWdceWU.s:1347   .text.HAL_UART_Transmit:0000000000000000 HAL_UART_Transmit
-     /tmp/ccWdceWU.s:1557   .text.HAL_UART_Receive:0000000000000000 $t
-     /tmp/ccWdceWU.s:1564   .text.HAL_UART_Receive:0000000000000000 HAL_UART_Receive
-     /tmp/ccWdceWU.s:1789   .text.HAL_UART_Transmit_IT:0000000000000000 $t
-     /tmp/ccWdceWU.s:1796   .text.HAL_UART_Transmit_IT:0000000000000000 HAL_UART_Transmit_IT
-     /tmp/ccWdceWU.s:1874   .text.HAL_UART_Transmit_DMA:0000000000000000 $t
-     /tmp/ccWdceWU.s:1881   .text.HAL_UART_Transmit_DMA:0000000000000000 HAL_UART_Transmit_DMA
-     /tmp/ccWdceWU.s:2057   .text.HAL_UART_Transmit_DMA:0000000000000078 $d
-     /tmp/ccWdceWU.s:4222   .text.UART_DMATransmitCplt:0000000000000000 UART_DMATransmitCplt
-     /tmp/ccWdceWU.s:4451   .text.UART_DMATxHalfCplt:0000000000000000 UART_DMATxHalfCplt
-     /tmp/ccWdceWU.s:4550   .text.UART_DMAError:0000000000000000 UART_DMAError
-     /tmp/ccWdceWU.s:2064   .text.HAL_UART_DMAPause:0000000000000000 $t
-     /tmp/ccWdceWU.s:2071   .text.HAL_UART_DMAPause:0000000000000000 HAL_UART_DMAPause
-     /tmp/ccWdceWU.s:2367   .text.HAL_UART_DMAResume:0000000000000000 $t
-     /tmp/ccWdceWU.s:2374   .text.HAL_UART_DMAResume:0000000000000000 HAL_UART_DMAResume
-     /tmp/ccWdceWU.s:2680   .text.HAL_UART_DMAStop:0000000000000000 $t
-     /tmp/ccWdceWU.s:2687   .text.HAL_UART_DMAStop:0000000000000000 HAL_UART_DMAStop
-     /tmp/ccWdceWU.s:2897   .text.HAL_UARTEx_ReceiveToIdle:0000000000000000 $t
-     /tmp/ccWdceWU.s:2904   .text.HAL_UARTEx_ReceiveToIdle:0000000000000000 HAL_UARTEx_ReceiveToIdle
-     /tmp/ccWdceWU.s:3211   .text.HAL_UARTEx_GetRxEventType:0000000000000000 $t
-     /tmp/ccWdceWU.s:3218   .text.HAL_UARTEx_GetRxEventType:0000000000000000 HAL_UARTEx_GetRxEventType
-     /tmp/ccWdceWU.s:3236   .text.HAL_UART_Abort:0000000000000000 $t
-     /tmp/ccWdceWU.s:3243   .text.HAL_UART_Abort:0000000000000000 HAL_UART_Abort
-     /tmp/ccWdceWU.s:3670   .text.HAL_UART_AbortTransmit:0000000000000000 $t
-     /tmp/ccWdceWU.s:3677   .text.HAL_UART_AbortTransmit:0000000000000000 HAL_UART_AbortTransmit
-     /tmp/ccWdceWU.s:3868   .text.HAL_UART_AbortReceive:0000000000000000 $t
-     /tmp/ccWdceWU.s:3875   .text.HAL_UART_AbortReceive:0000000000000000 HAL_UART_AbortReceive
-     /tmp/ccWdceWU.s:4194   .text.HAL_UART_TxCpltCallback:0000000000000000 $t
-     /tmp/ccWdceWU.s:4201   .text.HAL_UART_TxCpltCallback:0000000000000000 HAL_UART_TxCpltCallback
-ARM GAS  /tmp/ccWdceWU.s 			page 293
+     /tmp/ccvLMv3d.s:16     .text.UART_EndTxTransfer:0000000000000000 $t
+     /tmp/ccvLMv3d.s:23     .text.UART_EndTxTransfer:0000000000000000 UART_EndTxTransfer
+     /tmp/ccvLMv3d.s:102    .text.UART_EndRxTransfer:0000000000000000 $t
+     /tmp/ccvLMv3d.s:108    .text.UART_EndRxTransfer:0000000000000000 UART_EndRxTransfer
+     /tmp/ccvLMv3d.s:312    .text.UART_Transmit_IT:0000000000000000 $t
+     /tmp/ccvLMv3d.s:318    .text.UART_Transmit_IT:0000000000000000 UART_Transmit_IT
+     /tmp/ccvLMv3d.s:420    .text.UART_SetConfig:0000000000000000 $t
+     /tmp/ccvLMv3d.s:426    .text.UART_SetConfig:0000000000000000 UART_SetConfig
+     /tmp/ccvLMv3d.s:533    .text.UART_SetConfig:0000000000000088 $d
+     /tmp/ccvLMv3d.s:539    .text.UART_WaitOnFlagUntilTimeout:0000000000000000 $t
+     /tmp/ccvLMv3d.s:545    .text.UART_WaitOnFlagUntilTimeout:0000000000000000 UART_WaitOnFlagUntilTimeout
+     /tmp/ccvLMv3d.s:745    .text.HAL_UART_MspInit:0000000000000000 $t
+     /tmp/ccvLMv3d.s:752    .text.HAL_UART_MspInit:0000000000000000 HAL_UART_MspInit
+     /tmp/ccvLMv3d.s:767    .text.HAL_UART_Init:0000000000000000 $t
+     /tmp/ccvLMv3d.s:774    .text.HAL_UART_Init:0000000000000000 HAL_UART_Init
+     /tmp/ccvLMv3d.s:871    .text.HAL_HalfDuplex_Init:0000000000000000 $t
+     /tmp/ccvLMv3d.s:878    .text.HAL_HalfDuplex_Init:0000000000000000 HAL_HalfDuplex_Init
+     /tmp/ccvLMv3d.s:980    .text.HAL_LIN_Init:0000000000000000 $t
+     /tmp/ccvLMv3d.s:987    .text.HAL_LIN_Init:0000000000000000 HAL_LIN_Init
+     /tmp/ccvLMv3d.s:1108   .text.HAL_MultiProcessor_Init:0000000000000000 $t
+     /tmp/ccvLMv3d.s:1115   .text.HAL_MultiProcessor_Init:0000000000000000 HAL_MultiProcessor_Init
+     /tmp/ccvLMv3d.s:1243   .text.HAL_UART_MspDeInit:0000000000000000 $t
+     /tmp/ccvLMv3d.s:1250   .text.HAL_UART_MspDeInit:0000000000000000 HAL_UART_MspDeInit
+     /tmp/ccvLMv3d.s:1265   .text.HAL_UART_DeInit:0000000000000000 $t
+     /tmp/ccvLMv3d.s:1272   .text.HAL_UART_DeInit:0000000000000000 HAL_UART_DeInit
+     /tmp/ccvLMv3d.s:1340   .text.HAL_UART_Transmit:0000000000000000 $t
+     /tmp/ccvLMv3d.s:1347   .text.HAL_UART_Transmit:0000000000000000 HAL_UART_Transmit
+     /tmp/ccvLMv3d.s:1557   .text.HAL_UART_Receive:0000000000000000 $t
+     /tmp/ccvLMv3d.s:1564   .text.HAL_UART_Receive:0000000000000000 HAL_UART_Receive
+     /tmp/ccvLMv3d.s:1789   .text.HAL_UART_Transmit_IT:0000000000000000 $t
+     /tmp/ccvLMv3d.s:1796   .text.HAL_UART_Transmit_IT:0000000000000000 HAL_UART_Transmit_IT
+     /tmp/ccvLMv3d.s:1874   .text.HAL_UART_Transmit_DMA:0000000000000000 $t
+     /tmp/ccvLMv3d.s:1881   .text.HAL_UART_Transmit_DMA:0000000000000000 HAL_UART_Transmit_DMA
+     /tmp/ccvLMv3d.s:2057   .text.HAL_UART_Transmit_DMA:0000000000000078 $d
+     /tmp/ccvLMv3d.s:4222   .text.UART_DMATransmitCplt:0000000000000000 UART_DMATransmitCplt
+     /tmp/ccvLMv3d.s:4451   .text.UART_DMATxHalfCplt:0000000000000000 UART_DMATxHalfCplt
+     /tmp/ccvLMv3d.s:4550   .text.UART_DMAError:0000000000000000 UART_DMAError
+     /tmp/ccvLMv3d.s:2064   .text.HAL_UART_DMAPause:0000000000000000 $t
+     /tmp/ccvLMv3d.s:2071   .text.HAL_UART_DMAPause:0000000000000000 HAL_UART_DMAPause
+     /tmp/ccvLMv3d.s:2367   .text.HAL_UART_DMAResume:0000000000000000 $t
+     /tmp/ccvLMv3d.s:2374   .text.HAL_UART_DMAResume:0000000000000000 HAL_UART_DMAResume
+     /tmp/ccvLMv3d.s:2680   .text.HAL_UART_DMAStop:0000000000000000 $t
+     /tmp/ccvLMv3d.s:2687   .text.HAL_UART_DMAStop:0000000000000000 HAL_UART_DMAStop
+     /tmp/ccvLMv3d.s:2897   .text.HAL_UARTEx_ReceiveToIdle:0000000000000000 $t
+     /tmp/ccvLMv3d.s:2904   .text.HAL_UARTEx_ReceiveToIdle:0000000000000000 HAL_UARTEx_ReceiveToIdle
+     /tmp/ccvLMv3d.s:3211   .text.HAL_UARTEx_GetRxEventType:0000000000000000 $t
+     /tmp/ccvLMv3d.s:3218   .text.HAL_UARTEx_GetRxEventType:0000000000000000 HAL_UARTEx_GetRxEventType
+     /tmp/ccvLMv3d.s:3236   .text.HAL_UART_Abort:0000000000000000 $t
+     /tmp/ccvLMv3d.s:3243   .text.HAL_UART_Abort:0000000000000000 HAL_UART_Abort
+     /tmp/ccvLMv3d.s:3670   .text.HAL_UART_AbortTransmit:0000000000000000 $t
+     /tmp/ccvLMv3d.s:3677   .text.HAL_UART_AbortTransmit:0000000000000000 HAL_UART_AbortTransmit
+     /tmp/ccvLMv3d.s:3868   .text.HAL_UART_AbortReceive:0000000000000000 $t
+     /tmp/ccvLMv3d.s:3875   .text.HAL_UART_AbortReceive:0000000000000000 HAL_UART_AbortReceive
+     /tmp/ccvLMv3d.s:4194   .text.HAL_UART_TxCpltCallback:0000000000000000 $t
+     /tmp/ccvLMv3d.s:4201   .text.HAL_UART_TxCpltCallback:0000000000000000 HAL_UART_TxCpltCallback
+ARM GAS  /tmp/ccvLMv3d.s 			page 293
 
 
-     /tmp/ccWdceWU.s:4216   .text.UART_DMATransmitCplt:0000000000000000 $t
-     /tmp/ccWdceWU.s:4384   .text.UART_EndTransmit_IT:0000000000000000 $t
-     /tmp/ccWdceWU.s:4390   .text.UART_EndTransmit_IT:0000000000000000 UART_EndTransmit_IT
-     /tmp/ccWdceWU.s:4423   .text.HAL_UART_TxHalfCpltCallback:0000000000000000 $t
-     /tmp/ccWdceWU.s:4430   .text.HAL_UART_TxHalfCpltCallback:0000000000000000 HAL_UART_TxHalfCpltCallback
-     /tmp/ccWdceWU.s:4445   .text.UART_DMATxHalfCplt:0000000000000000 $t
-     /tmp/ccWdceWU.s:4478   .text.HAL_UART_RxCpltCallback:0000000000000000 $t
-     /tmp/ccWdceWU.s:4485   .text.HAL_UART_RxCpltCallback:0000000000000000 HAL_UART_RxCpltCallback
-     /tmp/ccWdceWU.s:4500   .text.HAL_UART_RxHalfCpltCallback:0000000000000000 $t
-     /tmp/ccWdceWU.s:4507   .text.HAL_UART_RxHalfCpltCallback:0000000000000000 HAL_UART_RxHalfCpltCallback
-     /tmp/ccWdceWU.s:4522   .text.HAL_UART_ErrorCallback:0000000000000000 $t
-     /tmp/ccWdceWU.s:4529   .text.HAL_UART_ErrorCallback:0000000000000000 HAL_UART_ErrorCallback
-     /tmp/ccWdceWU.s:4544   .text.UART_DMAError:0000000000000000 $t
-     /tmp/ccWdceWU.s:4647   .text.UART_DMAAbortOnError:0000000000000000 $t
-     /tmp/ccWdceWU.s:4653   .text.UART_DMAAbortOnError:0000000000000000 UART_DMAAbortOnError
-     /tmp/ccWdceWU.s:4686   .text.HAL_UART_AbortCpltCallback:0000000000000000 $t
-     /tmp/ccWdceWU.s:4693   .text.HAL_UART_AbortCpltCallback:0000000000000000 HAL_UART_AbortCpltCallback
-     /tmp/ccWdceWU.s:4708   .text.HAL_UART_Abort_IT:0000000000000000 $t
-     /tmp/ccWdceWU.s:4715   .text.HAL_UART_Abort_IT:0000000000000000 HAL_UART_Abort_IT
-     /tmp/ccWdceWU.s:5188   .text.HAL_UART_Abort_IT:000000000000011c $d
-     /tmp/ccWdceWU.s:5270   .text.UART_DMATxAbortCallback:0000000000000000 UART_DMATxAbortCallback
-     /tmp/ccWdceWU.s:5200   .text.UART_DMARxAbortCallback:0000000000000000 UART_DMARxAbortCallback
-     /tmp/ccWdceWU.s:5194   .text.UART_DMARxAbortCallback:0000000000000000 $t
-     /tmp/ccWdceWU.s:5264   .text.UART_DMATxAbortCallback:0000000000000000 $t
-     /tmp/ccWdceWU.s:5334   .text.HAL_UART_AbortTransmitCpltCallback:0000000000000000 $t
-     /tmp/ccWdceWU.s:5341   .text.HAL_UART_AbortTransmitCpltCallback:0000000000000000 HAL_UART_AbortTransmitCpltCallback
-     /tmp/ccWdceWU.s:5356   .text.HAL_UART_AbortTransmit_IT:0000000000000000 $t
-     /tmp/ccWdceWU.s:5363   .text.HAL_UART_AbortTransmit_IT:0000000000000000 HAL_UART_AbortTransmit_IT
-     /tmp/ccWdceWU.s:5571   .text.HAL_UART_AbortTransmit_IT:000000000000007c $d
-     /tmp/ccWdceWU.s:5582   .text.UART_DMATxOnlyAbortCallback:0000000000000000 UART_DMATxOnlyAbortCallback
-     /tmp/ccWdceWU.s:5576   .text.UART_DMATxOnlyAbortCallback:0000000000000000 $t
-     /tmp/ccWdceWU.s:5616   .text.HAL_UART_AbortReceiveCpltCallback:0000000000000000 $t
-     /tmp/ccWdceWU.s:5623   .text.HAL_UART_AbortReceiveCpltCallback:0000000000000000 HAL_UART_AbortReceiveCpltCallback
-     /tmp/ccWdceWU.s:5638   .text.HAL_UART_AbortReceive_IT:0000000000000000 $t
-     /tmp/ccWdceWU.s:5645   .text.HAL_UART_AbortReceive_IT:0000000000000000 HAL_UART_AbortReceive_IT
-     /tmp/ccWdceWU.s:5984   .text.HAL_UART_AbortReceive_IT:00000000000000b8 $d
-     /tmp/ccWdceWU.s:5995   .text.UART_DMARxOnlyAbortCallback:0000000000000000 UART_DMARxOnlyAbortCallback
-     /tmp/ccWdceWU.s:5989   .text.UART_DMARxOnlyAbortCallback:0000000000000000 $t
-     /tmp/ccWdceWU.s:6032   .text.HAL_UARTEx_RxEventCallback:0000000000000000 $t
-     /tmp/ccWdceWU.s:6039   .text.HAL_UARTEx_RxEventCallback:0000000000000000 HAL_UARTEx_RxEventCallback
-     /tmp/ccWdceWU.s:6055   .text.UART_Receive_IT:0000000000000000 $t
-     /tmp/ccWdceWU.s:6061   .text.UART_Receive_IT:0000000000000000 UART_Receive_IT
-     /tmp/ccWdceWU.s:6339   .text.HAL_UART_IRQHandler:0000000000000000 $t
-     /tmp/ccWdceWU.s:6346   .text.HAL_UART_IRQHandler:0000000000000000 HAL_UART_IRQHandler
-     /tmp/ccWdceWU.s:7239   .text.HAL_UART_IRQHandler:0000000000000284 $d
-     /tmp/ccWdceWU.s:7244   .text.UART_DMARxHalfCplt:0000000000000000 $t
-     /tmp/ccWdceWU.s:7250   .text.UART_DMARxHalfCplt:0000000000000000 UART_DMARxHalfCplt
-     /tmp/ccWdceWU.s:7298   .text.UART_DMAReceiveCplt:0000000000000000 $t
-     /tmp/ccWdceWU.s:7304   .text.UART_DMAReceiveCplt:0000000000000000 UART_DMAReceiveCplt
-     /tmp/ccWdceWU.s:7611   .text.HAL_LIN_SendBreak:0000000000000000 $t
-     /tmp/ccWdceWU.s:7618   .text.HAL_LIN_SendBreak:0000000000000000 HAL_LIN_SendBreak
-     /tmp/ccWdceWU.s:7725   .text.HAL_MultiProcessor_EnterMuteMode:0000000000000000 $t
-     /tmp/ccWdceWU.s:7732   .text.HAL_MultiProcessor_EnterMuteMode:0000000000000000 HAL_MultiProcessor_EnterMuteMode
-     /tmp/ccWdceWU.s:7842   .text.HAL_MultiProcessor_ExitMuteMode:0000000000000000 $t
-     /tmp/ccWdceWU.s:7849   .text.HAL_MultiProcessor_ExitMuteMode:0000000000000000 HAL_MultiProcessor_ExitMuteMode
-     /tmp/ccWdceWU.s:7959   .text.HAL_HalfDuplex_EnableTransmitter:0000000000000000 $t
-     /tmp/ccWdceWU.s:7966   .text.HAL_HalfDuplex_EnableTransmitter:0000000000000000 HAL_HalfDuplex_EnableTransmitter
-ARM GAS  /tmp/ccWdceWU.s 			page 294
+     /tmp/ccvLMv3d.s:4216   .text.UART_DMATransmitCplt:0000000000000000 $t
+     /tmp/ccvLMv3d.s:4384   .text.UART_EndTransmit_IT:0000000000000000 $t
+     /tmp/ccvLMv3d.s:4390   .text.UART_EndTransmit_IT:0000000000000000 UART_EndTransmit_IT
+     /tmp/ccvLMv3d.s:4423   .text.HAL_UART_TxHalfCpltCallback:0000000000000000 $t
+     /tmp/ccvLMv3d.s:4430   .text.HAL_UART_TxHalfCpltCallback:0000000000000000 HAL_UART_TxHalfCpltCallback
+     /tmp/ccvLMv3d.s:4445   .text.UART_DMATxHalfCplt:0000000000000000 $t
+     /tmp/ccvLMv3d.s:4478   .text.HAL_UART_RxCpltCallback:0000000000000000 $t
+     /tmp/ccvLMv3d.s:4485   .text.HAL_UART_RxCpltCallback:0000000000000000 HAL_UART_RxCpltCallback
+     /tmp/ccvLMv3d.s:4500   .text.HAL_UART_RxHalfCpltCallback:0000000000000000 $t
+     /tmp/ccvLMv3d.s:4507   .text.HAL_UART_RxHalfCpltCallback:0000000000000000 HAL_UART_RxHalfCpltCallback
+     /tmp/ccvLMv3d.s:4522   .text.HAL_UART_ErrorCallback:0000000000000000 $t
+     /tmp/ccvLMv3d.s:4529   .text.HAL_UART_ErrorCallback:0000000000000000 HAL_UART_ErrorCallback
+     /tmp/ccvLMv3d.s:4544   .text.UART_DMAError:0000000000000000 $t
+     /tmp/ccvLMv3d.s:4647   .text.UART_DMAAbortOnError:0000000000000000 $t
+     /tmp/ccvLMv3d.s:4653   .text.UART_DMAAbortOnError:0000000000000000 UART_DMAAbortOnError
+     /tmp/ccvLMv3d.s:4686   .text.HAL_UART_AbortCpltCallback:0000000000000000 $t
+     /tmp/ccvLMv3d.s:4693   .text.HAL_UART_AbortCpltCallback:0000000000000000 HAL_UART_AbortCpltCallback
+     /tmp/ccvLMv3d.s:4708   .text.HAL_UART_Abort_IT:0000000000000000 $t
+     /tmp/ccvLMv3d.s:4715   .text.HAL_UART_Abort_IT:0000000000000000 HAL_UART_Abort_IT
+     /tmp/ccvLMv3d.s:5188   .text.HAL_UART_Abort_IT:000000000000011c $d
+     /tmp/ccvLMv3d.s:5270   .text.UART_DMATxAbortCallback:0000000000000000 UART_DMATxAbortCallback
+     /tmp/ccvLMv3d.s:5200   .text.UART_DMARxAbortCallback:0000000000000000 UART_DMARxAbortCallback
+     /tmp/ccvLMv3d.s:5194   .text.UART_DMARxAbortCallback:0000000000000000 $t
+     /tmp/ccvLMv3d.s:5264   .text.UART_DMATxAbortCallback:0000000000000000 $t
+     /tmp/ccvLMv3d.s:5334   .text.HAL_UART_AbortTransmitCpltCallback:0000000000000000 $t
+     /tmp/ccvLMv3d.s:5341   .text.HAL_UART_AbortTransmitCpltCallback:0000000000000000 HAL_UART_AbortTransmitCpltCallback
+     /tmp/ccvLMv3d.s:5356   .text.HAL_UART_AbortTransmit_IT:0000000000000000 $t
+     /tmp/ccvLMv3d.s:5363   .text.HAL_UART_AbortTransmit_IT:0000000000000000 HAL_UART_AbortTransmit_IT
+     /tmp/ccvLMv3d.s:5571   .text.HAL_UART_AbortTransmit_IT:000000000000007c $d
+     /tmp/ccvLMv3d.s:5582   .text.UART_DMATxOnlyAbortCallback:0000000000000000 UART_DMATxOnlyAbortCallback
+     /tmp/ccvLMv3d.s:5576   .text.UART_DMATxOnlyAbortCallback:0000000000000000 $t
+     /tmp/ccvLMv3d.s:5616   .text.HAL_UART_AbortReceiveCpltCallback:0000000000000000 $t
+     /tmp/ccvLMv3d.s:5623   .text.HAL_UART_AbortReceiveCpltCallback:0000000000000000 HAL_UART_AbortReceiveCpltCallback
+     /tmp/ccvLMv3d.s:5638   .text.HAL_UART_AbortReceive_IT:0000000000000000 $t
+     /tmp/ccvLMv3d.s:5645   .text.HAL_UART_AbortReceive_IT:0000000000000000 HAL_UART_AbortReceive_IT
+     /tmp/ccvLMv3d.s:5984   .text.HAL_UART_AbortReceive_IT:00000000000000b8 $d
+     /tmp/ccvLMv3d.s:5995   .text.UART_DMARxOnlyAbortCallback:0000000000000000 UART_DMARxOnlyAbortCallback
+     /tmp/ccvLMv3d.s:5989   .text.UART_DMARxOnlyAbortCallback:0000000000000000 $t
+     /tmp/ccvLMv3d.s:6032   .text.HAL_UARTEx_RxEventCallback:0000000000000000 $t
+     /tmp/ccvLMv3d.s:6039   .text.HAL_UARTEx_RxEventCallback:0000000000000000 HAL_UARTEx_RxEventCallback
+     /tmp/ccvLMv3d.s:6055   .text.UART_Receive_IT:0000000000000000 $t
+     /tmp/ccvLMv3d.s:6061   .text.UART_Receive_IT:0000000000000000 UART_Receive_IT
+     /tmp/ccvLMv3d.s:6339   .text.HAL_UART_IRQHandler:0000000000000000 $t
+     /tmp/ccvLMv3d.s:6346   .text.HAL_UART_IRQHandler:0000000000000000 HAL_UART_IRQHandler
+     /tmp/ccvLMv3d.s:7239   .text.HAL_UART_IRQHandler:0000000000000284 $d
+     /tmp/ccvLMv3d.s:7244   .text.UART_DMARxHalfCplt:0000000000000000 $t
+     /tmp/ccvLMv3d.s:7250   .text.UART_DMARxHalfCplt:0000000000000000 UART_DMARxHalfCplt
+     /tmp/ccvLMv3d.s:7298   .text.UART_DMAReceiveCplt:0000000000000000 $t
+     /tmp/ccvLMv3d.s:7304   .text.UART_DMAReceiveCplt:0000000000000000 UART_DMAReceiveCplt
+     /tmp/ccvLMv3d.s:7611   .text.HAL_LIN_SendBreak:0000000000000000 $t
+     /tmp/ccvLMv3d.s:7618   .text.HAL_LIN_SendBreak:0000000000000000 HAL_LIN_SendBreak
+     /tmp/ccvLMv3d.s:7725   .text.HAL_MultiProcessor_EnterMuteMode:0000000000000000 $t
+     /tmp/ccvLMv3d.s:7732   .text.HAL_MultiProcessor_EnterMuteMode:0000000000000000 HAL_MultiProcessor_EnterMuteMode
+     /tmp/ccvLMv3d.s:7842   .text.HAL_MultiProcessor_ExitMuteMode:0000000000000000 $t
+     /tmp/ccvLMv3d.s:7849   .text.HAL_MultiProcessor_ExitMuteMode:0000000000000000 HAL_MultiProcessor_ExitMuteMode
+     /tmp/ccvLMv3d.s:7959   .text.HAL_HalfDuplex_EnableTransmitter:0000000000000000 $t
+     /tmp/ccvLMv3d.s:7966   .text.HAL_HalfDuplex_EnableTransmitter:0000000000000000 HAL_HalfDuplex_EnableTransmitter
+ARM GAS  /tmp/ccvLMv3d.s 			page 294
 
 
-     /tmp/ccWdceWU.s:8033   .text.HAL_HalfDuplex_EnableReceiver:0000000000000000 $t
-     /tmp/ccWdceWU.s:8040   .text.HAL_HalfDuplex_EnableReceiver:0000000000000000 HAL_HalfDuplex_EnableReceiver
-     /tmp/ccWdceWU.s:8107   .text.HAL_UART_GetState:0000000000000000 $t
-     /tmp/ccWdceWU.s:8114   .text.HAL_UART_GetState:0000000000000000 HAL_UART_GetState
-     /tmp/ccWdceWU.s:8141   .text.HAL_UART_GetError:0000000000000000 $t
-     /tmp/ccWdceWU.s:8148   .text.HAL_UART_GetError:0000000000000000 HAL_UART_GetError
-     /tmp/ccWdceWU.s:8166   .text.UART_Start_Receive_IT:0000000000000000 $t
-     /tmp/ccWdceWU.s:8173   .text.UART_Start_Receive_IT:0000000000000000 UART_Start_Receive_IT
-     /tmp/ccWdceWU.s:8232   .text.HAL_UART_Receive_IT:0000000000000000 $t
-     /tmp/ccWdceWU.s:8239   .text.HAL_UART_Receive_IT:0000000000000000 HAL_UART_Receive_IT
-     /tmp/ccWdceWU.s:8300   .text.HAL_UARTEx_ReceiveToIdle_IT:0000000000000000 $t
-     /tmp/ccWdceWU.s:8307   .text.HAL_UARTEx_ReceiveToIdle_IT:0000000000000000 HAL_UARTEx_ReceiveToIdle_IT
-     /tmp/ccWdceWU.s:8482   .text.UART_Start_Receive_DMA:0000000000000000 $t
-     /tmp/ccWdceWU.s:8489   .text.UART_Start_Receive_DMA:0000000000000000 UART_Start_Receive_DMA
-     /tmp/ccWdceWU.s:8772   .text.UART_Start_Receive_DMA:0000000000000098 $d
-     /tmp/ccWdceWU.s:8779   .text.HAL_UART_Receive_DMA:0000000000000000 $t
-     /tmp/ccWdceWU.s:8786   .text.HAL_UART_Receive_DMA:0000000000000000 HAL_UART_Receive_DMA
-     /tmp/ccWdceWU.s:8847   .text.HAL_UARTEx_ReceiveToIdle_DMA:0000000000000000 $t
-     /tmp/ccWdceWU.s:8854   .text.HAL_UARTEx_ReceiveToIdle_DMA:0000000000000000 HAL_UARTEx_ReceiveToIdle_DMA
+     /tmp/ccvLMv3d.s:8033   .text.HAL_HalfDuplex_EnableReceiver:0000000000000000 $t
+     /tmp/ccvLMv3d.s:8040   .text.HAL_HalfDuplex_EnableReceiver:0000000000000000 HAL_HalfDuplex_EnableReceiver
+     /tmp/ccvLMv3d.s:8107   .text.HAL_UART_GetState:0000000000000000 $t
+     /tmp/ccvLMv3d.s:8114   .text.HAL_UART_GetState:0000000000000000 HAL_UART_GetState
+     /tmp/ccvLMv3d.s:8141   .text.HAL_UART_GetError:0000000000000000 $t
+     /tmp/ccvLMv3d.s:8148   .text.HAL_UART_GetError:0000000000000000 HAL_UART_GetError
+     /tmp/ccvLMv3d.s:8166   .text.UART_Start_Receive_IT:0000000000000000 $t
+     /tmp/ccvLMv3d.s:8173   .text.UART_Start_Receive_IT:0000000000000000 UART_Start_Receive_IT
+     /tmp/ccvLMv3d.s:8232   .text.HAL_UART_Receive_IT:0000000000000000 $t
+     /tmp/ccvLMv3d.s:8239   .text.HAL_UART_Receive_IT:0000000000000000 HAL_UART_Receive_IT
+     /tmp/ccvLMv3d.s:8300   .text.HAL_UARTEx_ReceiveToIdle_IT:0000000000000000 $t
+     /tmp/ccvLMv3d.s:8307   .text.HAL_UARTEx_ReceiveToIdle_IT:0000000000000000 HAL_UARTEx_ReceiveToIdle_IT
+     /tmp/ccvLMv3d.s:8482   .text.UART_Start_Receive_DMA:0000000000000000 $t
+     /tmp/ccvLMv3d.s:8489   .text.UART_Start_Receive_DMA:0000000000000000 UART_Start_Receive_DMA
+     /tmp/ccvLMv3d.s:8772   .text.UART_Start_Receive_DMA:0000000000000098 $d
+     /tmp/ccvLMv3d.s:8779   .text.HAL_UART_Receive_DMA:0000000000000000 $t
+     /tmp/ccvLMv3d.s:8786   .text.HAL_UART_Receive_DMA:0000000000000000 HAL_UART_Receive_DMA
+     /tmp/ccvLMv3d.s:8847   .text.HAL_UARTEx_ReceiveToIdle_DMA:0000000000000000 $t
+     /tmp/ccvLMv3d.s:8854   .text.HAL_UARTEx_ReceiveToIdle_DMA:0000000000000000 HAL_UARTEx_ReceiveToIdle_DMA
 
 UNDEFINED SYMBOLS
 HAL_RCC_GetPCLK1Freq
