@@ -228,7 +228,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
             {
                 pps_flag = 0;
                 pps_count = 0;
-                HAL_GPIO_WritePin(GPIOB, GPIO_PIN_3, GPIO_PIN_RESET); // PPS LOW
+                HAL_GPIO_WritePin(GPIOC, GPIO_PIN_0, GPIO_PIN_RESET); // PPS LOW
             }
             
         }
@@ -243,6 +243,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 
 uint32_t pps_offset = 350;
 uint32_t for_delay = 0;
+uint32_t trigger_rate = 20;
 // uint32_t pps_offset = 390;
 // uint32_t for_delay = 35;
 // uint32_t pps_offset = 0;
@@ -251,27 +252,27 @@ void TIM4_IRQHandler(void) {
     if (__HAL_TIM_GET_FLAG(&htim4, TIM_FLAG_UPDATE) != RESET) {
         __HAL_TIM_CLEAR_IT(&htim4, TIM_IT_UPDATE);
         
-        static uint32_t count_10hz = 0, count_1hz = 0;
+        static uint32_t count_trigger_rate = 0, count_pps_rate = 0;
         
-        count_1hz ++;
-        count_10hz ++;
-        if (count_10hz >= 250) {
+        count_pps_rate ++;
+        count_trigger_rate ++;
+        if (count_trigger_rate >= 2500 / trigger_rate) {
             DWT_Delay(pps_offset);
             for(int i = 0; i < for_delay; i ++);
 
             HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_4); // Toggle Trigger signal
             trigger_flag = 1;
 
-            if (count_1hz >= 5000) {
+            if (count_pps_rate >= 5000) {
                 if(pps_flag) {
                     Error_Handler();
                 }
-                HAL_GPIO_WritePin(GPIOB, GPIO_PIN_3, GPIO_PIN_SET); // PPS HIGH
+                HAL_GPIO_WritePin(GPIOC, GPIO_PIN_0, GPIO_PIN_SET); // PPS HIGH
                 send_gps_flag = 1;    
                 pps_flag = 1;  // Set flag to turn off PPS in ISR after 100 ms
-                count_1hz = 0;          
+                count_pps_rate = 0;          
             }
-            count_10hz = 0;
+            count_trigger_rate = 0;
         }
         
     }
