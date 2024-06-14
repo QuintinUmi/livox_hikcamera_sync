@@ -243,7 +243,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 
 uint32_t pps_offset = 350;
 uint32_t for_delay = 0;
-uint32_t trigger_rate = 20;
+uint32_t trigger_rate = 10;
 // uint32_t pps_offset = 390;
 // uint32_t for_delay = 35;
 // uint32_t pps_offset = 0;
