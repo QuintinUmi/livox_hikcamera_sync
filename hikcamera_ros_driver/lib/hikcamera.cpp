@@ -915,7 +915,7 @@ void HikCameraSync::GetFrameWorkThread() {
                     std::to_string(stFrameOut.stFrameInfo.nWidth) + "], Height: [" +
                     std::to_string(stFrameOut.stFrameInfo.nHeight) + "], nFrameLen: [" +
                     std::to_string(stFrameOut.stFrameInfo.nFrameLen)+ "]\n";
-        ROS_INFO_STREAM(debug_msg.c_str());
+        // ROS_INFO_STREAM(debug_msg.c_str());
 
 
         if (stFrameOut.pBufAddr != NULL) {
@@ -1123,7 +1123,7 @@ void HikCameraSync::PublishCallBack(FramePacket frame_pkt, uint64_t time_stamp, 
     msg->header.seq = frame_pkt.seq;
     msg->header.stamp = stamp;
     cam_h->pub_handler_.publish(msg);
-    ROS_INFO("Publish Frame: seq [%d] | stamp [%lf] | is_sync [%s]\n", msg->header.seq, 
+    ROS_INFO("Publish Frame: seq [%d] | stamp [%lf] | is_sync [%s]", msg->header.seq, 
                                                                         msg->header.stamp.toSec(), 
                                                                         cam_h->sync_flag_ ? "true" : "false");
 }

@@ -64,6 +64,23 @@ void Preprocess::process(const sensor_msgs::PointCloud2::ConstPtr &msg, PointClo
   *pcl_out = pl_surf;
 }
 
+float FILTER_MIN_ANGLE = 135.f;
+float FILTER_MAX_ANGLE = 225.f;
+inline float rad2deg(float rad) {
+    return rad * 180.0f / M_PI;
+}
+bool isWithinAngleRange(float x, float y, float angle_min, float angle_max) {
+    float angle = atan2(y, x); 
+    float angle_deg = rad2deg(angle); 
+
+    // Normalize the angle to be within [0, 360)
+    if (angle_deg < 0) {
+        angle_deg += 360;
+    }
+
+    return (angle_deg >= angle_min && angle_deg <= angle_max);
+}
+
 void Preprocess::avia_handler(const livox_ros_driver::CustomMsg::ConstPtr &msg)
 {
   pl_surf.clear();
@@ -151,7 +168,8 @@ void Preprocess::avia_handler(const livox_ros_driver::CustomMsg::ConstPtr &msg)
           if(((abs(pl_full[i].x - pl_full[i-1].x) > 1e-7) 
               || (abs(pl_full[i].y - pl_full[i-1].y) > 1e-7)
               || (abs(pl_full[i].z - pl_full[i-1].z) > 1e-7))
-              && (pl_full[i].x * pl_full[i].x + pl_full[i].y * pl_full[i].y + pl_full[i].z * pl_full[i].z > (blind * blind)))
+              && (pl_full[i].x * pl_full[i].x + pl_full[i].y * pl_full[i].y + pl_full[i].z * pl_full[i].z > (blind * blind))
+              && !isWithinAngleRange(pl_full[i].x, pl_full[i].y, FILTER_MIN_ANGLE, FILTER_MAX_ANGLE))
           {
             pl_surf.push_back(pl_full[i]);
           }
