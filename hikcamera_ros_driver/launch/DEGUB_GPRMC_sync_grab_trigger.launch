@@ -1,0 +1,15 @@
+<launch>
+    <rosparam file="$(find hikcamera_opr)/config/hikcamera.yaml" command="load"/>
+    <rosparam file="$(find hikcamera_opr)/config/ros-node-config.yaml" command="load"/>
+
+    <node pkg="hikcamera_opr" type="GPRMC_sync_grab_trigger" name="GPRMC_sync_grab_trigger" 
+          output="screen" launch-prefix="gdb \
+                                        -ex 'catch thread exit' \
+                                        -ex 'break main' \
+                                        -ex 'break HikCameraSync::initCameraSettingSync' \
+                                        -ex 'break /home/quintinumi/project/ws_hikcamera_ros_driver/src/hikcamera_ros_driver/src/hikcamera_opr/lib/hikcamera.cpp:HikCameraSync::QueueProcessWorkThread' \
+                                        -ex 'break /home/quintinumi/project/ws_hikcamera_ros_driver/src/hikcamera_ros_driver/src/hikcamera_opr/lib/hikcamera.cpp:1109' \
+                                        -ex 'run' \
+                                        --args ">
+    </node>
+</launch>

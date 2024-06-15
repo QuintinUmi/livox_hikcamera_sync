@@ -22,6 +22,9 @@
 #include "hikcamera.h"
 #include "kbhit.h"
 
+
+using namespace hikcamera_opr;
+
 bool n_exit = false;
 
 void ImageReceiveCallBack(sensor_msgs::ImageConstPtr pImg){

@@ -6,10 +6,10 @@ Offset_y: 0
 FrameRateEnable: True
 FrameRate: 50
 
-TriggerMode: 0
+TriggerMode: 1
 LineSelector: 0
 LineMode: 0
-LineSource: 5
+LineSource: 9
 
 StrobeEnable: True
 StrobeLineDelay: 0
@@ -21,7 +21,7 @@ ExposureTimeLower: 25000
 ExposureTime: 30000
 
 GainAuto: 1 # 0: off, 1: once, 2: Continuous
-Gain: 15
+Gain: 16
 
 
 

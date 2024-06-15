@@ -16,6 +16,9 @@
 
 #include "hikcamera.h"
 
+
+using namespace hikcamera_opr;
+
 sensor_msgs::CameraInfo getCameraInfo(ros::NodeHandle rosHandle)
 {
     cv::String cameraIntrinsicsPath;

@@ -126,11 +126,13 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
   ${OpenCV_INCLUDE_DIRS}
   include /opt/MVS/include/
+  include 3rdParty/
 )
 
 ##For aarch64 system, please change the path to /opt/MVS/lib/aarch64/
 LINK_DIRECTORIES(
   /opt/MVS/lib/64/
+  3rdParty/
 )
 
 ## Declare a C++ library
@@ -140,10 +142,43 @@ add_library(hikcamera_lib
   lib/hikcamera.cpp
 )
 
+## 3rdParty
+file(GLOB_RECURSE COMM_SRC_FILES 3rdParty/comm/*.cpp)
+file(GLOB_RECURSE COMM_HEAD_FILES 3rdParty/comm/*.h)
+add_library(comm_lib
+  ${COMM_SRC_FILES}
+  ${COMM_HEAD_FILES}
+)
+file(GLOB_RECURSE TIMESYNC_SRC_FILES 3rdParty/timesync/*.cpp)
+file(GLOB_RECURSE TIMESYNC_HEAD_FILES 3rdParty/timesync/*.h)
+add_library(timesync_lib
+  ${TIMESYNC_SRC_FILES}
+  ${TIMESYNC_HEAD_FILES}
+)
+file(GLOB_RECURSE FASTCRC_SRC_FILES 3rdParty/FastCRC/*.cpp)
+file(GLOB_RECURSE FASTCRC_HEAD_FILES 3rdParty/FastCRC/*.h)
+add_library(FastCRC_lib
+  ${FASTCRC_SRC_FILES}
+  ${FASTCRC_HEAD_FILES}
+)
+
+
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
 ## either from message generation or dynamic reconfigure
 add_dependencies(hikcamera_lib ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
+add_dependencies(comm_lib ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(timesync_lib ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(FastCRC_lib ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
+
+target_link_libraries(timesync_lib
+  ${catkin_LIBRARIES}
+  comm_lib
+  FastCRC_lib
+  )
+
 
 target_link_libraries(hikcamera_lib
   ${catkin_LIBRARIES}
@@ -161,11 +196,19 @@ target_link_libraries(hikcamera_lib
   MediaProcess
   #  XmlParser_gcc421_v3_0
   X11
+
+  timesync_lib
   )
+
 
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
+add_executable(msg_hikcamera_grab src/msg_hikcamera_grab.cpp)
+add_executable(msg_hikcamera_info src/msg_hikcamera_info.cpp)
+add_executable(img_hikcamera_grab_save src/img_hikcamera_grab_save.cpp)
+add_executable(key_input src/key_input.cpp)
+add_executable(img_show src/img_show.cpp)
 
 add_executable(GPRMC_sync_grab_trigger src/GPRMC_sync_grab_trigger.cpp)
 
@@ -182,6 +225,29 @@ add_executable(GPRMC_sync_grab_trigger src/GPRMC_sync_grab_trigger.cpp)
 
 ## Specify libraries to link a library or executable target against
 
+target_link_libraries(msg_hikcamera_grab
+  ${catkin_LIBRARIES}
+  ${OpenCV_LIBRARIES}
+  hikcamera_lib
+)
+
+target_link_libraries(msg_hikcamera_info
+  ${catkin_LIBRARIES}
+)
+
+target_link_libraries(img_hikcamera_grab_save
+  ${catkin_LIBRARIES}
+  ${OpenCV_LIBRARIES}
+  hikcamera_lib
+)
+
+target_link_libraries(key_input
+  ${catkin_LIBRARIES}
+)
+
+target_link_libraries(img_show
+  ${catkin_LIBRARIES}
+)
 
 target_link_libraries(GPRMC_sync_grab_trigger
   ${catkin_LIBRARIES}

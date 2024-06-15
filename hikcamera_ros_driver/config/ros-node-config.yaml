@@ -7,4 +7,6 @@ image_file_save_path: "/home/quintinumi/project/camera_calibration_img/"
 
 camera_instrinsics_path_yaml: "/home/quintinumi/project/ws_camera_calibration/src/camera_calibration/src/camera_calibration_pkg/config/calibration_param.yaml"
 
-GPRMC_sync_serial_path: "/dev/ttyACM0"
+GPRMC_serial_name: "/dev/ttyACM0"
+
+trigger_rate: 10

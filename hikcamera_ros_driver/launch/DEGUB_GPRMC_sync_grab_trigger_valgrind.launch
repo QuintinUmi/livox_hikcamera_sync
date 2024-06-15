@@ -1,0 +1,9 @@
+<launch>
+    <rosparam file="$(find hikcamera_opr)/config/hikcamera.yaml" command="load"/>
+    <rosparam file="$(find hikcamera_opr)/config/ros-node-config.yaml" command="load"/>
+
+    <!-- 使用 Helgrind 分析这个节点 -->
+    <node pkg="hikcamera_opr" type="GPRMC_sync_grab_trigger" name="GPRMC_sync_grab_trigger" 
+          output="screen" launch-prefix="valgrind --tool=helgrind">
+    </node>
+</launch>

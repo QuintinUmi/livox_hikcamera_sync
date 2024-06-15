@@ -20,6 +20,8 @@
 #include "hikcamera.h"
 
 
+using namespace hikcamera_opr;
+
 int main(int argc, char *argv[])
 {
     ros::init(argc, argv, "msg_camera_grab");
@@ -31,7 +33,7 @@ int main(int argc, char *argv[])
 
     int nRet = MV_OK;
     sensor_msgs::Image imgOneFrame;
-    CAMERA_INFO cameraInfo = hikCamera.camera_init();
+    CAMERA_INFO cameraInfo = hikCamera.initDevice();
 
     image_transport::ImageTransport imgIt(rosHandle);
     image_transport::Publisher imgPub = imgIt.advertise(image_publish_topic, 2);
@@ -41,11 +43,10 @@ int main(int argc, char *argv[])
 
     nRet = hikCamera.setCameraParam();
     if(MV_OK != nRet){
-        printf("There is something wrong with hikcamera parameters setting!\n");
+        printf("Error Occurred in hikcamera parameters setting!\n");
         getchar();
     }
     cameraInfo = hikCamera.start_grab();
-    
 
     void *pUser = cameraInfo.pUser;
     unsigned int nDataSize = cameraInfo.nDataSize;
