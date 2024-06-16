@@ -1,24 +1,28 @@
 feature_extract_enable : 0
-point_filter_num : 2
+point_filter_num : 1
 max_iteration : 10
 dense_map_enable : 1
-filter_size_surf : 0.10
-filter_size_map : 0.3
+filter_size_surf : 0.05
+filter_size_map : 0.1
 cube_side_length : 20
 debug : 0
 grid_size : 40
 patch_size : 8
 img_enable : 1
 lidar_enable : 1
-outlier_threshold : 100 # 78 100 156
+pcd_save_enable: 1
+outlier_threshold : 300 # 78 100 156
 ncc_en: false
 ncc_thre: 0
-img_point_cov : 100 # 1000
+img_point_cov : 1000 # 1000
 laser_point_cov : 0.001 # 0.001
+img_resize_ratio: 0.5
 cam_fx: 855.21077240868806
 cam_fy: 857.39699983148921
 cam_cx: 633.20909928971662
 cam_cy: 501.45406166620387
+
+map_file_path: "/home/quintinumi/git_package_src/FAST-LIVO_ws/src/PCD/"
 
 common:
     lid_topic:  "/livox/lidar"
