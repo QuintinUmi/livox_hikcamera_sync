@@ -33,3 +33,6 @@ undistortion: True
 alpha: 0.0 # 1: Remain all pixels with black frame. 0: Loss of pixels and no black frame.
 interpolation: 1
 
+isResize: False
+resize: [640, 512]
+

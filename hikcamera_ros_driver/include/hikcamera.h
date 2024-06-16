@@ -117,6 +117,9 @@ namespace hikcamera_opr
             cv::Mat map1;
             cv::Mat map2;
 
+            bool isResize;
+            cv::Size imageReize;
+
         private:
 
             ros::NodeHandle rosHandle;
