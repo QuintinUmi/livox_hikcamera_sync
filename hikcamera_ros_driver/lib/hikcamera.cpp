@@ -69,6 +69,11 @@ HikCamera::HikCamera(ros::NodeHandle &nodeHandle, int cameraIndex)
     this->rosHandle.param("undistortion", this->undistortion, false);
     this->rosHandle.param("alpha", this->alpha, 0.0);
     this->rosHandle.param("interpolation", this->interpolation, 1);
+
+    std::vector<int> resize_image;
+    this->rosHandle.param("isResize", this->isResize, false);
+    this->rosHandle.param("resize", resize_image, std::vector<int>(1280, 1024));
+    this->imageReize = cv::Size(resize_image[0], resize_image[1]);
     
     this->setCameraIntrinsics(this->cameraIntrinsicsPath);
     
@@ -537,8 +542,15 @@ sensor_msgs::ImagePtr HikCamera::grabOneFrame2ROS()
         cvImageOutput = imgBGR;
     }
 
+    cv::Mat cvImageResize;
+    if(this->isResize) {
+        cv::resize(cvImageOutput, cvImageResize, this->imageReize);
+    } else {
+        cvImageResize = cvImageOutput;
+    }
+
     // Convert OpenCV image to ROS message
-    sensor_msgs::ImagePtr pRosImg = cv_bridge::CvImage(std_msgs::Header(), "rgb8", cvImageOutput).toImageMsg();
+    sensor_msgs::ImagePtr pRosImg = cv_bridge::CvImage(std_msgs::Header(), "rgb8", cvImageResize).toImageMsg();
     pRosImg->header.stamp = rcv_time;
 
     // Update camera initialization info
@@ -608,8 +620,15 @@ cv::Mat HikCamera::grabOneFrame2Mat()
         cvImageOutput = imgBGR;
     }
 
+    cv::Mat cvImageResize;
+    if(this->isResize) {
+        cv::resize(cvImageOutput, cvImageResize, this->imageReize);
+    } else {
+        cvImageResize = cvImageOutput;
+    }
+
     // Convert OpenCV image to ROS message
-    sensor_msgs::ImagePtr pRosImg = cv_bridge::CvImage(std_msgs::Header(), "rgb8", cvImageOutput).toImageMsg();
+    sensor_msgs::ImagePtr pRosImg = cv_bridge::CvImage(std_msgs::Header(), "rgb8", cvImageResize).toImageMsg();
     pRosImg->header.stamp = rcv_time;
 
     // Update camera initialization info
@@ -1119,7 +1138,15 @@ void HikCameraSync::PublishCallBack(FramePacket frame_pkt, uint64_t time_stamp, 
         cvImageOutput = imgBGR;
     }
 
-    sensor_msgs::ImagePtr msg = cv_bridge::CvImage(std_msgs::Header(), "rgb8", cvImageOutput).toImageMsg();
+    cv::Mat cvImageResize;
+    if(cam_h->isResize) {
+        cv::resize(cvImageOutput, cvImageResize, cam_h->imageReize);
+    } else {
+        cvImageResize = cvImageOutput;
+    }
+    // Convert OpenCV image to ROS message
+
+    sensor_msgs::ImagePtr msg = cv_bridge::CvImage(std_msgs::Header(), "rgb8", cvImageResize).toImageMsg();
     msg->header.seq = frame_pkt.seq;
     msg->header.stamp = stamp;
     cam_h->pub_handler_.publish(msg);
