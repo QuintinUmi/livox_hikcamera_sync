@@ -706,6 +706,25 @@ void map_incremental()
 #endif
 }
 
+
+
+#include <iostream>
+#include <string>
+#include <boost/filesystem.hpp>
+
+namespace fs = boost::filesystem;
+
+std::string generateUniqueFilename(const std::string& base_dir, const std::string& base_filename, const std::string& extension) {
+    int file_num = 1;
+    fs::path unique_path;
+
+    do {
+        unique_path = fs::path(base_dir + base_filename + std::to_string(file_num) + extension);
+        file_num++;
+    } while (fs::exists(unique_path));
+
+    return unique_path.string();
+}
 // PointCloudXYZRGB::Ptr pcl_wait_pub_RGB(new PointCloudXYZRGB(500000, 1));
 volatile bool save_flag = false;
 std::mutex save_mtx;
@@ -721,7 +740,7 @@ void PclSaveWorkThread() {
         if (save_flag) {
             if (pcl_wait_save->size() > 0 && pcd_save_en)
             {
-                string all_points_dir = map_file_path + string("scans.pcd");
+                string all_points_dir = generateUniqueFilename(map_file_path, "scans", ".pcd");
                 pcl::PCDWriter pcd_writer;
                 pcd_writer.writeBinary(all_points_dir, *pcl_wait_save);
             }
