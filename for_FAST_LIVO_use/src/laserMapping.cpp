@@ -732,6 +732,9 @@ std::shared_ptr<std::thread> pcl_save_wt;
 PointCloudXYZRGB::Ptr pcl_wait_save(new PointCloudXYZRGB());
 void PclSaveWorkThread() {
 
+    string all_points_dir = generateUniqueFilename(map_file_path, "scans", ".pcd");
+    ROS_WARN("Generate Save Path: %s", all_points_dir.c_str());
+
     std::unique_lock<std::mutex> lock(save_mtx);
     lock.unlock();
     auto status = ros::ok();
@@ -740,7 +743,6 @@ void PclSaveWorkThread() {
         if (save_flag) {
             if (pcl_wait_save->size() > 0 && pcd_save_en)
             {
-                string all_points_dir = generateUniqueFilename(map_file_path, "scans", ".pcd");
                 pcl::PCDWriter pcd_writer;
                 pcd_writer.writeBinary(all_points_dir, *pcl_wait_save);
             }
@@ -1905,4 +1907,3 @@ int main(int argc, char** argv)
 
     return 0;
 }
-
